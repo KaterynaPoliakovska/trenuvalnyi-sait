@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мовний дім — дизайн-система v3</title>
+<meta name="description" content="Повна дизайн-система сайту Мовний дім (Movnyi Dim), побудована за референсом localeader.pl: токени, шрифти, кольори, відступи, компоненти, блоки, анімації, адаптив.">
+<link rel="icon" href="{{FAVICON}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@100;200&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --c-black:#000000;--c-ink:#262626;--c-ink-2:#333333;--c-white:#FFFFFF;--c-field:#FAFAFA;
+  --c-accent:#C2A58A;--c-accent-light:#D3B79D;--c-accent-deep:#A3805F;--c-cocoa:#48392D;--c-taupe:#CDBBAA;
+  --c-hero:#DDCDC1;--c-beige:#F3EDE8;--c-cream:#F9F4F0;--c-cream-2:#F9F6F3;--c-espresso:#18120C;
+  --brand-green:#1F4B3A;--brand-copper:#B07A4F;--brand-grey:#6B5B4D;
+  --ff-display:'Playfair Display',Georgia,'Times New Roman',serif;
+  --ff-body:'Instrument Sans','Manrope',system-ui,sans-serif;
+  --ff-thin:'Poppins','Instrument Sans',sans-serif;
+  --ff-mono:'JetBrains Mono',ui-monospace,monospace;
+  --r-card:24px;--r-tile:16px;--r-pill:99px;--r-header:40px;
+  --sh-card:0 5px 10px rgba(0,0,0,.10);--sh-soft:2px 4px 12px rgba(0,0,0,.027);
+  --sh-glass:0 0 55px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.18);--sh-fab:0 0 10px rgba(0,0,0,.10);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--c-cream);color:var(--c-ink);font:400 16px/1.6 var(--ff-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6{font-family:var(--ff-display);font-weight:600;line-height:1.2;margin:0}
+p{margin:0}
+a{color:inherit}
+code{font-family:var(--ff-mono);font-size:.82em}
+.accent{color:var(--c-accent);font-style:italic}
+svg.lg{display:block;height:100%;width:auto}
+
+.doc{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}
+main{min-width:0}
+.side{position:sticky;top:0;height:100vh;overflow:auto;padding:28px 22px;background:#fff;border-right:1px solid #EEE6DE}
+.side .brand{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.side .brand span{width:34px;height:34px;flex:none}
+.side .brand b{font:600 1.1rem/1.1 var(--ff-display)}
+.side small{display:block;color:#8a7d72;font-size:.75rem;margin-bottom:22px}
+.side nav a{display:block;padding:7px 10px;border-radius:12px;text-decoration:none;font-size:.88rem;color:var(--c-ink-2)}
+.side nav a:hover{background:var(--c-cream);color:var(--c-accent-deep)}
+.side nav .n{font-family:var(--ff-mono);font-size:.7rem;color:var(--c-accent);margin-right:8px}
+main{padding:56px clamp(20px,4vw,64px) 120px;max-width:1240px}
+section.ds{padding:56px 0;border-bottom:1px solid #E9DFD5}
+section.ds:last-child{border-bottom:0}
+.eyebrow{font:500 .72rem/1 var(--ff-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--c-accent-deep)}
+.ds-h{font-size:clamp(2rem,3.4vw,3rem);margin:10px 0 14px}
+.ds-lead{max-width:760px;font-size:1.05rem;color:var(--c-ink-2)}
+.ds h3{font-size:1.35rem;margin:36px 0 14px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
+.card{background:#fff;border-radius:var(--r-card);padding:24px;box-shadow:var(--sh-soft);border:1px solid #F0E8E0}
+table{width:100%;border-collapse:collapse;font-size:.9rem;background:#fff}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid #F1EAE3;vertical-align:top}
+th{background:var(--c-beige);font-weight:600;font-size:.8rem;color:var(--c-cocoa)}
+tr:last-child td{border-bottom:0}
+.tbl{overflow-x:auto;border-radius:16px;box-shadow:var(--sh-soft);margin-top:16px}
+pre{margin:0;padding:22px;border-radius:18px;background:var(--c-espresso);color:#EDE3D9;overflow:auto;font:400 .8rem/1.6 var(--ff-mono)}
+.note{margin-top:14px;padding:14px 18px;border-radius:14px;background:var(--c-beige);font-size:.9rem;color:var(--c-cocoa)}
+.hero-doc{border-radius:var(--r-card);overflow:hidden;padding:56px 48px;color:#fff;background:linear-gradient(90deg,rgba(62,40,24,.88),rgba(118,80,50,.6)),url('https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=1600&q=70&auto=format&fit=crop') center/cover}
+.hero-doc h1{color:#fff;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.05;max-width:760px}
+.hero-doc p{max-width:640px;margin-top:16px;font-size:1.15rem;font-weight:300}
+.logo-pill{display:inline-flex;background:#fff;border-radius:40px;padding:12px 26px;margin-bottom:28px;height:70px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.meta span{padding:6px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.45);font-size:.82rem}
+.lgbox{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:180px}
+.lgbox .h{height:52px}
+.lgbox small{color:#8a7d72;font-size:.78rem;text-align:center}
+.sw{border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--sh-soft);border:1px solid #F0E8E0}
+.sw .c{height:96px}
+.sw .t{padding:12px 14px;font-size:.82rem;line-height:1.45}
+.sw .t b{display:block;font-size:.92rem}
+.sw .t code{color:var(--c-accent-deep)}
+.spec{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:baseline;padding:18px 0;border-bottom:1px dashed #E5DACF}
+.spec .lbl{font-size:.8rem;color:#7d6f63;line-height:1.5}
+.spec .lbl b{display:block;color:var(--c-ink);font-size:.9rem}
+.space-row{display:flex;align-items:center;gap:14px;font-size:.82rem;margin:6px 0}
+.space-row i{display:block;height:14px;background:var(--c-accent);border-radius:4px}
+.space-row code{width:90px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 16px;border-radius:var(--r-pill);border:1px solid transparent;font:300 1rem/1 var(--ff-body);white-space:nowrap;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--c-accent);border-color:var(--c-accent);color:#fff}
+.btn-outline-light{color:#fff;border-color:var(--c-accent);background:transparent}
+.btn-outline{color:var(--c-ink);border-color:var(--c-accent);background:transparent}
+.btn-white{background:#fff;color:var(--c-cocoa);font-size:1.2rem;font-weight:400;line-height:1.7;padding:4.8px 32px}
+.btn-white-sm{background:#fff;color:#000}
+.btn-accent{background:var(--c-accent);border-color:var(--c-accent);color:#fff}
+.btn-accent:hover{background:var(--c-accent-deep);border-color:var(--c-accent-deep)}
+.phone-pill{display:inline-flex;align-items:center;gap:6px;padding:8px 24px;border:2px solid var(--c-accent);border-radius:80px;font-size:.9rem;line-height:1.1;color:var(--c-ink);text-decoration:none;transition:background .25s,color .25s}
+.phone-pill:hover{background:var(--c-accent);color:#fff}
+.phone-pill svg{width:15px;height:15px}
+.lang{display:inline-flex;padding:3px;border-radius:99px;background:var(--c-beige)}
+.lang button{border:0;background:transparent;padding:5px 10px;border-radius:99px;font:500 .75rem/1.2 var(--ff-body);letter-spacing:.06em;color:var(--c-cocoa);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--c-accent);color:#fff}
+.stage{border-radius:20px;padding:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:12px}
+.stage.light{background:var(--c-cream)}.stage.dark{background:#5d432f}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:14px 28px 14px 32px;background:#fff;border-radius:var(--r-header);box-shadow:0 6px 24px rgba(72,57,45,.10);flex-wrap:wrap;width:100%}
+.hdr .lg{height:40px}
+.hdr nav{display:flex;gap:20px}
+.hdr nav a{display:flex;flex-direction:column;line-height:1.2;text-decoration:none}
+.hdr nav small{font-size:.7rem;font-weight:300;color:var(--c-ink-2);line-height:1.7}
+.hdr .act{display:flex;gap:12px;align-items:center}
+.input{width:100%;padding:8px 16px;border:1px solid var(--c-accent);border-radius:24px;background:var(--c-field);color:#1F2124;font:400 .95rem/1.6 var(--ff-body)}
+.input:focus{outline:0;border-color:var(--c-accent-deep);box-shadow:0 0 0 3px rgba(194,165,138,.22)}
+.input.err{border-color:#B4452A}
+.f{display:flex;flex-direction:column;gap:6px}
+.f label{font-size:.9rem;color:#000}
+.msg{font-size:.8rem;color:#B4452A;padding-left:12px}
+.select{position:relative}
+.select select{appearance:none;-webkit-appearance:none;padding-right:40px}
+.select::after{content:"";position:absolute;right:18px;top:50%;border:5px solid transparent;border-top-color:var(--c-ink);transform:translateY(-20%);pointer-events:none}
+
+.mini-hero{position:relative;border-radius:var(--r-card);overflow:hidden;min-height:380px;padding:44px 40px 140px;color:#fff;background:linear-gradient(90deg,rgba(62,40,24,.8),rgba(78,52,32,.45) 45%,rgba(90,62,40,.12)),url('https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=1400&q=70&auto=format&fit=crop') center/cover}
+.mini-hero .eb{font-size:1rem;font-weight:300;text-transform:uppercase;color:var(--c-hero)}
+.mini-hero h4{color:#fff;font-size:2.2rem;max-width:280px;text-align:center;margin:14px 0}
+.glass{position:relative;margin:-90px 24px 0;border-radius:var(--r-card);display:grid;grid-template-columns:1.15fr 1fr 1fr;color:#fff;background:linear-gradient(135deg,rgba(18,18,22,.58),rgba(10,10,12,.22));backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);box-shadow:var(--sh-glass);overflow:hidden}
+.glass>div{padding:22px 28px}
+.glass>div+div{border-left:1px solid rgba(255,255,255,.35);text-align:center}
+.glass .q{font:italic 600 1.35rem/1.15 var(--ff-display);margin-bottom:12px}
+.glass .big{font:600 3rem/1 var(--ff-display)}
+.glass .cap{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:6px}
+.stack-card{display:grid;grid-template-columns:1fr 1fr;min-height:300px;overflow:hidden;background:#fff;border-radius:var(--r-card);box-shadow:var(--sh-card)}
+.stack-copy{padding:36px 36px 36px 56px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+.stack-copy h4{font-size:2rem;line-height:1.12}
+.stack-copy h4 span{display:block;color:var(--c-accent)}
+.stack-media{position:relative;overflow:hidden;background:linear-gradient(160deg,#E9DCCF 0%,var(--c-cream-2) 70%)}
+.stack-media .ph{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=70&auto=format&fit=crop') center/cover;clip-path:ellipse(88% 120% at 100% 60%)}
+.icon-tile{position:absolute;top:24px;left:40px;width:104px;height:104px;display:grid;place-items:center;border-radius:var(--r-tile);background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(72,57,45,.12);color:var(--c-accent)}
+.icon-tile svg{width:48px;height:48px}
+.scene{position:relative;overflow:hidden;border-radius:var(--r-card);height:440px;background:linear-gradient(180deg,var(--c-cream) 10%,var(--c-taupe) 90%)}
+.scene .row{position:absolute;left:0;white-space:nowrap;font:600 6.5rem/1 var(--ff-display);letter-spacing:-3px;color:#fff;opacity:.6;animation:mq 28s linear infinite}
+.scene .row.b{animation-direction:reverse}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.scene .tw{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);width:220px;z-index:3;filter:drop-shadow(0 30px 40px rgba(72,57,45,.35))}
+.scene .chip{position:absolute;z-index:2;display:inline-flex;align-items:baseline;gap:8px;padding:9px 18px 10px;border-radius:99px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 18px 40px rgba(72,57,45,.14);font:italic 600 1.4rem/1 var(--ff-display);animation:floaty var(--d,7s) ease-in-out var(--dl,0s) infinite}
+.scene .chip b{font:600 .62rem/1 var(--ff-body);letter-spacing:.14em;color:var(--c-accent-deep)}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-16px) rotate(calc(var(--r,0deg)*-1))}}
+.steps-mini{display:flex;flex-direction:column;background:#fff;border-radius:var(--r-card);padding:24px 28px 40px}
+.step{position:relative;width:50%;padding:80px 24px 0 32px}
+.step:nth-child(even){margin-left:50%}
+.step:nth-child(n+2){margin-top:-24px}
+.step .num{position:absolute;top:0;left:0;font:600 8rem/1 var(--ff-display);color:var(--c-beige);letter-spacing:-2px}
+.step h5{position:relative;font-size:1.25rem;margin:0 0 10px}
+.step p{position:relative;color:var(--c-ink-2);font-size:.95rem}
+.bento-mini{display:grid;grid-template-columns:509fr 772fr;grid-template-rows:220px 220px;gap:16px}
+.b{position:relative;overflow:hidden;border-radius:var(--r-card);padding:32px;box-shadow:var(--sh-soft);transition:transform .5s var(--ease)}
+.b:hover{transform:scale(1.01)}
+.b h5{font-size:1.5rem;line-height:1.15}
+.b .gb{font:600 8rem/.8 var(--ff-display);letter-spacing:-3px}
+.b .gi{font:italic 600 2.4rem/1 var(--ff-display)}
+.b-tall{grid-row:span 2;color:#fff;background:linear-gradient(180deg,rgba(40,28,18,.55),rgba(40,28,18,.15) 45%,rgba(40,28,18,.55)),url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=900&q=70&auto=format&fit=crop') center/cover;display:flex;flex-direction:column;justify-content:space-between}
+.b-tall h5{color:#fff}
+.b-gold{background:linear-gradient(192deg,var(--c-accent-light) 0%,var(--c-accent-deep) 100%);color:#fff;display:flex;align-items:center;gap:24px}
+.b-gold h5{color:var(--c-ink)}
+.b-sand{background:var(--c-beige);display:flex;align-items:center;gap:24px}
+.b-sand .gb,.b-sand .gi{background:linear-gradient(180deg,var(--c-accent-light),var(--c-accent-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
+.b-sand .gb{font-size:5.5rem}
+.google{border:1px solid #ECECEC;border-radius:var(--r-card);padding:28px;display:flex;flex-direction:column;align-items:center;background:#fff}
+.google .g{font:500 4rem/1 var(--ff-body);letter-spacing:-.03em;color:#DADADA}
+.google .s{font:100 7rem/1 var(--ff-thin);background:linear-gradient(180deg,#E6C77E,var(--c-accent) 60%,var(--c-accent-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
+.review{display:grid;grid-template-columns:180px 1fr;gap:24px;background:#fff;border-radius:var(--r-card);padding:28px}
+.avatar{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--c-beige);color:var(--c-accent-deep);font:600 1.05rem/1 var(--ff-display)}
+.stars{color:#E9B949;letter-spacing:2px;font-size:.95rem}
+.progress{display:flex;align-items:center;gap:16px;max-width:440px;margin-top:16px}
+.progress i{flex:1;height:2px;background:#ECE6E0;position:relative}.progress i::after{content:"";position:absolute;inset:0 50% 0 0;background:var(--c-accent)}
+.arrow{width:28px;height:28px;display:inline-grid;place-items:center;border:0;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.14)}
+.aud{position:relative;min-height:320px;border-radius:var(--r-card);overflow:hidden;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:12px;color:#fff;background:linear-gradient(180deg,rgba(20,14,8,0) 30%,rgba(20,14,8,.78)),url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=70&auto=format&fit=crop') center/cover}
+.aud h5{font-size:2.2rem;color:#fff}
+.formcard{background:#fff;border-radius:var(--r-card);padding:44px;max-width:640px;margin:16px auto 0;box-shadow:var(--sh-soft)}
+.footer-mini{background:var(--c-espresso);color:#fff;border-radius:var(--r-card);padding:56px 48px 36px;margin-top:16px}
+.footer-mini .top{display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:center}
+.footer-mini .lg{height:58px}
+.footer-mini .slogan{font:600 2.2rem/1.25 var(--ff-display)}
+.footer-mini .slogan i{color:var(--c-accent);font-weight:500}
+.footer-mini .slogan em{font-style:normal;color:#BEB3A8}
+.footer-mini .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;font-size:.85rem}
+.footer-mini h6{font:600 .8rem/1.4 var(--ff-body);color:var(--c-accent);margin:0 0 10px}
+.fab{display:inline-block;padding:12.8px;border-radius:999px;background:#fff;border:1px solid rgba(0,0,0,.12);box-shadow:var(--sh-fab)}
+.fab a{display:flex;align-items:center;gap:12px;padding:7px 18px 7px 14px;border:1px solid #000;border-radius:999px;text-decoration:none}
+.fab svg{width:22px;height:22px;animation:ring 3.2s ease-in-out infinite;transform-origin:50% 60%}
+.fab small{display:block;font-size:.7rem;line-height:1.2;text-align:center}
+.fab b{display:block;font-size:1rem;line-height:1.2}
+@keyframes ring{0%,86%,100%{transform:rotate(0)}88%,92%,96%{transform:rotate(-14deg)}90%,94%,98%{transform:rotate(14deg)}}
+
+.demo-box{height:150px;border-radius:18px;background:#fff;display:grid;place-items:center;overflow:hidden;box-shadow:var(--sh-soft);position:relative}
+.demo-box .t{font:600 1.6rem/1 var(--ff-display)}
+.split .wm{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .2em 0;margin:0 -.06em -.2em 0}
+.split .wi{display:inline-block;transform:translateY(calc(100% + .2em));transition:transform .8s cubic-bezier(.33,1,.68,1)}
+.play .split .wi{transform:none}
+.fade-up{opacity:0;transform:translate3d(0,60px,0);transition:opacity 1.25s var(--ease),transform 1.25s var(--ease)}
+.play .fade-up{opacity:1;transform:none}
+.uf .ch{display:inline-block;opacity:0;transform:rotateY(90deg);transition:opacity .7s,transform .7s cubic-bezier(.33,1,.68,1)}
+.play .uf .ch{opacity:1;transform:none}
+.stack-demo div{position:absolute;inset:14px 24px;border-radius:16px;background:#fff;box-shadow:var(--sh-card);transform-origin:50% 0;display:grid;place-items:center;font:600 1.1rem var(--ff-display)}
+.stack-demo .a{animation:stk 3.6s var(--ease) infinite}
+.stack-demo .b2{animation:stk2 3.6s var(--ease) infinite;background:var(--c-beige)}
+@keyframes stk{0%,25%{transform:scale(1);opacity:1}60%,100%{transform:scale(.8);opacity:0}}
+@keyframes stk2{0%,25%{transform:translateY(160px)}60%,100%{transform:translateY(0)}}
+.clip-demo{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=60&auto=format&fit=crop') center/cover;animation:clip 4s var(--ease) infinite alternate}
+@keyframes clip{from{clip-path:inset(0 0 0 0 round 0)}to{clip-path:inset(0 8% 4% 8% round 28px)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.split .wi,.fade-up,.uf .ch{opacity:1;transform:none}}
+@media (max-width:900px){
+  .doc{grid-template-columns:1fr}
+  .side{position:static;height:auto;border-right:0;border-bottom:1px solid #EEE6DE}
+  .side nav{display:flex;flex-wrap:wrap;gap:4px}
+  .spec,.stack-card,.review,.footer-mini .top{grid-template-columns:1fr}
+  .stack-media{min-height:220px}
+  .glass{grid-template-columns:1fr;margin:-90px 10px 0}
+  .glass>div+div{border-left:0;border-top:1px solid rgba(255,255,255,.35)}
+  .bento-mini{grid-template-columns:1fr;grid-template-rows:auto}
+  .b-tall{grid-row:auto;min-height:340px}
+  .step,.step:nth-child(even),.step:nth-child(n+2){width:100%;margin:0}
+  .footer-mini .cols{grid-template-columns:1fr 1fr}
+  .hdr nav{display:none}
+  .scene .chip:nth-of-type(n+5){display:none}
+}
+</style>
+</head>
+<body>
+<div class="doc">
+<aside class="side">
+  <div class="brand"><span>{{MARK}}</span><b>Мовний дім</b></div>
+  <small>Дизайн-система v3 · жовтень 2026<br>референс: localeader.pl</small>
+  <nav>
+    <a href="#overview"><span class="n">00</span>Огляд</a>
+    <a href="#logo"><span class="n">01</span>Логотип</a>
+    <a href="#color"><span class="n">02</span>Кольори</a>
+    <a href="#type"><span class="n">03</span>Типографіка</a>
+    <a href="#space"><span class="n">04</span>Відступи і сітка</a>
+    <a href="#shape"><span class="n">05</span>Радіуси і тіні</a>
+    <a href="#buttons"><span class="n">06</span>Кнопки</a>
+    <a href="#forms"><span class="n">07</span>Форми</a>
+    <a href="#header"><span class="n">08</span>Хедер</a>
+    <a href="#blocks"><span class="n">09</span>Блоки сторінки</a>
+    <a href="#footer"><span class="n">10</span>Футер і FAB</a>
+    <a href="#motion"><span class="n">11</span>Анімація</a>
+    <a href="#responsive"><span class="n">12</span>Адаптив</a>
+    <a href="#photo"><span class="n">13</span>Фото та іконки</a>
+    <a href="#code"><span class="n">14</span>CSS-токени</a>
+    <a href="#files"><span class="n">15</span>Файли проєкту</a>
+  </nav>
+</aside>
+
+<main>
+<section class="ds" id="overview" style="padding-top:0">
+  <div class="hero-doc">
+    <div class="logo-pill">{{LOGO_UA}}</div>
+    <h1>Дизайн-система сайту <i style="color:var(--c-accent-light)">Мовний дім</i></h1>
+    <p>Візуальна мова localeader.pl — теплі пісочні тони, Playfair Display + Instrument Sans, скляні панелі, широкоформатні фото-блоки, sticky-картки, плаваючі слова і скрол-анімації — з логотипом «Мовний дім» у кольорах смарагд + мідь.</p>
+    <div class="meta"><span>Playfair Display · Instrument Sans</span><span>Акцент #C2A58A</span><span>Логотип #1F4B3A + #B07A4F</span><span>Радіус 24 px</span><span>PL · UA</span><span>1440 → 375 px</span></div>
+  </div>
+  <h3>Принципи</h3>
+  <div class="grid g3">
+    <div class="card"><b>Тепла розкіш</b><p style="margin-top:8px;color:var(--c-ink-2)">Кремовий фон #F9F4F0, пісочно-золотий акцент, еспресо-футер. Насичені кольори є лише в логотипі (смарагд і мідь).</p></div>
+    <div class="card"><b>Серіф + гротеск</b><p style="margin-top:8px;color:var(--c-ink-2)">Заголовки — Playfair Display 600, перше слово курсивом в акценті. Текст — Instrument Sans 300/400.</p></div>
+    <div class="card"><b>Широкі блоки й рух</b><p style="margin-top:8px;color:var(--c-ink-2)">Повноширинні фото-картки з радіусом 24 px, багато повітря (80–160 px), а анімації прив'язані до скролу, як у референсі.</p></div>
+  </div>
+</section>
+
+<section class="ds" id="logo">
+  <span class="eyebrow">01 · Логотип</span>
+  <h2 class="ds-h">Логотип «Мовний дім»</h2>
+  <p class="ds-lead">Будиночок з двох половин із лапками «» всередині. Кольори: <b>смарагд #1F4B3A</b> (ліва половина й назва) + <b>мідь #B07A4F</b> (права половина), підпис #6B5B4D. На сайті замінює вордмарк LOCALEADER у хедері/футері та «вежу» Палацу культури в блоці з великим текстом.</p>
+  <div class="grid g3" style="margin-top:24px">
+    <div class="card lgbox"><div class="h">{{LOGO_EN}}</div><small>PL-версія сайту · logo-horizontal-en-color</small></div>
+    <div class="card lgbox"><div class="h">{{LOGO_UA}}</div><small>UA-версія сайту · logo-horizontal-ua-color</small></div>
+    <div class="card lgbox" style="background:var(--c-espresso)"><div class="h">{{LOGO_UA_REV}}</div><small style="color:#BEB3A8">Футер · …-reverse</small></div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Місце</th><th>Версія</th><th>Розмір</th><th>Примітка</th></tr>
+    <tr><td>Хедер (біла плашка)</td><td>horizontal-{en|ua}-color</td><td>висота 46 px (38 px моб.)</td><td>мова логотипа перемикається разом із мовою сайту</td></tr>
+    <tr><td>Футер (еспресо)</td><td>horizontal-{en|ua}-reverse</td><td>висота 66 px (54 px моб.)</td><td>ліва половина знака біла, права — мідна</td></tr>
+    <tr><td>Hero — скляна плитка</td><td>mark-color</td><td>64 % від плитки 300 px</td><td>drop-shadow 0 14px 24px rgba(0,0,0,.25)</td></tr>
+    <tr><td>Блок «Мова не має таємниць»</td><td>mark-color</td><td>min(460px, 70vw)</td><td>стоїть перед текстом, піднімається при появі</td></tr>
+    <tr><td>Bento (золота картка)</td><td>mark-white</td><td>до 190 px</td><td>силует білим</td></tr>
+    <tr><td>Favicon</td><td>favicon</td><td>—</td><td>вбудований у сторінку як data-URI</td></tr>
+  </table></div>
+  <p class="note">На сайті всі логотипи <b>вбудовані прямо в index.html</b> (inline SVG), тому для роботи сайту достатньо трьох файлів: index.html, styles.css, app.js. Не перефарбовувати, не розтягувати, не міняти половинки місцями.</p>
+</section>
+
+<section class="ds" id="color">
+  <span class="eyebrow">02 · Кольори</span>
+  <h2 class="ds-h">Палітра</h2>
+  <p class="ds-lead">Витягнута з глобальних кольорів Elementor-кіту localeader.pl (<code>--e-global-color-*</code>) та обчислених стилів секцій.</p>
+  <h3>Нейтральні</h3>
+  <div class="grid g4">
+    <div class="sw"><div class="c" style="background:#262626"></div><div class="t"><b>Ink</b><code>--c-ink #262626</code><br>заголовки, основний текст</div></div>
+    <div class="sw"><div class="c" style="background:#333"></div><div class="t"><b>Ink 2</b><code>--c-ink-2 #333333</code><br>другорядний текст</div></div>
+    <div class="sw"><div class="c" style="background:#000"></div><div class="t"><b>Black</b><code>--c-black #000000</code><br>лід «Заяви», лейбли форми</div></div>
+    <div class="sw"><div class="c" style="background:#fff;border-bottom:1px solid #eee"></div><div class="t"><b>White</b><code>--c-white #FFFFFF</code><br>картки, світлі секції</div></div>
+    <div class="sw"><div class="c" style="background:#FAFAFA;border-bottom:1px solid #eee"></div><div class="t"><b>Field</b><code>--c-field #FAFAFA</code><br>фон полів форми</div></div>
+  </div>
+  <h3>Теплі (основна гама)</h3>
+  <div class="grid g4">
+    <div class="sw"><div class="c" style="background:#C2A58A"></div><div class="t"><b>Accent · Sand Gold</b><code>--c-accent #C2A58A</code><br>акценти, бордери, CTA, hover</div></div>
+    <div class="sw"><div class="c" style="background:#D3B79D"></div><div class="t"><b>Accent Light</b><code>--c-accent-light #D3B79D</code><br>старт градієнтів</div></div>
+    <div class="sw"><div class="c" style="background:#A3805F"></div><div class="t"><b>Accent Deep</b><code>--c-accent-deep #A3805F</code><br>кінець градієнтів, hover CTA</div></div>
+    <div class="sw"><div class="c" style="background:#48392D"></div><div class="t"><b>Cocoa</b><code>--c-cocoa #48392D</code><br>текст білих пігулок</div></div>
+    <div class="sw"><div class="c" style="background:#CDBBAA"></div><div class="t"><b>Taupe</b><code>--c-taupe #CDBBAA</code><br>низ градієнта «Заяви»</div></div>
+    <div class="sw"><div class="c" style="background:#DDCDC1"></div><div class="t"><b>Hero Sand</b><code>--c-hero #DDCDC1</code><br>основа hero, eyebrow</div></div>
+    <div class="sw"><div class="c" style="background:#F3EDE8"></div><div class="t"><b>Beige</b><code>--c-beige #F3EDE8</code><br>світлі bento, номери кроків</div></div>
+    <div class="sw"><div class="c" style="background:#F9F4F0"></div><div class="t"><b>Cream</b><code>--c-cream #F9F4F0</code><br>фон сторінки</div></div>
+    <div class="sw"><div class="c" style="background:#F9F6F3"></div><div class="t"><b>Cream 2</b><code>--c-cream-2 #F9F6F3</code><br>медіа-частина карток</div></div>
+    <div class="sw"><div class="c" style="background:#18120C"></div><div class="t"><b>Espresso</b><code>--c-espresso #18120C</code><br>футер</div></div>
+  </div>
+  <h3>Бренд (лише логотип)</h3>
+  <div class="grid g4">
+    <div class="sw"><div class="c" style="background:#1F4B3A"></div><div class="t"><b>Emerald · смарагд</b><code>--brand-green #1F4B3A</code><br>ліва половина знака, назва</div></div>
+    <div class="sw"><div class="c" style="background:#B07A4F"></div><div class="t"><b>Copper · мідь</b><code>--brand-copper #B07A4F</code><br>права половина знака</div></div>
+    <div class="sw"><div class="c" style="background:#6B5B4D"></div><div class="t"><b>Warm Grey</b><code>--brand-grey #6B5B4D</code><br>підпис логотипа</div></div>
+    <div class="sw"><div class="c" style="background:#D8CABD"></div><div class="t"><b>Light Taupe</b><code>#D8CABD</code><br>підпис логотипа на темному</div></div>
+  </div>
+  <h3>Градієнти та накладки</h3>
+  <div class="tbl"><table>
+    <tr><th>Назва</th><th>Значення</th><th>Де</th></tr>
+    <tr><td>Hero overlay</td><td><code>linear-gradient(90deg, rgba(62,40,24,.72), rgba(78,52,32,.45) 40%, rgba(90,62,40,.12) 75%) + rgba(118,80,50,.58)</code>, multiply</td><td>фото hero</td></tr>
+    <tr><td>Glass bar</td><td><code>linear-gradient(135deg, rgba(18,18,22,.58), rgba(10,10,12,.22))</code> + blur(18px)</td><td>панель статистики</td></tr>
+    <tr><td>Statement</td><td><code>linear-gradient(180deg, #F9F4F0 10%, #CDBBAA 90%)</code></td><td>блок «Мова не має таємниць»</td></tr>
+    <tr><td>Gold card</td><td><code>linear-gradient(192deg, #D3B79D, #A3805F)</code></td><td>bento «4 мови»</td></tr>
+    <tr><td>Gold text</td><td><code>linear-gradient(180deg, #D3B79D, #A3805F)</code> + background-clip: text</td><td>«15 хвилин»</td></tr>
+    <tr><td>Google score</td><td><code>linear-gradient(180deg, #E6C77E, #C2A58A 60%, #A3805F)</code></td><td>«5.0»</td></tr>
+    <tr><td>Glass chip</td><td><code>rgba(255,255,255,.58)</code> + blur(12px) + бордер rgba(255,255,255,.85)</td><td>плаваючі слова</td></tr>
+    <tr><td>Photo card shade</td><td><code>linear-gradient(180deg, transparent 30%, rgba(20,14,8,.78))</code></td><td>картки аудиторії</td></tr>
+    <tr><td>Contact fade</td><td><code>linear-gradient(180deg, transparent 55%, rgba(24,18,12,.85) 92%, #18120C)</code></td><td>фото за формою → футер</td></tr>
+  </table></div>
+</section>
+
+<section class="ds" id="type">
+  <span class="eyebrow">03 · Типографіка</span>
+  <h2 class="ds-h">Шрифти та шкала</h2>
+  <p class="ds-lead"><b>Playfair Display</b> (400–700, з курсивом і кирилицею) — заголовки й великі цифри. <b>Instrument Sans</b> (400–700) — текст і UI; кирилицю підхоплює <b>Manrope</b>. <b>Poppins 100</b> — лише рейтинг «5.0». База 16 px.</p>
+  <div style="margin-top:20px">
+    <div class="spec"><div class="lbl"><b>Giant</b>Playfair 600 · 16.25rem · lh .8 · ls −4px · великий текст: clamp(5.5rem,13vw,12rem)</div><div style="font:600 7rem/.8 var(--ff-display);letter-spacing:-4px">24<i style="font-size:.4em">години</i></div></div>
+    <div class="spec"><div class="lbl"><b>Display</b>Playfair 600 · clamp(3rem,6.6vw,6rem) · lh 1.1</div><div style="font:600 4.4rem/1.1 var(--ff-display)"><span class="accent">Мова</span> не має</div></div>
+    <div class="spec"><div class="lbl"><b>H2 — секція</b>Playfair 600 · clamp(2.25rem,3.8vw,3.4rem)</div><div style="font:600 3.4rem/1.2 var(--ff-display)"><span class="accent">Чому</span> Мовний дім?</div></div>
+    <div class="spec"><div class="lbl"><b>H2 sm — блок</b>Playfair 600 · clamp(2rem,2.8vw,2.5rem)</div><div style="font:600 2.5rem/1.2 var(--ff-display)"><span class="accent">Історії</span> наших клієнтів</div></div>
+    <div class="spec"><div class="lbl"><b>H1 — hero</b>Playfair 600 · 2.5rem · білий · max 300 px, центр</div><div style="font:600 2.5rem/1.2 var(--ff-display);background:#6b4a31;color:#fff;padding:14px 22px;border-radius:14px;max-width:340px;text-align:center">Перекладемо ваші документи</div></div>
+    <div class="spec"><div class="lbl"><b>H3 — картка</b>Playfair 600 · clamp(1.8rem,2.5vw,2.25rem) · 2-й рядок accent</div><div style="font:600 2.25rem/1.12 var(--ff-display)">Присяжний<br><span style="color:var(--c-accent)">перекладач</span></div></div>
+    <div class="spec"><div class="lbl"><b>H4 / H5</b>Playfair 600 · 1.6rem / 1.25rem</div><div style="font:600 1.6rem/1.2 var(--ff-display)">Швидкий розрахунок</div></div>
+    <div class="spec"><div class="lbl"><b>Italic accent</b>Playfair italic 600 · 1.6rem</div><div style="font:italic 600 1.6rem/1.15 var(--ff-display)">Мені потрібен переклад:</div></div>
+    <div class="spec"><div class="lbl"><b>Lead L</b>Instrument 300 · clamp(1.15rem,1.6vw,1.4rem)</div><div style="font:300 1.4rem/1.5 var(--ff-body);color:#000">Перекладаємо з англійської, польської, української та російської.</div></div>
+    <div class="spec"><div class="lbl"><b>Lead / eyebrow</b>Instrument 300 · 1.2rem</div><div style="font:300 1.2rem/1.4 var(--ff-body)"><b style="font-weight:700">Візьмемо все на себе</b> – від розрахунку до отримання.</div></div>
+    <div class="spec"><div class="lbl"><b>Body</b>Instrument 400 · 1rem · lh 1.6</div><div>Ваші документи в безпеці. Працюємо відповідно до RODO.</div></div>
+    <div class="spec"><div class="lbl"><b>Small / Caption</b>Instrument 400 · .9rem; caption 600 UPPER</div><div style="font-size:.9rem">Відповідаємо з ціною та терміном · <b style="letter-spacing:.04em">СТОРІНОК НА РІК</b></div></div>
+    <div class="spec"><div class="lbl"><b>Micro</b>Instrument 300 · .7rem — підписи меню</div><div style="font:300 .7rem/1.7 var(--ff-body)">присяжні та звичайні</div></div>
+    <div class="spec"><div class="lbl"><b>Thin score</b>Poppins 100 · золотий градієнт</div><div style="font:100 6rem/1 var(--ff-thin);background:linear-gradient(180deg,#E6C77E,#C2A58A 60%,#A3805F);-webkit-background-clip:text;background-clip:text;color:transparent">5.0</div></div>
+  </div>
+</section>
+
+<section class="ds" id="space">
+  <span class="eyebrow">04 · Відступи і сітка</span>
+  <h2 class="ds-h">Простір</h2>
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card">
+      <div class="space-row"><code>--s-1 4</code><i style="width:4px"></i></div>
+      <div class="space-row"><code>--s-2 8</code><i style="width:8px"></i></div>
+      <div class="space-row"><code>--s-3 12</code><i style="width:12px"></i></div>
+      <div class="space-row"><code>--s-4 16</code><i style="width:16px"></i></div>
+      <div class="space-row"><code>--s-5 24</code><i style="width:24px"></i></div>
+      <div class="space-row"><code>--s-6 32</code><i style="width:32px"></i></div>
+      <div class="space-row"><code>--s-7 48</code><i style="width:48px"></i></div>
+      <div class="space-row"><code>--s-8 64</code><i style="width:64px"></i></div>
+      <div class="space-row"><code>--s-9 80</code><i style="width:80px"></i></div>
+      <div class="space-row"><code>--s-10 120</code><i style="width:120px"></i></div>
+      <div class="space-row"><code>--s-11 160</code><i style="width:160px"></i></div>
+    </div>
+    <div class="tbl" style="margin-top:0"><table>
+      <tr><th>Параметр</th><th>Десктоп</th><th>≤1240</th><th>≤640</th></tr>
+      <tr><td>Gutter</td><td>64</td><td>32</td><td>16</td></tr>
+      <tr><td>Frame (hero від краю)</td><td>24</td><td>24</td><td>10</td></tr>
+      <tr><td>Хедер</td><td colspan="3">max 1312 px</td></tr>
+      <tr><td>Стек карток</td><td colspan="3">max 1250 px, gap 96 (24 моб.)</td></tr>
+      <tr><td>Кроки</td><td colspan="3">max 992 px, 2 колонки «драбинкою»</td></tr>
+      <tr><td>Картка форми</td><td colspan="3">max 884 px, padding 64</td></tr>
+      <tr><td>Bento</td><td colspan="3">509fr / 772fr · 320+320 · gap 16</td></tr>
+      <tr><td>Відгуки</td><td colspan="3">832fr / 449fr · gap 16</td></tr>
+    </table></div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Секція</th><th>Фон</th><th>Padding верх / низ</th></tr>
+    <tr><td>Hero</td><td>Cream</td><td>48 / 0 · картка 739 px, скляна панель −60 px</td></tr>
+    <tr><td>Чому (sticky stack)</td><td>Cream</td><td>80 / 160</td></tr>
+    <tr><td>Заява + плаваючі слова</td><td>Cream → Taupe</td><td>72 / 0 · сцена 700 px</td></tr>
+    <tr><td>Процес · установи · bento · відгуки · аудиторія</td><td>White</td><td>80 / 120 · 24 / 64 · 0 / 80 · 48 / 120 · 80 / 80</td></tr>
+    <tr><td>Контакт</td><td>фото → Espresso</td><td>80 / 160</td></tr>
+    <tr><td>Футер</td><td>Espresso</td><td>120 / 48</td></tr>
+  </table></div>
+</section>
+
+<section class="ds" id="shape">
+  <span class="eyebrow">05 · Радіуси і тіні</span>
+  <h2 class="ds-h">Форма</h2>
+  <div class="grid g4" style="margin-top:20px">
+    <div class="card" style="border-radius:24px"><b>--r-card 24</b><p style="font-size:.85rem;color:var(--c-ink-2)">hero, картки, bento, форма</p></div>
+    <div class="card" style="border-radius:16px"><b>--r-tile 16</b><p style="font-size:.85rem;color:var(--c-ink-2)">іконкові плитки</p></div>
+    <div class="card" style="border-radius:40px"><b>--r-header 40</b><p style="font-size:.85rem;color:var(--c-ink-2)">плашка хедера</p></div>
+    <div class="card" style="border-radius:99px;text-align:center"><b>--r-pill 99</b><p style="font-size:.85rem;color:var(--c-ink-2)">кнопки, слова-чипи</p></div>
+  </div>
+  <div class="grid g4" style="margin-top:16px">
+    <div class="card" style="box-shadow:var(--sh-card)"><b>--sh-card</b><br><code>0 5px 10px rgba(0,0,0,.10)</code></div>
+    <div class="card" style="box-shadow:var(--sh-soft)"><b>--sh-soft</b><br><code>2px 4px 12px rgba(0,0,0,.027)</code></div>
+    <div class="card" style="box-shadow:var(--sh-fab)"><b>--sh-fab</b><br><code>0 0 10px rgba(0,0,0,.10)</code></div>
+    <div class="card" style="box-shadow:0 18px 40px rgba(72,57,45,.14)"><b>chip</b><br><code>0 18px 40px rgba(72,57,45,.14)</code></div>
+  </div>
+</section>
+
+<section class="ds" id="buttons">
+  <span class="eyebrow">06 · Кнопки</span>
+  <h2 class="ds-h">Кнопки та пігулки</h2>
+  <p class="ds-lead">Усі кнопки — пігулки (radius 99), Instrument Sans 300 16 px, padding 8×16. Hover: фон Accent, білий текст, 0.25 s.</p>
+  <div class="stage light">
+    <a class="btn btn-outline" href="#buttons">btn-outline</a>
+    <a class="btn btn-accent" href="#buttons">btn-accent</a>
+    <a class="btn btn-white-sm" href="#buttons">btn-white-sm</a>
+    <a class="phone-pill" href="#buttons"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>+48 600 000 000</a>
+    <div class="lang"><button aria-pressed="true">PL</button><button aria-pressed="false">UA</button></div>
+  </div>
+  <div class="stage dark">
+    <a class="btn btn-outline-light" href="#buttons">btn-outline-light</a>
+    <a class="btn btn-white" href="#buttons">btn-white</a>
+    <button class="arrow" aria-label="prev">‹</button>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Клас</th><th>Фон / текст / бордер</th><th>Розмір</th><th>Де</th></tr>
+    <tr><td><code>.btn-outline-light</code></td><td>прозорий / #FFF / 1px Accent</td><td>8×16</td><td>на фото</td></tr>
+    <tr><td><code>.btn-outline</code></td><td>прозорий / Ink / 1px Accent</td><td>8×16</td><td>на світлому</td></tr>
+    <tr><td><code>.btn-white</code></td><td>#FFF / Cocoa</td><td>4.8×32 · 19.2/400</td><td>скляна панель</td></tr>
+    <tr><td><code>.btn-white-sm</code></td><td>#FFF / Black</td><td>8×16</td><td>«Знайомтеся з нами»</td></tr>
+    <tr><td><code>.btn-accent</code></td><td>Accent / #FFF → Accent Deep</td><td>8×16</td><td>форма, футер</td></tr>
+    <tr><td><code>.phone-pill</code></td><td>2px Accent, r 80</td><td>8×24 · 14.4</td><td>хедер</td></tr>
+    <tr><td><code>.lang</code></td><td>Beige, активна Accent</td><td>5×10 · 12/500</td><td>PL · UA</td></tr>
+  </table></div>
+</section>
+
+<section class="ds" id="forms">
+  <span class="eyebrow">07 · Форми</span>
+  <h2 class="ds-h">Поля вводу</h2>
+  <div class="formcard">
+    <h4 style="font-size:2.5rem;text-align:center">Поговорімо</h4>
+    <p style="text-align:center;font-size:.9rem;margin:12px auto 28px;max-width:400px">Розрахуємо вартість перекладу. Залиште повідомлення — відповімо за 15 хвилин.</p>
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:14px 12px">
+      <div class="f"><label>З мови</label><div class="select"><select class="input"><option>UA — українська</option></select></div></div>
+      <div class="f"><label>На мову</label><div class="select"><select class="input"><option>PL — польська</option></select></div></div>
+      <div class="f" style="grid-column:1/-1"><textarea class="input" rows="3" placeholder="Ваше повідомлення"></textarea></div>
+      <div class="f"><input class="input" placeholder="Ім'я"></div>
+      <div class="f"><input class="input err" value="600 00"><span class="msg">Введіть повний номер, напр. +48 600 000 000</span></div>
+      <div style="grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><label style="display:flex;gap:10px;align-items:center;font-size:.9rem"><input type="checkbox" style="width:18px;height:18px;accent-color:var(--c-accent)"> Приймаю політику конфіденційності</label><button class="btn btn-accent">Надіслати повідомлення</button></div>
+    </div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Елемент</th><th>Специфікація</th></tr>
+    <tr><td>Поле</td><td>#FAFAFA · 1px #C2A58A · radius 24 · 8×16 · 15.2 px</td></tr>
+    <tr><td>Focus / помилка</td><td>#A3805F + кільце 3px rgba(194,165,138,.22) / бордер #B4452A + текст 12.8 px</td></tr>
+    <tr><td>Сітка</td><td>6 колонок, gap 14×12 · моб. 1 колонка</td></tr>
+    <tr><td>Валідація</td><td>ім'я ≥ 2 · e-mail · телефон +XXXXXXXXX · файл PDF/DOCX/JPG/PNG ≤ 25 МБ · згода</td></tr>
+  </table></div>
+</section>
+
+<section class="ds" id="header">
+  <span class="eyebrow">08 · Хедер</span>
+  <h2 class="ds-h">Плаваюча біла плашка</h2>
+  <div class="stage light">
+    <div class="hdr">
+      <span class="lg">{{LOGO_EN}}</span>
+      <nav><a href="#header"><span>Usługi</span><small>przysięgłe i zwykłe</small></a><a href="#header"><span>Jak pracujemy?</span><small>4 proste kroki</small></a><a href="#header"><span>Cennik</span><small>od 49 zł za stronę</small></a></nav>
+      <div class="act"><a class="phone-pill" href="#header">+48 600 000 000</a><div class="lang"><button aria-pressed="true">PL</button><button aria-pressed="false">UA</button></div></div>
+    </div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Параметр</th><th>Значення</th></tr>
+    <tr><td>Позиція</td><td>fixed, top 12 px, бічні = gutter, max 1312, z-index 50</td></tr>
+    <tr><td>Плашка</td><td>#FFF · radius 40 · padding 14 32 14 36 → 10 після скролу, тінь 0 6px 24px rgba(72,57,45,.10)</td></tr>
+    <tr><td>Меню</td><td>назва 16/400 + підпис 11.2/300; при скролі підписи згортаються (rotateX −90°, 0.3 s)</td></tr>
+    <tr><td>Поведінка</td><td>ховається при скролі вниз після 400 px, з'являється при скролі вгору (0.45 s)</td></tr>
+    <tr><td>Адаптив</td><td>≤1240 без підписів · ≤1080 без телефону · ≤900 бургер · ≤640 без перемикача мови</td></tr>
+  </table></div>
+</section>
+
+<section class="ds" id="blocks">
+  <span class="eyebrow">09 · Блоки сторінки</span>
+  <h2 class="ds-h">Широкоформатні блоки</h2>
+  <p class="ds-lead">Порядок секцій повторює localeader.pl. Нижче — зменшені живі зразки та специфікації.</p>
+
+  <h3>9.1 Hero + скляна панель статистики</h3>
+  <div class="mini-hero">
+    <div class="eb">Присяжні переклади EN · PL · UA · RU</div>
+    <h4>Перекладемо ваші документи без стресу.</h4>
+    <p style="font-weight:300;max-width:440px"><b style="font-weight:700">Візьмемо все на себе</b> – від розрахунку до отримання.</p>
+    <a class="btn btn-outline-light" href="#blocks" style="margin-top:16px">Хочу дізнатися більше</a>
+  </div>
+  <div class="glass">
+    <div><div class="q">Мені потрібен<br>переклад:</div><a class="btn btn-white" href="#blocks" style="font-size:1rem;margin-right:10px">Присяжний</a><a class="btn btn-white" href="#blocks" style="font-size:1rem">Звичайний</a></div>
+    <div><div class="big">12 000<sup style="font-size:.5em">+</sup></div><div class="cap">сторінок на рік</div></div>
+    <div><div class="big">24<i style="font-size:.5em"> год</i></div><div class="cap">експрес-режим</div></div>
+  </div>
+  <p class="note">Картка min-height 739, radius 24, фото cover + overlay, плавно проявляється (fadeIn 1.25 s). Права колонка — скляна плитка 300×300 зі знаком логотипа та дві курсивні підписи. Скляна панель наїжджає на hero на −60 px і при скролі зсувається вгору (0 → −20 %); цифри рахуються від 0 і зсуваються по горизонталі.</p>
+
+  <h3>9.2 «Чому Мовний дім?» — sticky-стек карток</h3>
+  <div class="stack-card">
+    <div class="stack-copy"><h4>Присяжний <span>перекладач</span></h4><p style="max-width:380px">Завірені переклади, які приймають уряди, суди та університети Польщі.</p></div>
+    <div class="stack-media"><div class="ph"></div><div class="icon-tile"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="15" r="7"/><path d="M20 21v6h8v-6M12 33h24v5H12zM10 42h28"/></svg></div></div>
+  </div>
+  <p class="note">Біла картка 1250 px, radius 24, тінь card; текст зліва (padding-left 80), фото справа з дугою <code>clip-path: ellipse(88% 120% at 100% 60%)</code>, крапковий патерн і скляна плитка з лінійною іконкою. Кожна картка sticky (top 130), а попередня при наїзді наступної зменшується 1 → 0.8 і зникає.</p>
+
+  <h3>9.3 «Мова не має для нас таємниць» — великий текст + плаваючі слова</h3>
+  <div class="scene">
+    <div class="row" style="top:110px">Мова не має для нас таємниць · Мова не має для нас таємниць · </div>
+    <div class="row b" style="top:220px">Мова не має для нас таємниць · Мова не має для нас таємниць · </div>
+    <span class="chip" style="left:6%;top:12%;--d:6s">Język <b>PL</b></span>
+    <span class="chip" style="left:74%;top:8%;--d:7.3s;--dl:-1s;--r:2deg">Мова <b>UA</b></span>
+    <span class="chip" style="left:4%;top:58%;--d:8.6s;--dl:-2s">Language <b>EN</b></span>
+    <span class="chip" style="left:78%;top:55%;--d:9.9s;--dl:-3s;--r:2deg">Язык <b>RU</b></span>
+    <span class="chip" style="left:24%;top:34%;font-size:1rem;--d:6.5s;--dl:-1.5s">Tłumaczenie <b>PL</b></span>
+    <span class="chip" style="left:60%;top:32%;font-size:1rem;--d:7.8s;--dl:-2.5s;--r:2deg">Переклад <b>UA</b></span>
+    <div class="tw">{{MARK}}</div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Елемент</th><th>Специфікація</th></tr>
+    <tr><td>Фон</td><td>градієнт Cream → Taupe, висота сцени 700 px (480 моб.)</td></tr>
+    <tr><td>Великий текст</td><td>2 рядки Playfair 600 clamp(5.5rem,13vw,12rem), білий з прозорістю 60 %, другий рядок на 1.04em нижче; кожен рядок безкінечно пливе (60 s) і ще зсувається від скролу в протилежні боки</td></tr>
+    <tr><td>Будиночок</td><td>знак логотипа min(460px,70vw), по центру знизу, <b>завжди попереду тексту</b> (z-index 3), м'яке біле сяйво позаду, піднімається при появі (1.4 s)</td></tr>
+    <tr><td>Плаваючі слова</td><td>8 скляних чипів: Język·PL, Мова·UA, Language·EN, Язык·RU, Tłumaczenie, Переклад, Translation, Apostille. Розміри L 1.9rem / M 1.5rem / S 1.1rem</td></tr>
+    <tr><td>Рух слів</td><td>поява по черзі з пружинкою (stagger 0.12 s) → безкінечне погойдування ±18px і нахил ±2° (6–10 s) → глибина при скролі (до ±80px) і реакція на курсор</td></tr>
+    <tr><td>Мобільні</td><td>слова менші, 2 середні приховано</td></tr>
+  </table></div>
+
+  <h3>9.4 «Як ми працюємо?» — 4 кроки драбинкою</h3>
+  <div class="steps-mini">
+    <div class="step"><span class="num">01</span><h5>Надсилаєте документ</h5><p>Фото чи скан через форму, e-mail або WhatsApp.</p></div>
+    <div class="step"><span class="num">02</span><h5>Отримуєте розрахунок</h5><p>Ціна й термін за 15 хвилин.</p></div>
+    <div class="step"><span class="num">03</span><h5>Перекладаємо й перевіряємо</h5><p>Перекладач + коректор.</p></div>
+    <div class="step"><span class="num">04</span><h5>Забираєте готове</h5><p>Онлайн, кур'єром або в офісі.</p></div>
+  </div>
+  <p class="note">Кроки по 50 %, парні зсунуті вправо, кожен наступний −24 px — діагональ. Номер Playfair 600 clamp(7rem,11vw,10rem) кольору Beige за заголовком; при скролі номери рухаються з паралаксом (30 → −30 %).</p>
+
+  <h3>9.5 Bento — великі цифри</h3>
+  <div class="bento-mini">
+    <div class="b b-tall"><div><h5>Експрес<br>за 24 години</h5><p style="font-size:.85rem;margin-top:10px">Стільки займає переклад типового документа</p></div><div><div class="gb">24</div><div class="gi" style="margin:-.1em 0 0 1.4em">години</div></div></div>
+    <div class="b b-gold"><div style="width:110px">{{MARK_WHITE}}</div><div class="gb" style="font-size:6.5rem">4</div><div class="gi" style="font-size:2rem;margin-left:-.4em">мови</div><div><h5>Чотири мови</h5><p style="font-size:.85rem;color:var(--c-ink-2)">EN · PL · UA · RU</p></div></div>
+    <div class="b b-sand"><div><h5>Швидкий розрахунок</h5><p style="font-size:.85rem;color:var(--c-ink-2);margin-top:8px">Відповідаємо з ціною та терміном</p></div><div style="text-align:center"><div class="gb">15</div><div class="gi" style="font-size:1.8rem">хвилин</div></div></div>
+  </div>
+  <p class="note">Картки padding 44.8, radius 24, hover scale 1.01. Цифри рахуються від 0; при скролі цифра зсувається 10 → −10 %, а підпис 3 → −53 % — різна швидкість, як у референсі.</p>
+
+  <h3>9.6 Відгуки + Google 5.0</h3>
+  <div class="grid" style="grid-template-columns:832fr 449fr">
+    <div><h4 style="font-size:2.5rem"><span class="accent">Історії</span> наших клієнтів</h4><p style="margin:10px 0 20px">Нам довіряють такі люди, як ви</p>
+      <div class="review"><div style="display:flex;gap:12px"><span class="avatar">OK</span><div><div class="stars">★★★★★</div><b style="font-size:.9rem">Olena Kovalenko</b></div></div><p style="font-size:.95rem;line-height:1.7;color:var(--c-ink-2)">Переклад свідоцтва був готовий за день, ужонд прийняв без питань.</p></div>
+      <div class="progress"><button class="arrow">‹</button><i></i><button class="arrow">›</button></div></div>
+    <div class="google"><div class="g">Google</div><div class="s">5.0</div><div class="stars">★★★★★</div></div>
+  </div>
+  <p class="note">Слайдер-стрічка: перетягування мишею або свайп, стрілки, смужка прогресу; перехід 0.9 s, неактивні слайди напівпрозорі.</p>
+
+  <h3>9.7 Аудиторія — дві фото-картки</h3>
+  <div class="grid g2">
+    <div class="aud"><h5>Приватної особи</h5><p style="font-size:.9rem;max-width:420px">Свідоцтва, дипломи, посвідчення водія, документи для карти побиту.</p><a class="btn btn-outline-light" href="#blocks">Хочу дізнатися більше</a></div>
+    <div class="aud" style="background-image:linear-gradient(180deg,rgba(20,14,8,0) 30%,rgba(20,14,8,.78)),url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=70&auto=format&fit=crop')"><h5>Бізнесу</h5><p style="font-size:.9rem;max-width:420px">Договори, реєстраційні документи, технічна документація.</p><a class="btn btn-outline-light" href="#blocks">Хочу дізнатися більше</a></div>
+  </div>
+</section>
+
+<section class="ds" id="footer">
+  <span class="eyebrow">10 · Футер, форма, FAB</span>
+  <h2 class="ds-h">Нижня частина</h2>
+  <p class="ds-lead">Форма «Поговорімо» живе всередині футера на фото інтер'єру; при скролі фото стискається в картку із заокругленими кутами, а потім переходить в еспресо-футер.</p>
+  <div class="footer-mini">
+    <div class="top"><div class="lg">{{LOGO_EN_REV}}</div><div class="slogan"><i>Знаємо</i> мову установ<br>як ніхто <em>інший.</em></div></div>
+    <div class="cols"><div><b>Movnyi Dim — biuro tłumaczeń</b><br>Warszawa, Polska<br><br>+48 600 000 000</div><div><h6>Швидкі посилання</h6>Головна<br>Про нас<br>Контакти</div><div><h6>Послуги</h6>Присяжні переклади<br>Звичайні переклади</div><div><h6>Мови</h6>Англійська<br>Польська<br>Українська</div></div>
+    <div style="margin-top:32px"><a class="btn btn-accent" href="#footer">Зв'язатися з нами</a></div>
+    <p style="margin-top:18px;font-size:.8rem">© 2026 Movnyi Dim. <u>Політика конфіденційності</u></p>
+  </div>
+  <h3>Плаваюча кнопка дзвінка (FAB)</h3>
+  <div class="stage light"><div class="fab"><a href="#footer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span><small>Зателефонуйте</small><b>+48 600 000 000</b></span></a></div>
+  <p style="max-width:460px;font-size:.9rem">fixed праворуч знизу · з'являється після 600 px скролу · трубка «дзвонить» кожні 3.2 s.</p></div>
+</section>
+
+<section class="ds" id="motion">
+  <span class="eyebrow">11 · Анімація</span>
+  <h2 class="ds-h">Рух</h2>
+  <p class="ds-lead">Відтворює налаштування референсу (GSAP ScrollTrigger + SplitType) власним легким рушієм в app.js — без бібліотек. Easing <code>cubic-bezier(.22,.61,.36,1)</code>. Якщо app.js не запуститься, через 3 s увесь вміст показується без анімації; при «зменшити рух» анімації вимкнено.</p>
+  <div class="grid g3" style="margin-top:20px" id="demos">
+    <div><div class="demo-box"><div class="t split"><span class="wm"><span class="wi">Перекладемо</span></span> <span class="wm"><span class="wi" style="transition-delay:.05s">без</span></span> <span class="wm"><span class="wi" style="transition-delay:.1s">стресу.</span></span></div></div><small>Заголовки: слова виїжджають з маски</small></div>
+    <div><div class="demo-box"><div class="t fade-up">fadeInUp</div></div><small>Поява блоків: 1.25 s, 60px → 0</small></div>
+    <div><div class="demo-box"><div class="t uf" id="uf">Знаємо мову</div></div><small>Слоган футера: літери розгортаються</small></div>
+    <div><div class="demo-box stack-demo"><div class="a">Картка 1</div><div class="b2">Картка 2</div></div><small>Sticky-стек: scale 1→.8, opacity 1→0</small></div>
+    <div><div class="demo-box"><div class="clip-demo"></div></div><small>Форма: clip-path стискається в картку</small></div>
+    <div><div class="demo-box" style="background:linear-gradient(180deg,var(--c-cream),var(--c-taupe))"><span class="chip" style="position:relative;display:inline-flex;align-items:baseline;gap:8px;padding:9px 18px;border-radius:99px;background:rgba(255,255,255,.6);border:1px solid #fff;font:italic 600 1.4rem/1 var(--ff-display);animation:floaty 6s ease-in-out infinite">Мова <b style="font:600 .62rem var(--ff-body);color:var(--c-accent-deep)">UA</b></span></div><small>Плаваючі слова: погойдування ±18px</small></div>
+  </div>
+  <button class="btn btn-accent" style="margin-top:10px" onclick="replay()">▶ Повторити демо</button>
+  <div class="tbl"><table>
+    <tr><th>Анімація</th><th>Тригер</th><th>Тривалість / easing</th><th>Значення</th></tr>
+    <tr><td><b>Заголовки (type3)</b> <code>.split</code></td><td>центр на 95 % екрана</td><td>0.8 s · cubic-bezier(.33,1,.68,1) · stagger 0.05</td><td>слова: translateY(100% + .2em) → 0</td></tr>
+    <tr><td><b>Слоган футера (type1)</b></td><td>скрол: центр 80 % → 40 %</td><td>по літерах, scrub</td><td>rotateY 90° → 0, opacity 0 → 1</td></tr>
+    <tr><td>Поява блоків</td><td>у кадрі</td><td>1.25 s</td><td>opacity 0→1, translateY 60→0</td></tr>
+    <tr><td>Hero</td><td>завантаження</td><td>1.25 s / 2.4 s</td><td>fadeIn картки, фото 1.04 → 1</td></tr>
+    <tr><td>Скляна панель</td><td>скрол (scrub)</td><td>згладжування 0.1</td><td>translateY 0 → −20 %</td></tr>
+    <tr><td>Цифри статистики</td><td>скрол (scrub)</td><td>згладжування</td><td>translateX −40 → 25 % і −35 → 0 %</td></tr>
+    <tr><td>Лічильники</td><td>у кадрі</td><td>1.8 s · easeOutCubic</td><td>0 → N</td></tr>
+    <tr><td>Хедер</td><td>скрол</td><td>0.3 / 0.45 s</td><td>підписи згортаються; ховається вниз / з'являється вгору</td></tr>
+    <tr><td>Sticky stack</td><td>низ картки на 60 % екрана → верх</td><td>scrub 0.1</td><td>scale 1→.8, opacity 1→0</td></tr>
+    <tr><td>Великий текст</td><td>завжди + скрол</td><td>60 s ∞ + ±0.45 px/px</td><td>translateX</td></tr>
+    <tr><td><b>Плаваючі слова</b></td><td>поява сцени + завжди + скрол + курсор</td><td>stagger 0.12 s · 6–10 s ∞</td><td>pop-in scale .6→1, погойдування ±18px / ±2°, глибина</td></tr>
+    <tr><td>Будиночок</td><td>поява сцени</td><td>1.4 s</td><td>translateY 60 → 0, opacity</td></tr>
+    <tr><td>Номери кроків</td><td>скрол</td><td>scrub</td><td>translateY 30 → −30 %</td></tr>
+    <tr><td>Bento</td><td>скрол / hover</td><td>scrub 0.05 / 0.5 s</td><td>цифра 10 → −10 %, підпис 3 → −53 %, hover 1.01</td></tr>
+    <tr><td>Слайдер відгуків</td><td>стрілки, drag, свайп</td><td>0.9 s</td><td>стрічка translateX, смужка прогресу</td></tr>
+    <tr><td>Форма</td><td>скрол: верх → низ секції</td><td>прямо</td><td>clip-path inset 0 → 8% / 4%, radius 0 → 40px</td></tr>
+    <tr><td>Колонки футера</td><td>у кадрі</td><td>1 s · delay 0.1</td><td>translateY 4vw → 0</td></tr>
+    <tr><td>FAB</td><td>скрол &gt; 600</td><td>0.4 s; 3.2 s ∞</td><td>поява; трубка ±14°</td></tr>
+  </table></div>
+</section>
+
+<section class="ds" id="responsive">
+  <span class="eyebrow">12 · Адаптив</span>
+  <h2 class="ds-h">Брейкпоінти</h2>
+  <div class="tbl"><table>
+    <tr><th>Ширина</th><th>Зміни</th></tr>
+    <tr><td>&gt; 1240</td><td>повний макет, gutter 64</td></tr>
+    <tr><td>≤ 1240</td><td>gutter 32 · без підписів меню</td></tr>
+    <tr><td>≤ 1080</td><td>без телефону · hero в 1 колонку · bento і відгуки в 1–2 колонки</td></tr>
+    <tr><td>≤ 900</td><td>бургер · картки без sticky · кроки й аудиторія в 1 колонку · сцена 480</td></tr>
+    <tr><td>≤ 640</td><td>gutter 16 · логотип 38 px · форма в 1 колонку · футер 2×2</td></tr>
+  </table></div>
+  <p class="note">Без фіксованих висот у текстових блоках (українські рядки на 10–20 % довші). Горизонтального скролу немає — перевірено на 375 px.</p>
+</section>
+
+<section class="ds" id="photo">
+  <span class="eyebrow">13 · Фото та іконки</span>
+  <h2 class="ds-h">Візуальний контент</h2>
+  <p class="ds-lead">Теплі натуральні інтер'єри, папір, руки з ручкою, бібліотеки. Зараз — безкоштовні фото Unsplash за прямими посиланнями; перед запуском замінити на власні.</p>
+  <div class="tbl"><table>
+    <tr><th>Місце</th><th>Unsplash ID</th><th>Замінити на</th></tr>
+    <tr><td>Hero</td><td><code>1583847268964-b28dc8f51f92</code></td><td>офіс бюро / перекладач</td></tr>
+    <tr><td>Чому 1–4</td><td><code>1450101499163-c8848c66ca85</code>, <code>1554224155-6726b3ff858f</code>, <code>1434030216411-0b793f4b4173</code>, <code>1589829545856-d10d557cf95f</code></td><td>печатка, телефон, конверт, документи</td></tr>
+    <tr><td>Bento</td><td><code>1481627834876-b7833e8f5570</code>, <code>1522202176988-66273c2fd55f</code></td><td>архів, команда</td></tr>
+    <tr><td>Аудиторія</td><td><code>1600210492486-724fe5c67fb0</code>, <code>1497366216548-37526070297c</code></td><td>приватна особа, офіс</td></tr>
+    <tr><td>Форма</td><td><code>1513694203232-719a280e022f</code></td><td>інтер'єр офісу</td></tr>
+  </table></div>
+  <p class="note">Іконки — тонкі лінійні (stroke 1.4) кольору Accent у скляних плитках. Без емодзі.</p>
+</section>
+
+<section class="ds" id="code">
+  <span class="eyebrow">14 · CSS-токени</span>
+  <h2 class="ds-h">Готовий код</h2>
+  <p class="ds-lead">Перша секція styles.css (також файл tokens.css поруч із цим документом).</p>
+<pre>{{TOKENS_CSS}}</pre>
+</section>
+
+<section class="ds" id="files">
+  <span class="eyebrow">15 · Файли</span>
+  <h2 class="ds-h">Структура проєкту</h2>
+  <div class="tbl"><table>
+    <tr><th>Файл</th><th>Що</th></tr>
+    <tr><td><code>index.html</code></td><td>розмітка всіх секцій + вбудовані логотипи (inline SVG) і favicon</td></tr>
+    <tr><td><code>styles.css</code></td><td>токени → база → компоненти → секції → анімація → адаптив</td></tr>
+    <tr><td><code>app.js</code></td><td>тексти PL/UA, рендер, рушій анімацій, плаваючі слова, слайдер, форма</td></tr>
+    <tr><td><code>assets/logo/</code></td><td>запасна копія логотипів (сайту не потрібна)</td></tr>
+    <tr><td><code>tokens.css</code>, <code>tailwind-theme.css</code></td><td>змінні дизайн-системи</td></tr>
+  </table></div>
+  <p class="note">Для GitHub / Vercel достатньо трьох файлів: index.html, styles.css, app.js.</p>
+</section>
+</main>
+</div>
+<script>
+  function replay(){
+    var d=document.getElementById('demos');d.classList.remove('play');void d.offsetWidth;
+    setTimeout(function(){d.classList.add('play')},60);
+  }
+  (function(){var u=document.getElementById('uf');var t=u.textContent;u.innerHTML=t.split('').map(function(c,i){return c===' '?' ':'<span class="ch" style="transition-delay:'+(i*0.04).toFixed(2)+'s">'+c+'</span>'}).join('')})();
+  document.querySelectorAll('.lang').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))})})});
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){replay();o.disconnect()}})},{threshold:.3}).observe(document.getElementById('demos'))}else replay();
+</script>
+</body>
+</html>

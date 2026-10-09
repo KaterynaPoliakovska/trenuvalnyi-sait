@@ -1,0 +1,46 @@
+/* Movnyi Dim — Tailwind v4 theme v3 (visual system of localeader.pl) */
+@theme {
+  --color-ink: #262626;
+  --color-ink-2: #333333;
+  --color-field: #FAFAFA;
+  --color-accent: #C2A58A;
+  --color-accent-light: #D3B79D;
+  --color-accent-deep: #A3805F;
+  --color-cocoa: #48392D;
+  --color-taupe: #CDBBAA;
+  --color-hero: #DDCDC1;
+  --color-beige: #F3EDE8;
+  --color-cream: #F9F4F0;
+  --color-cream-2: #F9F6F3;
+  --color-espresso: #18120C;
+  --color-brand-green: #1F4B3A;
+  --color-brand-copper: #B07A4F;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Instrument Sans', 'Manrope', system-ui, sans-serif;
+  --font-thin: 'Poppins', sans-serif;
+
+  --text-giant: 16.25rem;
+  --text-display: 6rem;
+  --text-h2: 3.4rem;
+  --text-h2-sm: 2.5rem;
+  --text-h3: 2rem;
+  --text-h4: 1.6rem;
+  --text-h5: 1.25rem;
+  --text-lead-lg: 1.4rem;
+  --text-lead: 1.2rem;
+  --text-small: .9rem;
+  --text-micro: .7rem;
+
+  --radius-card: 24px;
+  --radius-tile: 16px;
+  --radius-pill: 99px;
+  --radius-header: 40px;
+
+  --shadow-card: 0 5px 10px rgba(0,0,0,.10);
+  --shadow-soft: 2px 4px 12px rgba(0,0,0,.027);
+  --shadow-glass: 0 0 55px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.18);
+  --shadow-fab: 0 0 10px rgba(0,0,0,.10);
+
+  --ease-brand: cubic-bezier(.22,.61,.36,1);
+}

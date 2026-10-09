@@ -1,0 +1,67 @@
+/* Movnyi Dim — design tokens v3 (visual system of localeader.pl) */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@100;200&display=swap");
+
+:root {
+  /* colour — neutrals */
+  --c-black: #000000;
+  --c-ink: #262626;          /* headings, body text */
+  --c-ink-2: #333333;        /* secondary text */
+  --c-white: #FFFFFF;
+  --c-field: #FAFAFA;        /* inputs */
+  /* colour — warm palette */
+  --c-accent: #C2A58A;       /* sand gold: accents, borders, CTA */
+  --c-accent-light: #D3B79D; /* gradient start */
+  --c-accent-deep: #A3805F;  /* gradient end, hover */
+  --c-cocoa: #48392D;        /* text on white pills in dark areas */
+  --c-taupe: #CDBBAA;        /* statement gradient end */
+  --c-hero: #DDCDC1;         /* hero card base / eyebrow on dark */
+  --c-beige: #F3EDE8;        /* light cards, step numbers */
+  --c-cream: #F9F4F0;        /* page background */
+  --c-cream-2: #F9F6F3;
+  --c-espresso: #18120C;     /* footer */
+  /* colour — brand (logo only) */
+  --brand-green: #1F4B3A;
+  --brand-copper: #B07A4F;
+
+  /* type */
+  --ff-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --ff-body: 'Instrument Sans', 'Manrope', system-ui, sans-serif;
+  --ff-thin: 'Poppins', 'Instrument Sans', sans-serif;
+
+  --fs-giant: clamp(7rem, 16vw, 16.25rem);   /* 260px numbers / marquee */
+  --fs-display: clamp(3rem, 6.6vw, 6rem);    /* 96px statement */
+  --fs-h2: clamp(2.25rem, 3.8vw, 3.4rem);    /* 54.4px section titles */
+  --fs-h2-sm: clamp(2rem, 2.8vw, 2.5rem);    /* 40px block titles */
+  --fs-h1: clamp(2.25rem, 2.8vw, 2.5rem);    /* 40px hero */
+  --fs-h3: 2rem;                             /* 32px card titles */
+  --fs-h4: 1.6rem;                           /* 25.6px */
+  --fs-h5: 1.25rem;                          /* 20px step titles */
+  --fs-lead-lg: clamp(1.15rem, 1.6vw, 1.4rem);/* 22.4px light */
+  --fs-lead: 1.2rem;                         /* 19.2px light */
+  --fs-body: 1rem;                           /* 16px */
+  --fs-small: .9rem;                         /* 14.4px */
+  --fs-micro: .7rem;                         /* 11.2px nav sub-labels */
+
+  /* spacing (8-pt) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px;
+  --s-7: 48px; --s-8: 64px; --s-9: 80px; --s-10: 120px; --s-11: 160px;
+  --gutter: 64px;            /* side padding of wide blocks */
+  --frame: 24px;             /* hero card inset */
+
+  /* radius */
+  --r-card: 24px;
+  --r-tile: 16px;
+  --r-pill: 99px;
+  --r-header: 40px;
+
+  /* shadow */
+  --sh-card: 0 5px 10px rgba(0,0,0,.10);
+  --sh-soft: 2px 4px 12px rgba(0,0,0,.027);
+  --sh-glass: 0 0 55px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.18);
+  --sh-fab: 0 0 10px rgba(0,0,0,.10);
+
+  /* motion */
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --t-fast: .25s;
+  --t-reveal: 1.25s;
+}

@@ -1,0 +1,73 @@
+{
+  "title": "Movnyi Dim — biuro tłumaczeń przysięgłych EN · PL · UA · RU",
+  "nav": [["Usługi", "przysięgłe i zwykłe"], ["Jak pracujemy?", "4 proste kroki"], ["Cennik", "od 49 zł za stronę"], ["O nas", "poznaj Movnyi Dim"], ["Kontakt", "napisz do nas"]],
+  "eyebrow": "Tłumaczenia przysięgłe EN · PL · UA · RU",
+  "h1": "Przetłumaczymy Twoje dokumenty bez stresu.",
+  "lead": "<b>Zajmiemy się wszystkim</b> – od wyceny po odbiór gotowego tłumaczenia.<br>Ekspres w 24 h, wycena w 15 minut.",
+  "more": "Chcę wiedzieć więcej",
+  "sideA": "Tłumacz<br>przysięgły",
+  "sideB": "EN · PL<br>UA · RU",
+  "barQ": "Potrzebuję<br>tłumaczenia:",
+  "barA": "Przysięgłego",
+  "barB": "Zwykłego",
+  "stat1": "stron rocznie",
+  "stat2u": "h",
+  "stat2": "tryb ekspres",
+  "whyTitle": "<span class=\"accent\">Dlaczego</span> Movnyi Dim?",
+  "why": [
+    { "t": "Tłumacz <span class=\"accent\">przysięgły</span>", "d": "Uwierzytelnione tłumaczenia akceptowane przez urzędy, sądy i uczelnie. Pieczęć i podpis tłumacza przysięgłego.", "i": "stamp" },
+    { "t": "Wycena <span class=\"accent\">w 15 minut</span>", "d": "Wyślij skan lub zdjęcie — odpowiemy z ceną i terminem jeszcze w tym samym kwadransie. Bez zobowiązań.", "i": "clock" },
+    { "t": "Odbiór <span class=\"accent\">online</span>", "d": "Skan z pieczęcią mailem, oryginał kurierem lub osobiście w biurze. Nawet jeśli jesteś za granicą, zajmiemy się wszystkim.", "i": "mail" },
+    { "t": "Pełna <span class=\"accent\">poufność</span>", "d": "Twoje dokumenty są bezpieczne. Pracujemy zgodnie z RODO, a pliki usuwamy po zakończeniu zlecenia.", "i": "shield" }
+  ],
+  "stTitle": "<span class=\"accent\">Język</span><br>nie ma<br>dla nas tajemnic",
+  "stText": "Tłumaczymy z angielskiego, polskiego, ukraińskiego i rosyjskiego — we wszystkich kierunkach. Znamy wymagania polskich urzędów, dlatego nasze tłumaczenia przechodzą bez poprawek. Tłumacz i korektor sprawdzają każdy dokument co do przecinka.",
+  "stBtn": "Poznaj nas",
+  "marquee": "Język nie ma dla nas tajemnic",
+  "floats": [["Język", "PL"], ["Мова", "UA"], ["Tłumaczenie", "PL"], ["Переклад", "UA"], ["Language", "EN"], ["Язык", "RU"], ["Translation", "EN"], ["Apostille", "✓"]],
+  "howTitle": "<span class=\"accent\">Jak</span><br>pracujemy?",
+  "howSub": "Nasz proces opiera się na 4 krokach.",
+  "steps": [
+    ["Wysyłasz dokument", "Zdjęcie lub skan przez formularz, e-mail albo WhatsApp. Wystarczy czytelna kopia."],
+    ["Otrzymujesz wycenę", "Cena i termin w 15 minut. Bez zobowiązań — decydujesz, czy zlecasz."],
+    ["Tłumaczymy i sprawdzamy", "Tłumacz + korektor. Zgodność z oryginałem co do przecinka, poprawna terminologia."],
+    ["Odbierasz gotowe", "Online, kurierem lub w biurze — jak Ci wygodnie. Ty tylko składasz dokumenty w urzędzie."]
+  ],
+  "logosLabel": "Nasze tłumaczenia składasz w",
+  "logos": ["Urząd Wojewódzki", "USC", "ZUS", "Sąd Okręgowy", "Uczelnie", "Urząd Skarbowy", "Notariusz", "Bank"],
+  "b1Title": "Ekspres<br>w 24 godziny", "b1Text": "Tyle zajmuje tłumaczenie typowego dokumentu w trybie ekspres", "b1Unit": "godziny",
+  "b2Title": "Cztery języki", "b2Text": "EN · PL · UA · RU — we wszystkich kierunkach", "b2Unit": "języki",
+  "b3Title": "Szybka wycena", "b3Text": "Odpowiadamy z ceną i terminem w godzinach pracy biura", "b3Unit": "minut",
+  "revTitle": "<span class=\"accent\">Historie</span> naszych klientów",
+  "revSub": "Cieszymy się zaufaniem osób takich, jak Ty",
+  "reviews": [
+    ["Olena Kovalenko", "Tłumaczenie aktu urodzenia gotowe w jeden dzień, urząd przyjął bez pytań. Bardzo miła obsługa po ukraińsku i po polsku."],
+    ["Miejsce na opinię", "Tu pojawi się kolejna prawdziwa opinia klienta z Google. Podmień ten tekst przed publikacją strony."]
+  ],
+  "audTitle": "<span class=\"accent\">Potrzebuję</span>tłumaczenia<br>dla...",
+  "aud": [
+    ["Osoby prywatnej", "Akty stanu cywilnego, dyplomy, prawo jazdy, dokumenty do karty pobytu i obywatelstwa. Zajmiemy się wszystkim — od wyceny po odbiór."],
+    ["Firmy", "Umowy, dokumenty rejestrowe, dokumentacja techniczna i korespondencja. Stała współpraca, faktura VAT i terminy, na których możesz polegać."]
+  ],
+  "audBtn": "Chcę wiedzieć więcej",
+  "formTitle": "Porozmawiajmy",
+  "formSub": "Wycenimy Twoje tłumaczenie.<br>Zostaw wiadomość — odpiszemy w 15 minut.",
+  "from": "Z języka", "to": "Na język", "type": "Rodzaj tłumaczenia",
+  "types": ["Przysięgłe (uwierzytelnione)", "Zwykłe", "Specjalistyczne (prawo, medycyna)"],
+  "fileLabel": "Dokument do wyceny", "fileBtn": "Wybierz plik", "fileHint": "PDF, DOCX, JPG · do 25 MB",
+  "msg": "Twoja wiadomość", "name": "Imię", "email": "Email", "phone": "Numer telefonu",
+  "agree": "Akceptuję <a href=\"#\">politykę prywatności</a>",
+  "send": "Wyślij wiadomość",
+  "errName": "Wpisz imię", "errEmail": "Wpisz poprawny e-mail", "errPhone": "Wpisz pełny numer, np. +48 600 000 000",
+  "errFile": "Dozwolone: PDF, DOCX, JPG, PNG do 25 MB", "errAgree": "Zaznacz zgodę",
+  "okTitle": "Dziękujemy!", "okText": "Wiadomość dotarła. Odpiszemy z wyceną w ciągu 15 minut w godzinach pracy biura.", "okAgain": "Wyślij kolejną",
+  "slogan": "<i>Znamy</i> język urzędów<br>jak nikt <em>inny.</em>",
+  "addr": "Warszawa, Polska",
+  "fcols": [
+    ["Na skróty", [["Strona główna", "#top"], ["O nas", "#o-nas"], ["Blog", "#"], ["Kontakt", "#kontakt"]]],
+    ["Usługi", [["Tłumaczenia przysięgłe", "#uslugi"], ["Tłumaczenia zwykłe", "#uslugi"], ["Tłumaczenia specjalistyczne", "#uslugi"], ["Ekspres 24 h", "#kontakt"]]],
+    ["Języki", [["Angielski", "#kontakt"], ["Polski", "#kontakt"], ["Ukraiński", "#kontakt"], ["Rosyjski", "#kontakt"]]]
+  ],
+  "contactBtn": "Kontakt z nami", "privacy": "Polityka prywatności", "callNow": "Zadzwoń teraz",
+  "langNames": { "UA": "ukraiński", "PL": "polski", "EN": "angielski", "RU": "rosyjski" }
+}
