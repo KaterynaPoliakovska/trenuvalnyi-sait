@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movnyi Dim — biuro tłumaczeń</title>
+  <meta name="description" content="Tłumaczenia przysięgłe i specjalistyczne EN · PL · UA · RU. Ekspres w 24 h, wycena w 15 minut.">
+  <meta name="theme-color" content="#256441">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Movnyi Dim">
+      <img data-logo="color" src="assets/logo/logo-horizontal-en-color.svg" alt="Movnyi Dim — biuro tłumaczeń" width="136" height="56">
+    </a>
+    <nav class="nav" id="nav" data-nav></nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Język / Мова">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+      </div>
+      <a class="btn btn-primary header-cta" href="#wycena" data-t="cta"></a>
+      <button class="menu-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="container hero">
+    <div class="hero-copy">
+      <span class="eyebrow" data-t="eyebrow"></span>
+      <h1 class="h1" data-t="h1"></h1>
+      <p class="lead" data-t="lead"></p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-l" href="#wycena"><span data-t="cta"></span> →</a>
+        <a class="link" href="#proces" data-t="secondary"></a>
+      </div>
+      <div class="stats" data-stats></div>
+    </div>
+    <div class="hero-media">
+      <div class="ph"><span data-t="heroImg"></span></div>
+      <div class="mark-bg"><img src="assets/logo/mark-color.svg" alt=""></div>
+      <div class="float-card">
+        <span class="cap" data-t="pairsLabel"></span>
+        <div class="pills">
+          <span class="pill active">UA → PL</span>
+          <span class="pill">EN → PL</span>
+          <span class="pill">RU → PL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="container section" id="uslugi">
+    <div class="section-head">
+      <span class="eyebrow" data-t="whyEyebrow"></span>
+      <h2 class="h2" data-t="whyTitle"></h2>
+    </div>
+    <div class="cards" data-features></div>
+  </section>
+
+  <!-- Languages -->
+  <section class="container section" id="jezyki">
+    <div class="section-head">
+      <span class="eyebrow" data-t="langsEyebrow"></span>
+      <h2 class="h3" data-t="langsTitle"></h2>
+    </div>
+    <div class="langs" data-langs></div>
+  </section>
+
+  <!-- Process -->
+  <section class="container section" id="proces">
+    <div class="process">
+      <div class="section-head">
+        <h2 class="h3" data-t="howTitle"></h2>
+        <p data-t="howSub"></p>
+      </div>
+      <div class="steps" data-steps></div>
+    </div>
+  </section>
+
+  <!-- Testimonial + dark CTA -->
+  <section class="container section reviews" id="o-nas">
+    <figure class="review" style="margin:0">
+      <span class="qm" aria-hidden="true">“</span>
+      <blockquote data-t="quote"></blockquote>
+      <figcaption class="author">
+        <div class="avatar" aria-hidden="true">OK</div>
+        <div>
+          <div class="author-n">Olena Kovalenko</div>
+          <div class="author-m">Google · ★★★★★ 5.0</div>
+        </div>
+      </figcaption>
+    </figure>
+    <div class="dark-cta" style="grid-template-columns:1fr">
+      <div>
+        <h2 class="h3"><span data-t="darkA"></span> <em data-t="darkB"></em></h2>
+        <p data-t="darkText"></p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-l" href="tel:+48600000000" data-t="call"></a>
+        <a class="link link-on-dark" href="tel:+48600000000">+48 600 000 000</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="container section quote" id="wycena">
+    <div class="quote-aside">
+      <span class="eyebrow" data-t="formEyebrow"></span>
+      <h2 class="h2" data-t="formTitle"></h2>
+      <p data-t="formLead"></p>
+      <div class="tabs" role="tablist" data-tabs></div>
+      <ul class="price-list" data-pricelist></ul>
+      <p class="note" data-t="priceNote"></p>
+    </div>
+
+    <form class="form" id="form" novalidate>
+      <div class="form-body" style="display:flex;flex-direction:column;gap:20px">
+        <div class="pair">
+          <div class="field">
+            <span class="label" data-t="from"></span>
+            <button type="button" class="pair-btn" data-side="from"><span class="code" data-code></span><span class="pair-name" data-name></span></button>
+          </div>
+          <button type="button" class="swap" data-swap aria-label="Zamień">⇄</button>
+          <div class="field">
+            <span class="label" data-t="to"></span>
+            <button type="button" class="pair-btn" data-side="to"><span class="code to" data-code></span><span class="pair-name" data-name></span></button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="type" data-t="type"></label>
+          <div class="select-wrap">
+            <select class="input" id="type" name="type">
+              <option value="sworn" data-t="opt1"></option>
+              <option value="regular" data-t="opt2"></option>
+              <option value="special" data-t="opt3"></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field" data-field="file">
+          <label class="drop" for="file">
+            <span class="drop-t" data-t="upload"></span>
+            <span class="drop-h" data-t="uploadHint"></span>
+            <span class="drop-f" data-filename></span>
+          </label>
+          <input class="sr-only" type="file" id="file" name="file" accept=".pdf,.docx,.jpg,.jpeg">
+          <span class="err" data-t="errFile"></span>
+        </div>
+
+        <div class="field" data-field="name">
+          <label for="name" data-t="name"></label>
+          <input class="input" id="name" name="name" autocomplete="name">
+          <span class="err" data-t="errName"></span>
+        </div>
+
+        <div class="row2">
+          <div class="field" data-field="email">
+            <label for="email" data-t="email"></label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="jan@example.com">
+            <span class="err" data-t="errEmail"></span>
+          </div>
+          <div class="field" data-field="phone">
+            <label for="phone" data-t="phone"></label>
+            <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+48 600 000 000">
+            <span class="err" data-t="err"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="msg" data-t="msg"></label>
+          <textarea class="input" id="msg" name="msg" rows="3"></textarea>
+        </div>
+
+        <div class="field" data-field="agree">
+          <label class="check">
+            <input type="checkbox" id="agree" name="agree">
+            <span class="box" aria-hidden="true"></span>
+            <span data-t="privacy"></span>
+          </label>
+          <span class="err" data-t="errAgree"></span>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn btn-primary btn-l" type="submit" data-t="send"></button>
+          <span class="note" data-t="answerTime"></span>
+        </div>
+      </div>
+
+      <div class="form-success" role="status">
+        <span class="badge badge-success" data-t="b4"></span>
+        <h3 class="h3" data-t="okTitle"></h3>
+        <p data-t="okText"></p>
+        <button type="button" class="link" data-reset data-t="okAgain"></button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<div class="container">
+  <footer class="footer" id="kontakt">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img data-logo="reverse" src="assets/logo/logo-horizontal-en-reverse.svg" alt="Movnyi Dim" width="175" height="72">
+        <p data-t="footerLine"></p>
+      </div>
+      <div data-footer-cols style="display:contents"></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Movnyi Dim · <a href="#" data-t="privacyLink"></a></span>
+      <div class="lang-switch" role="group" aria-label="Język / Мова">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
