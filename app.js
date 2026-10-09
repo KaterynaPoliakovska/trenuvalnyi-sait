@@ -1,449 +1,343 @@
 (function () {
   'use strict';
 
-  var NAV_HREF = ['#uslugi', '#jezyki', '#wycena', '#o-nas', '#kontakt'];
+  var ICONS = {
+    stamp: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="15" r="7"/><path d="M20 21v6h8v-6M12 33h24v5H12zM10 42h28"/></svg>',
+    clock: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="15"/><path d="M24 15v9l6 4"/></svg>',
+    mail:  '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="13" width="32" height="22" rx="4"/><path d="m9 15 15 11 15-11"/></svg>',
+    shield:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 11 13v10c0 8 5.5 14 13 17 7.5-3 13-9 13-17V13z"/><path d="m18 24 4.5 4.5L31 20"/></svg>'
+  };
+
+  var NAV_HREF = ['#uslugi', '#proces', '#cennik', '#o-nas', '#kontakt'];
   var CODES = ['UA', 'PL', 'EN', 'RU'];
 
   var T = {
     pl: {
-      title: 'Movnyi Dim — biuro tłumaczeń',
-      tagline: 'biuro tłumaczeń',
-      nav: [
-        { l: 'Usługi', s: 'przysięgłe i zwykłe' },
-        { l: 'Języki', s: 'EN · PL · UA · RU' },
-        { l: 'Cennik', s: 'od 49 zł za stronę' },
-        { l: 'O nas', s: 'poznaj tłumaczy' },
-        { l: 'Kontakt', s: 'napisz do nas' }
-      ],
-      cta: 'Wyceń tłumaczenie',
-      eyebrow: 'Tłumaczenia przysięgłe i specjalistyczne',
+      title: 'Movnyi Dim — biuro tłumaczeń przysięgłych EN · PL · UA · RU',
+      nav: [['Usługi', 'przysięgłe i zwykłe'], ['Jak pracujemy?', '4 proste kroki'], ['Cennik', 'od 49 zł za stronę'], ['O nas', 'poznaj Movnyi Dim'], ['Kontakt', 'napisz do nas']],
+      eyebrow: 'Tłumaczenia przysięgłe EN · PL · UA · RU',
       h1: 'Przetłumaczymy Twoje dokumenty bez stresu.',
-      lead: 'Angielski, polski, ukraiński i rosyjski. Tłumacz przysięgły, ekspres w 24 h i wycena w 15 minut.',
-      secondary: 'Jak to działa?',
-      call: 'Zadzwoń teraz',
-      send: 'Wyślij zapytanie',
-      stats: [
-        { v: '12 000+', l: 'stron rocznie' },
-        { v: '4', l: 'języki' },
-        { v: '24 h', l: 'tryb ekspres' }
+      lead: '<b>Zajmiemy się wszystkim</b> – od wyceny po odbiór gotowego tłumaczenia. Ekspres w 24 h, wycena w 15 minut.',
+      more: 'Chcę wiedzieć więcej',
+      barQ: 'Potrzebuję tłumaczenia:',
+      barA: 'Przysięgłego', barB: 'Zwykłego',
+      stat1: 'stron rocznie', stat2v: '24 h', stat2: 'tryb ekspres',
+      phHero: 'zdjęcie · tłumacz przy biurku', phCity: 'zdjęcie · dokumenty', phOffice: 'zdjęcie · biuro',
+      whyTitle: '<span class="accent">Dlaczego</span> Movnyi Dim?',
+      why: [
+        { t: 'Tłumacz <span class="accent">przysięgły</span>', d: 'Uwierzytelnione tłumaczenia akceptowane przez urzędy, sądy i uczelnie. Pieczęć i podpis tłumacza przysięgłego.', i: 'stamp', ph: 'zdjęcie · pieczęć' },
+        { t: 'Wycena w <span class="accent">15 minut</span>', d: 'Wyślij skan lub zdjęcie — odpowiemy z ceną i terminem jeszcze w tym samym kwadransie. Bez zobowiązań.', i: 'clock', ph: 'zdjęcie · telefon' },
+        { t: 'Odbiór <span class="accent">online</span>', d: 'Skan z pieczęcią mailem, oryginał kurierem lub osobiście w biurze. Nawet jeśli jesteś za granicą.', i: 'mail', ph: 'zdjęcie · koperta' },
+        { t: 'Pełna <span class="accent">poufność</span>', d: 'Twoje dokumenty są bezpieczne. Pracujemy zgodnie z RODO, a pliki usuwamy po zakończeniu zlecenia.', i: 'shield', ph: 'zdjęcie · dokumenty' }
       ],
-      heroImg: 'photo · tłumacz przy biurku',
-      pairsLabel: 'Najczęstsze pary',
-      from: 'Z języka',
-      to: 'Na język',
-      swap: 'Zamień',
-      type: 'Rodzaj tłumaczenia',
-      opt1: 'Przysięgłe (uwierzytelnione)',
-      opt2: 'Zwykłe',
-      opt3: 'Specjalistyczne (prawo, medycyna)',
-      upload: 'Przeciągnij plik lub wybierz z dysku',
-      uploadHint: 'PDF, DOCX, JPG · do 25 MB',
-      name: 'Imię i nazwisko',
-      email: 'E-mail',
-      phone: 'Telefon',
-      msg: 'Wiadomość',
-      err: 'Wpisz pełny numer telefonu',
-      errName: 'Wpisz imię i nazwisko',
-      errEmail: 'Wpisz poprawny adres e-mail',
-      errFile: 'Dozwolone pliki: PDF, DOCX, JPG do 25 MB',
-      errAgree: 'Zaznacz zgodę, aby wysłać zapytanie',
-      privacy: 'Akceptuję politykę prywatności',
-      answerTime: 'Odpowiemy w 15 minut',
-      b1: 'Przysięgłe', b2: 'Ekspres 24 h', b3: 'Online', b4: 'Gotowe',
-      tabs: ['Osoby prywatne', 'Firmy', 'Urzędy'],
-      pricelists: [
-        [['Akt urodzenia, małżeństwa', 'od 49 zł'], ['Dyplom i suplement', 'od 49 zł / str.'], ['Prawo jazdy, dowód rejestracyjny', 'od 49 zł'], ['Zaświadczenia, wyroki', 'od 49 zł / str.']],
-        [['Umowy i regulaminy', 'od 49 zł / str.'], ['Dokumenty rejestrowe KRS', 'od 49 zł / str.'], ['Dokumentacja techniczna', 'wycena indywidualna'], ['Stała współpraca', 'wycena indywidualna']],
-        [['Akta sądowe i prokuratorskie', 'od 49 zł / str.'], ['Korespondencja urzędowa', 'od 49 zł / str.'], ['Tłumaczenia ustne', 'wycena indywidualna'], ['Faktura VAT', 'zawsze']]
-      ],
-      priceNote: 'Strona rozliczeniowa: 1125 znaków ze spacjami. Ostateczną cenę podajemy po obejrzeniu dokumentu.',
-      whyEyebrow: 'Usługi',
-      whyTitle: 'Dlaczego Movnyi Dim?',
-      features: [
-        { t: 'Tłumacz przysięgły', d: 'Uwierzytelnione tłumaczenia akceptowane przez urzędy, sądy i uczelnie.', img: 'photo · pieczęć', b: 'b1', bc: 'accent' },
-        { t: 'Wycena w 15 minut', d: 'Wyślij skan — odpowiemy z ceną i terminem jeszcze w tym samym kwadransie.', img: 'photo · telefon', b: 'b2', bc: 'solid' },
-        { t: 'Odbiór online', d: 'Skan z pieczęcią mailem, oryginał kurierem lub osobiście w biurze.', img: 'photo · koperta', b: 'b3', bc: 'neutral' }
-      ],
-      langsEyebrow: 'Języki',
-      langsTitle: 'Tłumaczymy we wszystkich kierunkach między czterema językami.',
-      howTitle: 'Jak pracujemy?',
+      stTitle: '<span class="accent">Język</span><br>nie ma<br>dla nas tajemnic',
+      stText: 'Tłumaczymy z angielskiego, polskiego, ukraińskiego i rosyjskiego — we wszystkich kierunkach. Znamy wymagania polskich urzędów, dlatego nasze tłumaczenia przechodzą bez poprawek. Tłumacz i korektor sprawdzają każdy dokument co do przecinka.',
+      stBtn: 'Poznaj nas',
+      marquee: 'Język nie ma dla nas tajemnic · ',
+      howTitle: '<span class="accent">Jak</span><br>pracujemy?',
       howSub: 'Nasz proces opiera się na 4 krokach.',
       steps: [
-        { n: '01', t: 'Wysyłasz dokument', d: 'Zdjęcie lub skan przez formularz, e-mail albo WhatsApp.' },
-        { n: '02', t: 'Otrzymujesz wycenę', d: 'Cena i termin w 15 minut. Bez zobowiązań.' },
-        { n: '03', t: 'Tłumaczymy i sprawdzamy', d: 'Tłumacz + korektor. Zgodność z oryginałem co do przecinka.' },
-        { n: '04', t: 'Odbierasz gotowe', d: 'Online, kurierem lub w biurze — jak Ci wygodnie.' }
+        ['Wysyłasz<br>dokument', 'Zdjęcie lub skan przez formularz, e-mail albo WhatsApp. Wystarczy czytelna kopia.'],
+        ['Otrzymujesz wycenę', 'Cena i termin w 15 minut. Bez zobowiązań — decydujesz, czy zlecasz.'],
+        ['Tłumaczymy i sprawdzamy', 'Tłumacz + korektor. Zgodność z oryginałem co do przecinka, poprawna terminologia.'],
+        ['Odbierasz gotowe', 'Online, kurierem lub w biurze — jak Ci wygodnie. Ty tylko składasz dokumenty w urzędzie.']
       ],
-      quote: 'Tłumaczenie aktu urodzenia gotowe w jeden dzień, urząd przyjął bez pytań. Bardzo miła obsługa po ukraińsku i po polsku.',
-      darkA: 'Tłumaczenie potrzebne',
-      darkB: 'na wczoraj?',
-      darkText: 'Zadzwoń — od razu powiemy, czy zdążymy.',
-      formEyebrow: 'Cennik i wycena',
-      formTitle: 'Wyceń tłumaczenie',
-      formLead: 'Dołącz plik, wybierz parę językową — w ciągu 15 minut odpiszemy z ceną i terminem.',
-      okTitle: 'Dziękujemy!',
-      okText: 'Zapytanie dotarło. Odpowiemy z wyceną w ciągu 15 minut w godzinach pracy biura.',
-      okAgain: 'Wyślij kolejne zapytanie',
-      footerLine: 'Tłumaczenia przysięgłe EN · PL · UA · RU.',
-      footerCols: [
-        { h: 'Na skróty', items: [['Strona główna', '#top'], ['O nas', '#o-nas'], ['Blog', '#'], ['Kontakt', '#wycena']] },
-        { h: 'Usługi', items: [['Tłumaczenia przysięgłe', '#uslugi'], ['Tłumaczenia zwykłe', '#uslugi'], ['Ekspres 24 h', '#wycena']] },
-        { h: 'Kontakt', items: [['+48 600 000 000', 'tel:+48600000000'], ['biuro@movnyidim.pl', 'mailto:biuro@movnyidim.pl']] }
+      logosLabel: 'Nasze tłumaczenia składasz w',
+      logos: ['Urząd Wojewódzki', 'USC', 'ZUS', 'Sąd Okręgowy', 'Uczelnie', 'Urząd Skarbowy', 'Notariusz', 'Bank'],
+      b1Title: 'Ekspres<br>w 24 godziny', b1Text: 'Tyle zajmuje tłumaczenie typowego dokumentu w trybie ekspres', b1Unit: 'godziny',
+      b2Title: 'Cztery języki', b2Text: 'EN · PL · UA · RU — we wszystkich kierunkach', b2Unit: 'języki',
+      b3Title: 'Szybka wycena', b3Text: 'Odpowiadamy z ceną i terminem w godzinach pracy biura', b3Unit: 'minut',
+      revTitle: '<span class="accent">Historie</span> naszych klientów',
+      revSub: 'Cieszymy się zaufaniem osób takich, jak Ty',
+      reviews: [
+        ['Olena Kovalenko', 'Tłumaczenie aktu urodzenia gotowe w jeden dzień, urząd przyjął bez pytań. Bardzo miła obsługa po ukraińsku i po polsku.'],
+        ['Miejsce na opinię', 'Tu pojawi się kolejna prawdziwa opinia klienta z Google. Podmień ten tekst przed publikacją strony.']
       ],
-      privacyLink: 'Polityka prywatności',
-      languageNames: { UA: 'ukraiński', PL: 'polski', EN: 'angielski', RU: 'rosyjski' }
+      audTitle: '<span class="accent">Potrzebuję</span><br>tłumaczenia dla...',
+      aud: [
+        ['Osoby prywatnej', 'Akty stanu cywilnego, dyplomy, prawo jazdy, dokumenty do karty pobytu i obywatelstwa. Zajmiemy się wszystkim — od wyceny po odbiór.', 'zdjęcie · dokumenty', 'dark'],
+        ['Firmy', 'Umowy, dokumenty rejestrowe, dokumentacja techniczna i korespondencja. Stała współpraca, faktura VAT i terminy, na których możesz polegać.', 'zdjęcie · biuro', 'grey']
+      ],
+      audBtn: 'Chcę wiedzieć więcej',
+      formTitle: 'Porozmawiajmy',
+      formSub: 'Wycenimy Twoje tłumaczenie. Zostaw wiadomość — odpiszemy w 15 minut.',
+      from: 'Z języka', to: 'Na język', type: 'Rodzaj tłumaczenia',
+      types: ['Przysięgłe (uwierzytelnione)', 'Zwykłe', 'Specjalistyczne (prawo, medycyna)'],
+      fileLabel: 'Dokument do wyceny', fileBtn: 'Wybierz plik', fileHint: 'PDF, DOCX, JPG · do 25 MB',
+      msg: 'Twoja wiadomość', name: 'Imię', email: 'Email', phone: 'Numer telefonu',
+      agree: 'Akceptuję <a href="#">politykę prywatności</a>',
+      send: 'Wyślij wiadomość',
+      errName: 'Wpisz imię', errEmail: 'Wpisz poprawny e-mail', errPhone: 'Wpisz pełny numer, np. +48 600 000 000',
+      errFile: 'Dozwolone: PDF, DOCX, JPG, PNG do 25 MB', errAgree: 'Zaznacz zgodę',
+      okTitle: 'Dziękujemy!', okText: 'Wiadomość dotarła. Odpiszemy z wyceną w ciągu 15 minut w godzinach pracy biura.', okAgain: 'Wyślij kolejną',
+      slogan: '<i>Znamy</i> język urzędów<br>jak nikt inny.',
+      addr: 'Warszawa, Polska',
+      fcols: [
+        ['Na skróty', [['Strona główna', '#top'], ['O nas', '#o-nas'], ['Blog', '#'], ['Kontakt', '#kontakt']]],
+        ['Usługi', [['Tłumaczenia przysięgłe', '#uslugi'], ['Tłumaczenia zwykłe', '#uslugi'], ['Tłumaczenia specjalistyczne', '#uslugi'], ['Ekspres 24 h', '#kontakt']]],
+        ['Języki', [['Angielski', '#kontakt'], ['Polski', '#kontakt'], ['Ukraiński', '#kontakt'], ['Rosyjski', '#kontakt']]]
+      ],
+      contactBtn: 'Kontakt z nami', privacy: 'Polityka prywatności', callNow: 'Zadzwoń teraz',
+      langNames: { UA: 'ukraiński', PL: 'polski', EN: 'angielski', RU: 'rosyjski' }
     },
 
     ua: {
-      title: 'Мовний дім — бюро перекладів',
-      tagline: 'бюро перекладів',
-      nav: [
-        { l: 'Послуги', s: 'присяжні та звичайні' },
-        { l: 'Мови', s: 'EN · PL · UA · RU' },
-        { l: 'Ціни', s: 'від 49 зл за сторінку' },
-        { l: 'Про нас', s: 'наші перекладачі' },
-        { l: 'Контакти', s: 'напишіть нам' }
-      ],
-      cta: 'Розрахувати вартість',
-      eyebrow: 'Присяжні та спеціалізовані переклади',
+      title: 'Мовний дім — бюро присяжних перекладів EN · PL · UA · RU',
+      nav: [['Послуги', 'присяжні та звичайні'], ['Як ми працюємо?', '4 прості кроки'], ['Ціни', 'від 49 зл за сторінку'], ['Про нас', 'знайомтеся з нами'], ['Контакти', 'напишіть нам']],
+      eyebrow: 'Присяжні переклади EN · PL · UA · RU',
       h1: 'Перекладемо ваші документи без стресу.',
-      lead: 'Англійська, польська, українська та російська. Присяжний перекладач, експрес за 24 год і розрахунок за 15 хвилин.',
-      secondary: 'Як це працює?',
-      call: 'Зателефонувати',
-      send: 'Надіслати запит',
-      stats: [
-        { v: '12 000+', l: 'сторінок на рік' },
-        { v: '4', l: 'мови' },
-        { v: '24 год', l: 'експрес-режим' }
+      lead: '<b>Візьмемо все на себе</b> – від розрахунку до отримання готового перекладу. Експрес за 24 год, розрахунок за 15 хвилин.',
+      more: 'Хочу дізнатися більше',
+      barQ: 'Мені потрібен переклад:',
+      barA: 'Присяжний', barB: 'Звичайний',
+      stat1: 'сторінок на рік', stat2v: '24 год', stat2: 'експрес-режим',
+      phHero: 'фото · перекладач за столом', phCity: 'фото · документи', phOffice: 'фото · офіс',
+      whyTitle: '<span class="accent">Чому</span> Мовний дім?',
+      why: [
+        { t: 'Присяжний <span class="accent">перекладач</span>', d: 'Завірені переклади, які приймають уряди, суди та університети Польщі. Печатка й підпис присяжного перекладача.', i: 'stamp', ph: 'фото · печатка' },
+        { t: 'Розрахунок за <span class="accent">15 хвилин</span>', d: 'Надішліть скан чи фото — відповімо з ціною та терміном протягом чверті години. Без зобов’язань.', i: 'clock', ph: 'фото · телефон' },
+        { t: 'Отримання <span class="accent">онлайн</span>', d: 'Скан з печаткою на e-mail, оригінал кур’єром або особисто в офісі. Навіть якщо ви за кордоном.', i: 'mail', ph: 'фото · конверт' },
+        { t: 'Повна <span class="accent">конфіденційність</span>', d: 'Ваші документи в безпеці. Працюємо відповідно до RODO, а файли видаляємо після завершення замовлення.', i: 'shield', ph: 'фото · документи' }
       ],
-      heroImg: 'photo · перекладач за столом',
-      pairsLabel: 'Найпопулярніші пари',
-      from: 'З мови',
-      to: 'На мову',
-      swap: 'Поміняти',
-      type: 'Тип перекладу',
-      opt1: 'Присяжний (завірений)',
-      opt2: 'Звичайний',
-      opt3: 'Спеціалізований (право, медицина)',
-      upload: 'Перетягніть файл або оберіть з диска',
-      uploadHint: 'PDF, DOCX, JPG · до 25 МБ',
-      name: 'Ім’я та прізвище',
-      email: 'E-mail',
-      phone: 'Телефон',
-      msg: 'Повідомлення',
-      err: 'Введіть повний номер телефону',
-      errName: 'Введіть ім’я та прізвище',
-      errEmail: 'Введіть правильну адресу e-mail',
-      errFile: 'Дозволені файли: PDF, DOCX, JPG до 25 МБ',
-      errAgree: 'Позначте згоду, щоб надіслати запит',
-      privacy: 'Приймаю політику конфіденційності',
-      answerTime: 'Відповімо за 15 хвилин',
-      b1: 'Присяжний', b2: 'Експрес 24 год', b3: 'Онлайн', b4: 'Готово',
-      tabs: ['Приватним особам', 'Бізнесу', 'Установам'],
-      pricelists: [
-        [['Свідоцтво про народження, шлюб', 'від 49 зл'], ['Диплом і додаток', 'від 49 зл / стор.'], ['Посвідчення водія, техпаспорт', 'від 49 зл'], ['Довідки, рішення суду', 'від 49 зл / стор.']],
-        [['Договори та регламенти', 'від 49 зл / стор.'], ['Реєстраційні документи KRS', 'від 49 зл / стор.'], ['Технічна документація', 'індивідуальний розрахунок'], ['Постійна співпраця', 'індивідуальний розрахунок']],
-        [['Судові та прокурорські матеріали', 'від 49 зл / стор.'], ['Офіційне листування', 'від 49 зл / стор.'], ['Усні переклади', 'індивідуальний розрахунок'], ['Фактура VAT', 'завжди']]
-      ],
-      priceNote: 'Розрахункова сторінка: 1125 знаків з пробілами. Остаточну ціну називаємо після перегляду документа.',
-      whyEyebrow: 'Послуги',
-      whyTitle: 'Чому Мовний дім?',
-      features: [
-        { t: 'Присяжний перекладач', d: 'Завірені переклади, які приймають уряди, суди та університети Польщі.', img: 'photo · печатка', b: 'b1', bc: 'accent' },
-        { t: 'Розрахунок за 15 хвилин', d: 'Надішліть скан — відповімо з ціною та терміном протягом чверті години.', img: 'photo · телефон', b: 'b2', bc: 'solid' },
-        { t: 'Отримання онлайн', d: 'Скан з печаткою на e-mail, оригінал кур’єром або особисто в офісі.', img: 'photo · конверт', b: 'b3', bc: 'neutral' }
-      ],
-      langsEyebrow: 'Мови',
-      langsTitle: 'Перекладаємо в усіх напрямках між чотирма мовами.',
-      howTitle: 'Як ми працюємо?',
+      stTitle: '<span class="accent">Мова</span><br>не має<br>для нас таємниць',
+      stText: 'Перекладаємо з англійської, польської, української та російської — в усіх напрямках. Знаємо вимоги польських установ, тому наші переклади приймають без виправлень. Перекладач і коректор перевіряють кожен документ до коми.',
+      stBtn: 'Знайомтеся з нами',
+      marquee: 'Мова не має для нас таємниць · ',
+      howTitle: '<span class="accent">Як</span><br>ми працюємо?',
       howSub: 'Наш процес складається з 4 кроків.',
       steps: [
-        { n: '01', t: 'Надсилаєте документ', d: 'Фото чи скан через форму, e-mail або WhatsApp.' },
-        { n: '02', t: 'Отримуєте розрахунок', d: 'Ціна й термін за 15 хвилин. Без зобов’язань.' },
-        { n: '03', t: 'Перекладаємо й перевіряємо', d: 'Перекладач + коректор. Точно до оригіналу, до коми.' },
-        { n: '04', t: 'Забираєте готове', d: 'Онлайн, кур’єром або в офісі — як вам зручно.' }
+        ['Надсилаєте<br>документ', 'Фото чи скан через форму, e-mail або WhatsApp. Достатньо розбірливої копії.'],
+        ['Отримуєте розрахунок', 'Ціна й термін за 15 хвилин. Без зобов’язань — ви вирішуєте, чи замовляти.'],
+        ['Перекладаємо й перевіряємо', 'Перекладач + коректор. Точно до оригіналу, до коми, з правильною термінологією.'],
+        ['Забираєте готове', 'Онлайн, кур’єром або в офісі — як вам зручно. Вам лишається тільки подати документи.']
       ],
-      quote: 'Переклад свідоцтва про народження був готовий за день, ужонд прийняв без питань. Дуже приємне обслуговування українською та польською.',
-      darkA: 'Потрібен переклад',
-      darkB: 'на вчора?',
-      darkText: 'Зателефонуйте — одразу скажемо, чи встигнемо.',
-      formEyebrow: 'Ціни та розрахунок',
-      formTitle: 'Розрахувати вартість',
-      formLead: 'Додайте файл, оберіть мовну пару — протягом 15 хвилин відповімо з ціною та терміном.',
-      okTitle: 'Дякуємо!',
-      okText: 'Запит отримано. Відповімо з розрахунком протягом 15 хвилин у робочий час бюро.',
-      okAgain: 'Надіслати ще один запит',
-      footerLine: 'Присяжні переклади EN · PL · UA · RU.',
-      footerCols: [
-        { h: 'Швидкі посилання', items: [['Головна', '#top'], ['Про нас', '#o-nas'], ['Блог', '#'], ['Контакти', '#wycena']] },
-        { h: 'Послуги', items: [['Присяжні переклади', '#uslugi'], ['Звичайні переклади', '#uslugi'], ['Експрес 24 год', '#wycena']] },
-        { h: 'Контакти', items: [['+48 600 000 000', 'tel:+48600000000'], ['biuro@movnyidim.pl', 'mailto:biuro@movnyidim.pl']] }
+      logosLabel: 'Наші переклади подають до',
+      logos: ['Urząd Wojewódzki', 'USC', 'ZUS', 'Sąd Okręgowy', 'Університети', 'Urząd Skarbowy', 'Нотаріус', 'Банк'],
+      b1Title: 'Експрес<br>за 24 години', b1Text: 'Стільки займає переклад типового документа в експрес-режимі', b1Unit: 'години',
+      b2Title: 'Чотири мови', b2Text: 'EN · PL · UA · RU — в усіх напрямках', b2Unit: 'мови',
+      b3Title: 'Швидкий розрахунок', b3Text: 'Відповідаємо з ціною та терміном у робочий час бюро', b3Unit: 'хвилин',
+      revTitle: '<span class="accent">Історії</span> наших клієнтів',
+      revSub: 'Нам довіряють такі люди, як ви',
+      reviews: [
+        ['Olena Kovalenko', 'Переклад свідоцтва про народження був готовий за день, ужонд прийняв без питань. Дуже приємне обслуговування українською та польською.'],
+        ['Місце для відгуку', 'Тут з’явиться ще один справжній відгук клієнта з Google. Замініть цей текст перед публікацією сайту.']
       ],
-      privacyLink: 'Політика конфіденційності',
-      languageNames: { UA: 'українська', PL: 'польська', EN: 'англійська', RU: 'російська' }
+      audTitle: '<span class="accent">Мені потрібен</span><br>переклад для...',
+      aud: [
+        ['Приватної особи', 'Свідоцтва, дипломи, посвідчення водія, документи для карти побиту та громадянства. Візьмемо все на себе — від розрахунку до отримання.', 'фото · документи', 'dark'],
+        ['Бізнесу', 'Договори, реєстраційні документи, технічна документація та листування. Постійна співпраця, фактура VAT і терміни, на які можна покластися.', 'фото · офіс', 'grey']
+      ],
+      audBtn: 'Хочу дізнатися більше',
+      formTitle: 'Поговорімо',
+      formSub: 'Розрахуємо вартість перекладу. Залиште повідомлення — відповімо за 15 хвилин.',
+      from: 'З мови', to: 'На мову', type: 'Тип перекладу',
+      types: ['Присяжний (завірений)', 'Звичайний', 'Спеціалізований (право, медицина)'],
+      fileLabel: 'Документ для розрахунку', fileBtn: 'Оберіть файл', fileHint: 'PDF, DOCX, JPG · до 25 МБ',
+      msg: 'Ваше повідомлення', name: 'Ім’я', email: 'Email', phone: 'Номер телефону',
+      agree: 'Приймаю <a href="#">політику конфіденційності</a>',
+      send: 'Надіслати повідомлення',
+      errName: 'Введіть ім’я', errEmail: 'Введіть правильний e-mail', errPhone: 'Введіть повний номер, напр. +48 600 000 000',
+      errFile: 'Дозволено: PDF, DOCX, JPG, PNG до 25 МБ', errAgree: 'Позначте згоду',
+      okTitle: 'Дякуємо!', okText: 'Повідомлення отримано. Відповімо з розрахунком протягом 15 хвилин у робочий час бюро.', okAgain: 'Надіслати ще одне',
+      slogan: '<i>Знаємо</i> мову установ<br>як ніхто інший.',
+      addr: 'Варшава, Польща',
+      fcols: [
+        ['Швидкі посилання', [['Головна', '#top'], ['Про нас', '#o-nas'], ['Блог', '#'], ['Контакти', '#kontakt']]],
+        ['Послуги', [['Присяжні переклади', '#uslugi'], ['Звичайні переклади', '#uslugi'], ['Спеціалізовані переклади', '#uslugi'], ['Експрес 24 год', '#kontakt']]],
+        ['Мови', [['Англійська', '#kontakt'], ['Польська', '#kontakt'], ['Українська', '#kontakt'], ['Російська', '#kontakt']]]
+      ],
+      contactBtn: 'Зв’язатися з нами', privacy: 'Політика конфіденційності', callNow: 'Зателефонуйте',
+      langNames: { UA: 'українська', PL: 'польська', EN: 'англійська', RU: 'російська' }
     }
   };
 
-  var state = { lang: 'pl', from: 'UA', to: 'PL', tab: 0 };
+  var lang = 'pl';
+  var slide = 0;
 
-  function $(sel, root) { return (root || document).querySelector(sel); }
-  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
-  function el(tag, cls, text) {
-    var n = document.createElement(tag);
-    if (cls) n.className = cls;
-    if (text != null) n.textContent = text;
-    return n;
-  }
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
 
-  function readSavedLang() {
-    try { return localStorage.getItem('md-lang'); } catch (e) { return null; }
-  }
-  function saveLang(l) {
-    try { localStorage.setItem('md-lang', l); } catch (e) { /* ignore */ }
-  }
-
-  function renderPair() {
-    var t = T[state.lang];
-    ['from', 'to'].forEach(function (side) {
-      var btn = $('.pair-btn[data-side="' + side + '"]');
-      $('[data-code]', btn).textContent = state[side];
-      $('[data-name]', btn).textContent = t.languageNames[state[side]];
-    });
-    $('[data-swap]').setAttribute('aria-label', t.swap);
-  }
-
-  function renderTabs() {
-    var t = T[state.lang];
-    var tabs = $('[data-tabs]');
-    tabs.innerHTML = '';
-    t.tabs.forEach(function (label, i) {
-      var b = el('button', null, label);
-      b.type = 'button';
-      b.setAttribute('role', 'tab');
-      b.setAttribute('aria-selected', String(i === state.tab));
-      b.addEventListener('click', function () { state.tab = i; renderTabs(); });
-      tabs.appendChild(b);
-    });
-    var list = $('[data-pricelist]');
-    list.innerHTML = '';
-    t.pricelists[state.tab].forEach(function (row) {
-      var li = el('li');
-      li.appendChild(el('span', null, row[0]));
-      li.appendChild(el('b', null, row[1]));
-      list.appendChild(li);
-    });
-  }
-
+  // ---------- Render ----------
   function render() {
-    var t = T[state.lang];
-    var isUa = state.lang === 'ua';
-
-    document.documentElement.lang = isUa ? 'uk' : 'pl';
+    var t = T[lang];
+    document.documentElement.lang = lang === 'ua' ? 'uk' : 'pl';
     document.title = t.title;
 
-    $$('[data-t]').forEach(function (n) {
-      var v = t[n.getAttribute('data-t')];
-      if (typeof v === 'string') n.textContent = v;
+    $$('[data-t]').forEach(function (n) { var v = t[n.dataset.t]; if (typeof v === 'string') n.textContent = v; });
+    $$('[data-html]').forEach(function (n) { var v = t[n.dataset.html]; if (typeof v === 'string') n.innerHTML = v; });
+    $$('[data-ph]').forEach(function (n) { n.placeholder = t[n.dataset.ph]; });
+    $$('[data-label-t]').forEach(function (n) { n.dataset.label = t[n.dataset.labelT]; });
+    $$('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+
+    // headline split into words for the reveal
+    $$('[data-words]').forEach(function (n) {
+      n.innerHTML = t[n.dataset.words].split(' ').map(function (w, i) {
+        return '<span class="w" style="transition-delay:' + (i * 0.08).toFixed(2) + 's">' + esc(w) + '</span>';
+      }).join(' ');
     });
 
-    $$('[data-lang]').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === state.lang));
+    $('[data-nav]').innerHTML = t.nav.map(function (n, i) {
+      return '<a href="' + NAV_HREF[i] + '"><span>' + esc(n[0]) + '</span><small>' + esc(n[1]) + '</small></a>';
+    }).join('');
+
+    $('[data-stack]').innerHTML = t.why.map(function (c) {
+      return '<div class="stack-item"><article class="stack-card">' +
+        '<div class="stack-copy"><h3>' + c.t + '</h3><p>' + esc(c.d) + '</p></div>' +
+        '<div class="stack-media"><div class="photo" data-label="' + esc(c.ph) + '"></div><div class="icon-tile">' + ICONS[c.i] + '</div></div>' +
+        '</article></div>';
+    }).join('');
+
+    var mtext = new Array(5).join(t.marquee);
+    $$('[data-mtext]').forEach(function (n) { n.textContent = mtext + mtext; });
+
+    $('[data-steps]').innerHTML = t.steps.map(function (s, i) {
+      return '<div class="step reveal up"><span class="step-num" aria-hidden="true">0' + (i + 1) + '</span><h3>' + s[0] + '</h3><p>' + esc(s[1]) + '</p></div>';
+    }).join('');
+
+    var logos = t.logos.map(function (l) { return '<span>' + esc(l) + '</span>'; }).join('');
+    $('[data-logos]').innerHTML = logos + logos;
+
+    $('[data-slides]').innerHTML = t.reviews.map(function (r, i) {
+      var initials = r[0].split(' ').map(function (p) { return p[0]; }).join('').slice(0, 2);
+      return '<div class="slide' + (i === slide ? ' active' : '') + '"><div class="reviewer"><span class="avatar">' + esc(initials) + '</span>' +
+        '<div><div class="stars">★★★★★</div><b>' + esc(r[0]) + '</b></div></div><blockquote>' + esc(r[1]) + '</blockquote></div>';
+    }).join('');
+
+    $('[data-aud]').innerHTML = t.aud.map(function (a) {
+      return '<a class="aud-card reveal up" href="#kontakt"><div class="photo-bg photo ' + a[3] + '" data-label="' + esc(a[2]) + '"></div>' +
+        '<h3>' + esc(a[0]) + '</h3><p>' + esc(a[1]) + '</p><span class="btn btn-ghost-light">' + esc(t.audBtn) + '</span></a>';
+    }).join('');
+
+    $('[data-fcols]').innerHTML = t.fcols.map(function (c) {
+      return '<div><h4>' + esc(c[0]) + '</h4><ul>' + c[1].map(function (l) {
+        return '<li><a href="' + l[1] + '">' + esc(l[0]) + '</a></li>';
+      }).join('') + '</ul></div>';
+    }).join('');
+
+    // form selects
+    var from = $('#from'), to = $('#to');
+    var fv = from.value || 'UA', tv = to.value || 'PL';
+    [from, to].forEach(function (s) {
+      s.innerHTML = CODES.map(function (c) { return '<option value="' + c + '">' + c + ' — ' + esc(t.langNames[c]) + '</option>'; }).join('');
+    });
+    from.value = fv; to.value = tv;
+    var type = $('#type'), tyv = type.selectedIndex;
+    type.innerHTML = t.types.map(function (o) { return '<option>' + esc(o) + '</option>'; }).join('');
+    type.selectedIndex = tyv < 0 ? 0 : tyv;
+    if (chosen) $('[data-filename]').textContent = chosen.name;
+
+    observeReveals();
+    // re-show anything already revealed
+    requestAnimationFrame(function () { $$('.words').forEach(function (n) { n.classList.add('in'); }); });
+  }
+
+  function setLang(l) { lang = l; store('md-lang', l); render(); onScroll(); }
+  $$('[data-lang]').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+
+  // ---------- Reveal on scroll (fadeIn / fadeInUp) ----------
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }) : null;
+  function observeReveals() {
+    $$('.reveal:not(.in)').forEach(function (n) { if (io) io.observe(n); else n.classList.add('in'); });
+  }
+
+  // ---------- Header hide/show, FAB, sticky cards, marquee ----------
+  var header = $('#header'), fab = $('#fab');
+  var lastY = window.scrollY, ticking = false;
+
+  function onScroll() {
+    var y = window.scrollY;
+    header.classList.toggle('scrolled', y > 20);
+    header.classList.toggle('hide', y > 400 && y > lastY && !$('#nav').classList.contains('open'));
+    fab.classList.toggle('show', y > 600);
+    lastY = y;
+
+    // stacked cards: each card shrinks to .8 and fades as the next one slides over it
+    var items = $$('.stack-item');
+    items.forEach(function (item, i) {
+      var card = item.firstElementChild, next = items[i + 1];
+      if (!next || window.innerWidth <= 900) { card.style.transform = ''; card.style.opacity = ''; return; }
+      var nTop = next.getBoundingClientRect().top, iTop = item.getBoundingClientRect().top;
+      var dist = item.offsetHeight + 96;
+      var p = Math.min(1, Math.max(0, 1 - (nTop - iTop) / dist));
+      card.style.transform = 'scale(' + (1 - 0.2 * p).toFixed(4) + ')';
+      card.style.opacity = (1 - p).toFixed(3);
     });
 
-    var suffix = isUa ? 'ua' : 'en';
-    $$('[data-logo]').forEach(function (img) {
-      img.src = 'assets/logo/logo-horizontal-' + suffix + '-' + img.getAttribute('data-logo') + '.svg';
-      img.alt = (isUa ? 'Мовний дім — ' : 'Movnyi Dim — ') + t.tagline;
-    });
-
-    // Nav
-    var nav = $('[data-nav]');
-    nav.innerHTML = '';
-    t.nav.forEach(function (item, i) {
-      var a = el('a');
-      a.href = NAV_HREF[i];
-      a.appendChild(el('span', 'l', item.l));
-      a.appendChild(el('span', 's', item.s));
-      nav.appendChild(a);
-    });
-
-    // Stats
-    var stats = $('[data-stats]');
-    stats.innerHTML = '';
-    t.stats.forEach(function (s) {
-      var d = el('div');
-      d.appendChild(el('div', 'stat-v', s.v));
-      d.appendChild(el('div', 'stat-l', s.l));
-      stats.appendChild(d);
-    });
-
-    // Features
-    var cards = $('[data-features]');
-    cards.innerHTML = '';
-    t.features.forEach(function (f) {
-      var c = el('article', 'card');
-      var ph = el('div', 'ph');
-      ph.appendChild(el('span', null, f.img));
-      c.appendChild(ph);
-      c.appendChild(el('span', 'badge badge-' + f.bc, t[f.b]));
-      c.appendChild(el('h3', 'card-t', f.t));
-      c.appendChild(el('p', 'card-d', f.d));
-      cards.appendChild(c);
-    });
-
-    // Language chips
-    var langs = $('[data-langs]');
-    langs.innerHTML = '';
-    ['EN', 'PL', 'UA', 'RU'].forEach(function (code) {
-      var chip = el('span', 'chip');
-      chip.appendChild(el('i', null, code));
-      chip.appendChild(document.createTextNode(t.languageNames[code]));
-      langs.appendChild(chip);
-    });
-
-    // Steps
-    var steps = $('[data-steps]');
-    steps.innerHTML = '';
-    t.steps.forEach(function (s) {
-      var d = el('div', 'step');
-      d.appendChild(el('span', 'step-n', s.n));
-      d.appendChild(el('h3', 'step-t', s.t));
-      d.appendChild(el('p', 'step-d', s.d));
-      steps.appendChild(d);
-    });
-
-    // Footer columns
-    var cols = $('[data-footer-cols]');
-    cols.innerHTML = '';
-    t.footerCols.forEach(function (col) {
-      var d = el('div');
-      d.appendChild(el('h4', null, col.h));
-      var ul = el('ul');
-      col.items.forEach(function (it) {
-        var li = el('li');
-        var a = el('a', null, it[0]);
-        a.href = it[1];
-        li.appendChild(a);
-        ul.appendChild(li);
+    // big text rows move horizontally with scroll
+    var scene = $('[data-marquee]');
+    if (scene) {
+      var r = scene.getBoundingClientRect();
+      var prog = (window.innerHeight - r.top);
+      $$('.marquee-row', scene).forEach(function (row) {
+        var sp = parseFloat(row.dataset.speed);
+        var base = sp < 0 ? 0 : -row.scrollWidth / 2 + window.innerWidth * 0.2;
+        row.style.transform = 'translate3d(' + (base + prog * sp).toFixed(1) + 'px,0,0)';
       });
-      d.appendChild(ul);
-      cols.appendChild(d);
-    });
-
-    renderPair();
-    renderTabs();
+    }
+    ticking = false;
   }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  window.addEventListener('resize', onScroll);
 
-  function setLang(l) {
-    if (!T[l]) return;
-    state.lang = l;
-    saveLang(l);
-    render();
-  }
-
-  // ---------- Events ----------
-  $$('[data-lang]').forEach(function (b) {
-    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
-  });
-
-  var toggle = $('.menu-toggle');
-  var nav = $('#nav');
-  toggle.addEventListener('click', function () {
+  // ---------- Mobile menu ----------
+  var burger = $('.burger'), nav = $('#nav');
+  burger.addEventListener('click', function () {
     var open = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-expanded', String(open));
   });
   nav.addEventListener('click', function (e) {
-    if (e.target.closest('a')) {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
+    if (e.target.closest('a')) { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }
   });
 
-  // Pair picker: click cycles to the next language, skipping the other side's
-  $$('.pair-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var side = btn.getAttribute('data-side');
-      var other = side === 'from' ? 'to' : 'from';
-      var i = CODES.indexOf(state[side]);
-      do { i = (i + 1) % CODES.length; } while (CODES[i] === state[other]);
-      state[side] = CODES[i];
-      renderPair();
-    });
-  });
-  $('[data-swap]').addEventListener('click', function () {
-    var f = state.from; state.from = state.to; state.to = f;
-    renderPair();
-  });
+  // ---------- Reviews slider ----------
+  function go(d) {
+    var slides = $$('.slide');
+    slide = (slide + d + slides.length) % slides.length;
+    slides.forEach(function (s, i) { s.classList.toggle('active', i === slide); });
+  }
+  $('[data-prev]').addEventListener('click', function () { go(-1); });
+  $('[data-next]').addEventListener('click', function () { go(1); });
 
-  // File drop zone
+  // ---------- Form ----------
+  var chosen = null;
   var fileInput = $('#file');
-  var drop = $('.drop');
-  var MAX = 25 * 1024 * 1024;
-  var ALLOWED = /\.(pdf|docx|jpe?g)$/i;
-  var chosenFile = null;
-
-  function setFile(f) {
-    chosenFile = f || null;
-    $('[data-filename]').textContent = f ? f.name : '';
-    validateFile();
-  }
-  function validateFile() {
-    var bad = chosenFile && (!ALLOWED.test(chosenFile.name) || chosenFile.size > MAX);
-    $('[data-field="file"]').classList.toggle('has-error', !!bad);
-    return !bad;
-  }
-  fileInput.addEventListener('change', function () { setFile(fileInput.files[0]); });
-  ['dragenter', 'dragover'].forEach(function (ev) {
-    drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('drag'); });
+  fileInput.addEventListener('change', function () {
+    chosen = fileInput.files[0] || null;
+    $('[data-filename]').textContent = chosen ? chosen.name : T[lang].fileHint;
+    check('file');
   });
-  ['dragleave', 'drop'].forEach(function (ev) {
-    drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove('drag'); });
-  });
-  drop.addEventListener('drop', function (e) {
-    if (e.dataTransfer && e.dataTransfer.files.length) setFile(e.dataTransfer.files[0]);
-  });
-
-  // Validation
-  var form = $('#form');
-  var checks = {
+  var rules = {
     name: function () { return $('#name').value.trim().length > 1; },
     email: function () { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test($('#email').value.trim()); },
     phone: function () { return /^\+\d{9,15}$/.test($('#phone').value.replace(/[\s\-()]/g, '')); },
-    agree: function () { return $('#agree').checked; }
+    agree: function () { return $('#agree').checked; },
+    file: function () { return !chosen || (/\.(pdf|docx|jpe?g|png)$/i.test(chosen.name) && chosen.size <= 25 * 1024 * 1024); }
   };
-  function validate(key) {
-    var ok = checks[key]();
-    $('[data-field="' + key + '"]').classList.toggle('has-error', !ok);
-    return ok;
-  }
-  Object.keys(checks).forEach(function (key) {
-    var input = $('#' + key);
-    var evt = key === 'agree' ? 'change' : 'blur';
-    input.addEventListener(evt, function () { validate(key); });
-    input.addEventListener('input', function () {
-      if ($('[data-field="' + key + '"]').classList.contains('has-error')) validate(key);
-    });
+  function check(k) { var ok = rules[k](); $('[data-f="' + k + '"]').classList.toggle('err', !ok); return ok; }
+  ['name', 'email', 'phone'].forEach(function (k) {
+    $('#' + k).addEventListener('blur', function () { check(k); });
+    $('#' + k).addEventListener('input', function () { if ($('[data-f="' + k + '"]').classList.contains('err')) check(k); });
   });
-
-  form.addEventListener('submit', function (e) {
+  $('#agree').addEventListener('change', function () { check('agree'); });
+  $('#form').addEventListener('submit', function (e) {
     e.preventDefault();
-    var ok = Object.keys(checks).map(validate).every(Boolean) && validateFile();
-    if (!ok) {
-      var first = $('.has-error input, .has-error .drop', form);
-      if (first) first.focus();
-      return;
-    }
+    var ok = Object.keys(rules).map(check).every(Boolean);
+    if (!ok) { var f = $('.f.err input, .f.err textarea'); if (f) f.focus(); return; }
     // TODO: send to e-mail / CRM endpoint
-    form.classList.add('done');
+    $('#formCard').classList.add('done');
   });
   $('[data-reset]').addEventListener('click', function () {
-    form.reset();
-    setFile(null);
-    form.classList.remove('done');
+    $('#form').reset(); chosen = null; $('[data-filename]').textContent = T[lang].fileHint;
+    $('#formCard').classList.remove('done');
   });
 
   // ---------- Init ----------
-  var saved = readSavedLang();
-  if (saved && T[saved]) state.lang = saved;
+  var saved = store('md-lang');
+  if (saved && T[saved]) lang = saved;
   render();
+  onScroll();
 })();
