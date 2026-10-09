@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movnyi Dim — biuro tłumaczeń przysięgłych EN · PL · UA · RU</title>
+  <meta name="description" content="Tłumaczenia przysięgłe i specjalistyczne EN · PL · UA · RU. Ekspres w 24 h, wycena w 15 minut.">
+  <meta name="theme-color" content="#F9F4F0">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+  <script>
+    // hide-before-reveal states only when motion can actually run; if app.js never starts, show everything
+    (function (d) {
+      if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      d.classList.add('motion');
+      setTimeout(function () { if (!window.__mdReady) d.classList.remove('motion'); }, 3000);
+    })(document.documentElement);
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@100;200&display=swap">
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+
+<!-- ============ HEADER (floating white pill) ============ -->
+<header class="header" id="header">
+  <div class="header-bar">
+    <a class="logo" href="#top" aria-label="Movnyi Dim">
+      <img data-logo-lang="en" src="assets/logo/logo-horizontal-en-color.svg" alt="Movnyi Dim — translation bureau" width="434" height="158">
+      <img data-logo-lang="ua" src="assets/logo/logo-horizontal-ua-color.svg" alt="Мовний дім — бюро перекладів" width="468" height="158">
+    </a>
+    <nav class="nav" id="nav" data-nav></nav>
+    <div class="header-actions">
+      <a class="phone-pill" href="tel:+48600000000">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+        +48 600 000 000
+      </a>
+      <div class="lang" role="group" aria-label="Język / Мова">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+      </div>
+      <button class="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-bg" role="img" aria-label="" style="--img:url('https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=2000&q=75&auto=format&fit=crop')"></div>
+      <div class="hero-copy">
+        <span class="eyebrow fade" style="transition-delay:.1s" data-t="eyebrow"></span>
+        <h1 class="split" data-html="h1"></h1>
+        <p class="hero-lead fade" style="transition-delay:.5s" data-html="lead"></p>
+        <a class="btn btn-outline-light fade" style="transition-delay:.7s" href="#dlaczego" data-t="more"></a>
+      </div>
+      <div class="hero-side fade">
+        <div class="hero-mark"><img src="assets/logo/mark-color.svg" alt="" width="100" height="100"></div>
+        <div class="hero-names">
+          <span data-html="sideA"></span>
+          <span data-html="sideB"></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bar-wrap"><div class="hero-bar fade" data-sy="0,-20">
+      <div class="bar-q">
+        <div class="q split" data-html="barQ"></div>
+        <div class="chips">
+          <a class="btn btn-white" href="#kontakt" data-t="barA"></a>
+          <a class="btn btn-white" href="#kontakt" data-t="barB"></a>
+        </div>
+      </div>
+      <div class="bar-stat"><div class="stat-big" data-sx="-40,25"><span data-count="12000" data-sep=" ">0</span><sup>+</sup></div><div class="stat-cap" data-t="stat1"></div></div>
+      <div class="bar-stat"><div class="stat-big" data-sx="-35,0"><span data-count="24">0</span><small data-t="stat2u"></small></div><div class="stat-cap" data-t="stat2"></div></div>
+    </div></div>
+  </section>
+
+  <!-- ============ WHY: sticky stacked cards ============ -->
+  <section class="why" id="dlaczego">
+    <h2 class="h2 center split" data-html="whyTitle"></h2>
+    <div class="stack" data-stack></div>
+  </section>
+
+  <!-- ============ STATEMENT + SCROLL MARQUEE ============ -->
+  <section class="statement" id="o-nas">
+    <div class="statement-copy">
+      <h2 class="display split" data-html="stTitle"></h2>
+      <p class="lead-lg fade-up" data-t="stText"></p>
+      <a class="btn btn-white-sm fade" href="#proces" data-t="stBtn"></a>
+    </div>
+    <div class="marquee-scene" id="marquee" data-marquee>
+      <div class="marquee-row r1" data-speed="-0.45" data-mtext></div>
+      <div class="marquee-row r2" data-speed="0.45" data-mtext></div>
+      <div class="float-words" data-floats aria-hidden="true"></div>
+      <div class="tower"><img src="assets/logo/mark-color.svg" alt="" width="100" height="100"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="process" id="proces">
+    <div class="process-head center">
+      <h2 class="h2 split" data-html="howTitle"></h2>
+      <p class="fade" data-t="howSub"></p>
+    </div>
+    <div class="steps" data-steps></div>
+  </section>
+
+  <!-- ============ LOGOS STRIP ============ -->
+  <section class="logos" id="instytucje">
+    <h2 class="logos-label fade" data-t="logosLabel"></h2>
+    <div class="logos-track"><div class="logos-move" data-logos></div></div>
+  </section>
+
+  <!-- ============ BENTO STATS (wide blocks) ============ -->
+  <section class="bento" id="uslugi">
+    <div class="b-card b-tall fade" style="--img:url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1100&q=75&auto=format&fit=crop')">
+      <h3 data-html="b1Title"></h3>
+      <p data-t="b1Text"></p>
+      <div class="giant" data-sy="10,-10" data-k=".05"><b data-count="24">0</b><i data-t="b1Unit" data-sy="3,-53" data-k=".05"></i></div>
+    </div>
+    <div class="b-card b-gold fade">
+      <div class="b-art"><img src="assets/logo/mark-white.svg" alt="" width="100" height="100"></div>
+      <div class="giant" data-sy="10,-10" data-k=".05"><b data-count="4">0</b><i data-t="b2Unit" data-sy="3,-53" data-k=".05"></i></div>
+      <div class="b-text"><h3 data-t="b2Title"></h3><p data-t="b2Text"></p></div>
+    </div>
+    <div class="b-card b-sand fade" style="--img:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=75&auto=format&fit=crop')">
+      <div class="b-text"><h3 data-t="b3Title"></h3><p data-t="b3Text"></p></div>
+      <div class="giant" data-sy="10,-10" data-k=".05"><b data-count="15">0</b><i data-t="b3Unit" data-sy="3,-53" data-k=".05"></i></div>
+      <div class="b-photo"></div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews" id="opinie">
+    <div class="reviews-main">
+      <h2 class="h2-sm split" data-html="revTitle"></h2>
+      <p class="sub fade" data-t="revSub"></p>
+      <div class="slider fade">
+        <div class="slides" data-slides></div>
+        <div class="slider-nav">
+          <button class="arrow" type="button" data-prev aria-label="Wstecz"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 3 5 8l5 5"/></svg></button>
+            <div class="slider-progress" aria-hidden="true"><i></i></div>
+          <button class="arrow" type="button" data-next aria-label="Dalej"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 3 5 5-5 5"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="google-card fade">
+      <div class="g" aria-label="Google">Google</div>
+      <div class="score">5.0</div>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+    </div>
+  </section>
+
+  <!-- ============ AUDIENCE ============ -->
+  <section class="audience" id="cennik">
+    <h2 class="h2-sm center split" data-html="audTitle"></h2>
+    <div class="aud-grid" data-aud></div>
+  </section>
+</main>
+
+<!-- ============ FOOTER (contact form + dark footer) ============ -->
+<footer class="footer">
+  <section class="contact" id="kontakt" data-clip style="--img:url('https://images.unsplash.com/photo-1513694203232-719a280e022f?w=2000&q=75&auto=format&fit=crop')">
+    <div class="form-card fade-up" id="formCard">
+      <h2 class="h2-sm split" data-t="formTitle"></h2>
+      <p class="sub" data-html="formSub"></p>
+      <form id="form" novalidate>
+        <div class="form-grid">
+          <div class="f half"><label for="from" data-t="from"></label><div class="select"><select class="input" id="from" data-langselect></select></div></div>
+          <div class="f half"><label for="to" data-t="to"></label><div class="select"><select class="input" id="to" data-langselect></select></div></div>
+          <div class="f half"><label for="type" data-t="type"></label><div class="select"><select class="input" id="type" data-types></select></div></div>
+          <div class="f half" data-f="file">
+            <label for="file" data-t="fileLabel"></label>
+            <label class="input file-input" for="file">
+              <span class="file-name" data-filename data-t="fileHint"></span>
+              <span class="file-btn" data-t="fileBtn"></span>
+              <input type="file" id="file" accept=".pdf,.docx,.jpg,.jpeg,.png">
+            </label>
+            <span class="msg" data-t="errFile"></span>
+          </div>
+          <div class="f full"><textarea class="input" id="msg" rows="3" data-ph="msg"></textarea></div>
+          <div class="f third" data-f="name"><input class="input" id="name" autocomplete="name" data-ph="name"><span class="msg" data-t="errName"></span></div>
+          <div class="f third" data-f="email"><input class="input" id="email" type="email" autocomplete="email" data-ph="email"><span class="msg" data-t="errEmail"></span></div>
+          <div class="f third" data-f="phone"><input class="input" id="phone" type="tel" autocomplete="tel" data-ph="phone"><span class="msg" data-t="errPhone"></span></div>
+          <div class="form-foot">
+            <div class="f" data-f="agree">
+              <label class="check"><input type="checkbox" id="agree"><span data-html="agree"></span></label>
+              <span class="msg" data-t="errAgree"></span>
+            </div>
+            <button class="btn btn-accent" type="submit" data-t="send"></button>
+          </div>
+        </div>
+      </form>
+      <div class="form-ok" role="status">
+        <h3 class="h2-sm" data-t="okTitle"></h3>
+        <p data-t="okText"></p>
+        <button class="btn btn-outline" type="button" data-reset data-t="okAgain"></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-main" id="stopka">
+    <div class="footer-hero">
+      <div class="footer-logo rise">
+        <img data-logo-lang="en" src="assets/logo/logo-horizontal-en-reverse.svg" alt="Movnyi Dim" width="434" height="158">
+        <img data-logo-lang="ua" src="assets/logo/logo-horizontal-ua-reverse.svg" alt="Мовний дім" width="468" height="158">
+      </div>
+      <p class="footer-slogan type1" data-html="slogan"></p>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-addr rise">
+        <b>Movnyi Dim — biuro tłumaczeń</b>
+        <span data-t="addr"></span>
+        <span class="gap"></span>
+        <a href="tel:+48600000000">+48 600 000 000</a>
+        <a href="mailto:biuro@movnyidim.pl">biuro@movnyidim.pl</a>
+      </div>
+      <div class="footer-cols rise" data-fcols></div>
+    </div>
+    <div class="footer-bottom rise">
+      <a class="btn btn-accent" href="#kontakt" data-t="contactBtn"></a>
+      <div class="row">
+        <span>© 2026 Movnyi Dim. <a href="#" data-t="privacy"></a></span>
+        <div class="lang lang-dark" role="group" aria-label="Język / Мова">
+          <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+          <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING CALL ============ -->
+<div class="call-fab" id="fab">
+  <a href="tel:+48600000000">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+    <span><small data-t="callNow"></small><b>+48 600 000 000</b></span>
+  </a>
+</div>
+
+<script src="app.js?v=7"></script>
+</body>
+</html>
