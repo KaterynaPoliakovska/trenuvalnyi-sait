@@ -62,6 +62,8 @@ def parse(text):
         for b in blocks:
             if b['t'] == 'buttons':
                 (sec['buttons'] if sec else page['intro_buttons']).extend(b['items'])
+            elif sec is not None and b['t'] == 'link' and re.match(r'^(Послуга|Usługa):', b['label']):
+                sec.setdefault('after', []).append(b)
             elif sec is None:
                 page['intro'].append(b)
             elif item is not None:
@@ -488,7 +490,8 @@ def section_html(sec, lang, key, idx):
         cards = '<div class="cards' + (f' cards-{n}' if n in (2, 3, 4) else '') + '">' + ''.join(
             f'<article class="card fade-up"><h3>{esc(it["h3"])}</h3>{render_blocks(it["blocks"], lang, key, resolve(it["h3"], lang))}</article>'
             for it in items) + '</div>'
-    return f'<section class="sec{alt}"><div class="sec-in"><h2 class="h2-sm split">{h2}</h2>{intro}{cards}{btns}</div></section>'
+    after = render_blocks(sec.get('after', []), lang, key)
+    return f'<section class="sec{alt}"><div class="sec-in"><h2 class="h2-sm split">{h2}</h2>{intro}{cards}{after}{btns}</div></section>'
 
 
 # ---------------------------------------------------------------- page chrome

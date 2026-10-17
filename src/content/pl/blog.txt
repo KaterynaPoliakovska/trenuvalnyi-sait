@@ -3,28 +3,52 @@ description: Przydatne artykuły od biura tłumaczeń «Movnyi Dim»: tłumaczen
 
 # Blog biura tłumaczeń «Movnyi Dim»
 
-Na blogu «Movnyi Dim» odpowiadamy na pytania, które najczęściej słyszymy od klientów: jak przygotować dokumenty do Polski, gdzie uzyskać apostille, jak sprawdzić tłumacza przysięgłego i co zrobić, jeśli w tłumaczeniu jest błąd. Artykuły piszą nasi tłumacze i menedżerowie na podstawie prawdziwych zamówień.
+Witamy na blogu informacyjnym biura tłumaczeń «Movnyi Dim»! Dzielimy się tu praktycznymi poradami, eksperckimi omówieniami i aktualnościami z zakresu legalizacji dokumentów, tłumaczeń urzędowych oraz adaptacji treści biznesowych na rynki zagraniczne.
 
 ## Tłumaczenie przysięgłe
 
-Jak wygląda tłumaczenie przysięgłe, jak sprawdzić tłumacza i ile to kosztuje.
-!todo: Lista artykułów w kategorii — brak artykułów
+Tłumaczenie przysięgłe to oficjalne poświadczenie dokumentu przez certyfikowanego tłumacza wpisanego na listę tłumaczy przysięgłych Ministerstwa Sprawiedliwości. Takie tłumaczenie ma pełną moc prawną w urzędach w Polsce i w krajach UE.
+
+### Czym tłumaczenie przysięgłe różni się od notarialnego?
+Główna różnica dotyczy odpowiedzialności prawnej. Notariusz poświadcza wyłącznie autentyczność podpisu tłumacza i nie sprawdza jakości ani dokładności tekstu. Tłumacz przysięgły natomiast osobiście odpowiada za każdy termin i umieszcza własną pieczęć oraz podpis, dzięki czemu dokument jest honorowany w sądach, urzędach i placówkach edukacyjnych bez dodatkowych procedur.
+
+### Kiedy tłumaczenie przysięgłe jest obowiązkowe?
+Tłumaczenie przysięgłe jest niezbędne przy składaniu dokumentów o kartę pobytu, rekrutacji na polskie uczelnie, zawieraniu małżeństwa za granicą, rejestracji samochodu lub zakupie nieruchomości.
+
 → Usługa: Tłumaczenie przysięgłe
 
 ## Apostille i legalizacja
 
-Gdzie i jak uzyskać apostille, na jakie dokumenty się go nie umieszcza i czym apostille różni się od legalizacji konsularnej.
-!todo: Lista artykułów w kategorii — brak artykułów
+Aby dokument wydany w jednym kraju był uznawany przez urzędy innego państwa, musi przejść procedurę międzynarodowego poświadczenia — uzyskania klauzuli apostille lub legalizacji konsularnej.
+
+### Czym jest apostille i gdzie się je uzyskuje?
+Apostille to ujednolicona klauzula o międzynarodowym wzorze, która potwierdza ważność podpisu i pieczęci urzędnika na dokumencie. Umieszczają ją właściwe ministerstwa (MSZ, Ministerstwo Sprawiedliwości, MEN) kraju, który wydał dokument.
+
+### Różnica między apostille a legalizacją konsularną
+Apostille stosuje się w państwach — stronach Konwencji haskiej. Jeśli państwo, w którym składasz dokumenty, nie przystąpiło do konwencji, obowiązuje bardziej złożona, dwuetapowa procedura — legalizacja konsularna.
+
 → Usługa: Apostille
 
 ## Dokumenty do Polski
 
-Instrukcje krok po kroku: rekrutacja na studia, nostryfikacja, ślub, wymiana prawa jazdy, PESEL i karta stałego pobytu.
-!todo: Lista artykułów w kategorii — brak artykułów
+Przygotowanie pakietu dokumentów na wyjazd, studia lub pracę w Polsce wymaga szczególnej dbałości o szczegóły i wymagania polskiego prawa.
+
+### Tłumaczenie dokumentów edukacyjnych (świadectwa, dyplomy, suplementy)
+Do rekrutacji na polskie uczelnie lub nostryfikacji dyplomu potrzebne jest dokładne tłumaczenie przysięgłe suplementu z ocenami oraz samego dyplomu lub świadectwa. Ważne, aby nazwy przedmiotów odpowiadały polskim standardom edukacyjnym. → Tłumaczenie dokumentów edukacyjnych
+
+### Legalizacja dokumentów dla biznesu i zatrudnienia
+Do założenia spółki (Sp. z o.o.) lub legalnego zatrudnienia potrzebne będą tłumaczenia przysięgłe książeczek pracy, dokumentów statutowych, pełnomocnictw i zaświadczeń o niekaralności. → Tłumaczenia dla biznesu
+
 → Usługa: Dokumenty do Polski
 
 ## Przydatne o tłumaczeniu dokumentów
 
-Jak przygotować dokumenty do tłumaczenia, jak sprawdzić jakość i co zrobić, jeśli w tłumaczeniu jest błąd.
-!todo: Lista artykułów w kategorii — brak artykułów
+Aby przygotowanie dokumentów przebiegło szybko i bez opóźnień, warto pamiętać o kilku podstawowych zasadach jeszcze przed kontaktem z biurem tłumaczeń.
+
+### Jak uniknąć błędów w transliteracji imion i nazwisk
+Zawsze przekazuj menedżerowi lub tłumaczowi kopię pierwszej strony paszportu zagranicznego. Dzięki temu pisownia Twojego imienia i nazwiska w tłumaczeniu będzie w 100% zgodna z oficjalnymi dokumentami.
+
+### Wymagania wobec oryginału dokumentu przed tłumaczeniem
+Dokument powinien być czytelny, niezalaminowany, z wyraźnie widocznymi pieczęciami i podpisami. Wszelkie poprawki lub uszkodzenia mogą być powodem odmowy ze strony urzędów.
+
 → Usługa: Tłumaczenie dokumentów

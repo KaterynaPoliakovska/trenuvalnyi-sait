@@ -6,11 +6,6 @@ pl:about
    [демо, замінити реальним] Członkostwo w stowarzyszeniu tłumaczy
 pl:apostille
    [розділ прихований, немає даних] Opinie klientów
-pl:blog
-   [блок] Lista artykułów w kategorii — brak artykułów
-   [блок] Lista artykułów w kategorii — brak artykułów
-   [блок] Lista artykułów w kategorii — brak artykułów
-   [блок] Lista artykułów w kategorii — brak artykułów
 pl:business
    [розділ прихований, немає даних] Zaufali nam
 pl:contacts
@@ -79,11 +74,6 @@ uk:about
    [демо, замінити реальним] Членство в професійній асоціації перекладачів
 uk:apostille
    [розділ прихований, немає даних] Відгуки клієнтів
-uk:blog
-   [блок] Список статей рубрики — статей поки немає
-   [блок] Список статей рубрики — статей поки немає
-   [блок] Список статей рубрики — статей поки немає
-   [блок] Список статей рубрики — статей поки немає
 uk:business
    [розділ прихований, немає даних] Нам довіряють
 uk:contacts
