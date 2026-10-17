@@ -99,7 +99,7 @@ Przycisk: «Oblicz koszt mojego dokumentu»
 
 ## Terminy realizacji
 
-Standardowy dokument (paszport, akt stanu cywilnego, dyplom) tłumaczymy w ciągu ___ dni roboczych. W przypadku pakietów dokumentów termin ustalamy indywidualnie podczas wyceny.
+Standardowy dokument (paszport, akt stanu cywilnego, dyplom) tłumaczymy w ciągu 5 dni roboczych. W przypadku pakietów dokumentów termin ustalamy indywidualnie podczas wyceny.
 
 ## Tłumaczenia ekspresowe / pilne
 

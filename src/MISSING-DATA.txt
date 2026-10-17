@@ -27,7 +27,6 @@ pl:contacts
    [блок] Jak dojechać: najbliższa stacja metra, komunikacja miejska, parking — brak danych
 pl:documents
    [розділ прихований, немає даних] Opinie klientów
-   Standardowy dokument (paszport, akt, dyplom) tłumaczymy w ciągu ___ dni roboczych. Termin dla pakietu dokumentów ustalamy podczas wyceny.
    Ekspresowe tłumaczenie dokumentów w Kijowie wykonujemy w ciągu ___ godzin, również z poświadczeniem notarialnym. Szybkie tłumaczenie można zamówić przez formularz, podając wymagany termin.
 pl:education
    ___
@@ -47,7 +46,6 @@ pl:employment
 pl:home
    [розділ прихований, немає даних] Nagrody i certyfikaty
    [розділ прихований, немає даних] Opinie klientów
-   Standardowy dokument (paszport, akt stanu cywilnego, dyplom) tłumaczymy w ciągu ___ dni roboczych. W przypadku pakietów dokumentów termin ustalamy indywidualnie podczas wyceny.
    Jeśli potrzebujesz dokumentów na dziś, wykonujemy tłumaczenie ekspresowe w ciągu ___ godzin, również z poświadczeniem notarialnym.
    Tłumaczenie pilne standardowego dokumentu zajmuje ok. ___ godzin. Dokładny czas zależy od objętości oraz rodzaju poświadczenia.
 pl:interpreting
@@ -101,7 +99,6 @@ pl:meeting
    Minimalne zamówienie wynosi ___ godziny, nawet jeśli spotkanie jest krótsze, ponieważ uwzględnia czas dojazdu i przygotowania. Jeśli spotkanie trwa dłużej, każda kolejna godzina jest płatna osobno.
 pl:notarial
    [розділ прихований, немає даних] Opinie klientów
-   Tłumaczenie notarialne standardowego dokumentu trwa ___ dni roboczych.
    Ekspresowe tłumaczenie notarialne dokumentów w Kijowie wykonujemy w ciągu ___ godzin, jeśli dokument dotarł do godziny ___.
 pl:online
    [розділ прихований, немає даних] Opinie klientów
@@ -140,7 +137,6 @@ pl:reviews
    [кнопка прихована] Napisz opinię na stronie — немає посилання на профіль Google / форми відгуку
 pl:sworn
    [розділ прихований, немає даних] Opinie klientów
-   Tłumaczenie przysięgłe standardowego dokumentu (paszport, akt, zaświadczenie) trwa ___ dni roboczych.
    Jeśli masz pilną wizytę w urzędzie lub ambasadzie, zamów ekspresowe tłumaczenie przysięgłe w Kijowie. Czas realizacji wynosi od ___ godzin.
 pl:written
    [розділ прихований, немає даних] Opinie klientów
@@ -175,7 +171,6 @@ uk:contacts
    [блок] Як дістатися: найближча станція метро, громадський транспорт, паркування — дані не надані
 uk:documents
    [розділ прихований, немає даних] Відгуки клієнтів
-   Стандартний документ (паспорт, свідоцтво, диплом) перекладаємо за ___ робочих днів. Для пакета документів термін погоджуємо під час розрахунку.
    Терміновий переклад документів у Києві виконуємо за ___ годин, зокрема з нотаріальним засвідченням. Швидкий переклад документів можна замовити через форму, вказавши потрібний термін.
 uk:education
    ___
@@ -195,7 +190,6 @@ uk:employment
 uk:home
    [розділ прихований, немає даних] Нагороди та сертифікати
    [розділ прихований, немає даних] Відгуки клієнтів
-   Стандартний документ (паспорт, свідоцтво, диплом) перекладаємо за ___ робочих днів. Для пакета документів термін погоджуємо під час розрахунку.
    Якщо документи потрібні сьогодні, виконуємо терміновий переклад за ___ годин, зокрема з нотаріальним засвідченням.
    Терміновий переклад стандартного документа займає ___ годин. Точний термін залежить від обсягу й засвідчення, тож менеджер назве його під час розрахунку.
    [блок] Під контактами розмістіть карту.
@@ -250,7 +244,6 @@ uk:meeting
    Мінімальне замовлення становить ___ години, навіть якщо зустріч коротша, бо в нього враховано час на дорогу та підготовку. Якщо зустріч триває довше, кожна наступна година оплачується окремо.
 uk:notarial
    [розділ прихований, немає даних] Відгуки клієнтів
-   Нотаріальний переклад стандартного документа займає ___ робочих днів.
    Терміновий нотаріальний переклад документів у Києві виконуємо за ___ годин, якщо документ надійшов до ___ години.
    [блок] Під контактами розмістіть карту та кнопку «Прокласти маршрут», бо для локального наміру це важливо.
 uk:online
@@ -291,7 +284,6 @@ uk:reviews
    [кнопка прихована] Написати відгук на сайті — немає посилання на профіль Google / форми відгуку
 uk:sworn
    [розділ прихований, немає даних] Відгуки клієнтів
-   Присяжний переклад стандартного документа (паспорт, свідоцтво, довідка) займає ___ робочих днів. Для пакета документів термін погоджуємо під час розрахунку.
    Якщо документи потрібні до візиту в ужонд чи посольство, замовте присяжний переклад документів терміново в Києві. Терміновий переклад виконуємо за ___ годин.
 uk:written
    [розділ прихований, немає даних] Відгуки клієнтів
