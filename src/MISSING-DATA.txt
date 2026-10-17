@@ -1,6 +1,10 @@
 pl:about
-   [розділ прихований, немає даних] Nagrody i certyfikaty
    Biuro «Movnyi Dim» zostało założone w ___ roku w Kijowie. Zaczynaliśmy od tłumaczenia dokumentów dla Ukraińców przeprowadzających się do Polski i dlatego język polski oraz tłumaczenia przysięgłe nadal są naszym głównym kierunkiem. Dziś wykonujemy ponad ___ tłumaczeń rocznie dla klientów prywatnych i firm.
+   [демо, замінити реальним] Dyplom tłumacza języka polskiego
+   [демо, замінити реальним] Zaświadczenie tłumacza przysięgłego
+   [демо, замінити реальним] Certyfikat z tłumaczeń prawniczych
+   [демо, замінити реальним] Certyfikat z tłumaczeń medycznych
+   [демо, замінити реальним] Członkostwo w stowarzyszeniu tłumaczy
 pl:apostille
    [розділ прихований, немає даних] Opinie klientów
    Standardowy termin zależy od ministerstwa i wynosi ___ dni roboczych. Pilne apostille w Kijowie jest możliwe w ciągu ___ dni roboczych, w tym pilne apostille na dyplom w Ministerstwie Edukacji.
@@ -44,9 +48,15 @@ pl:employment
    ___ godzin
    Ceny tłumaczenia umowy o pracę i książeczki pracy zależą od objętości, języka i rodzaju poświadczenia. Ekspresowe tłumaczenie umowy o pracę wykonujemy w ciągu ___ godzin.
 pl:home
-   [розділ прихований, немає даних] Nagrody i certyfikaty
-   [розділ прихований, немає даних] Opinie klientów
    Jeśli potrzebujesz dokumentów na dziś, wykonujemy tłumaczenie ekspresowe w ciągu ___ godzin, również z poświadczeniem notarialnym.
+   [демо, замінити реальним] Dyplom tłumacza języka polskiego
+   [демо, замінити реальним] Zaświadczenie tłumacza przysięgłego
+   [демо, замінити реальним] Certyfikat z tłumaczeń prawniczych
+   [демо, замінити реальним] Certyfikat z tłumaczeń medycznych
+   [демо, замінити реальним] Członkostwo w stowarzyszeniu tłumaczy
+   [демо, замінити реальним] Olena K.
+   [демо, замінити реальним] Andrij M.
+   [демо, замінити реальним] Iryna S.
    Tłumaczenie pilne standardowego dokumentu zajmuje ok. ___ godzin. Dokładny czas zależy od objętości oraz rodzaju poświadczenia.
 pl:interpreting
    [розділ прихований, немає даних] Opinie klientów
@@ -131,8 +141,16 @@ pl:privacy
 pl:reviews
    [блок] Pod wstępem umieść filtr według usług: «Tłumaczenie przysięgłe», «Tłumaczenie notarialne», «Tłumaczenie paszportu», «Tłumaczenie dyplomu», «Apostille», «Dokumenty do Polski», «Tłumaczenia ustne», «Dla biznesu».
    [кнопка прихована] Zobacz opinie w Google — немає посилання на профіль Google / форми відгуку
-   [блок] Umieść tutaj prawdziwe opinie. Każda powinna zawierać imię, nazwę usługi (np. «Tłumaczenie przysięgłe aktu urodzenia») i datę.
-   [блок] Umieść tutaj opinie z nazwą firmy i logo, jeśli firma wyraziła na to zgodę.
+   [демо, замінити реальним] Olena K.
+   [демо, замінити реальним] Andrij M.
+   [демо, замінити реальним] Iryna S.
+   [демо, замінити реальним] Maksym T.
+   [демо, замінити реальним] Natalia H.
+   [демо, замінити реальним] Serhij P.
+   [демо, замінити реальним] Julia D.
+   [демо, замінити реальним] Demo Logistic Sp. z o.o.
+   [демо, замінити реальним] Demo Tech Sp. z o.o.
+   [демо, замінити реальним] Firma «Demo»
    [кнопка прихована] Dodaj opinię w Google — немає посилання на профіль Google / форми відгуку
    [кнопка прихована] Napisz opinię na stronie — немає посилання на профіль Google / форми відгуку
 pl:sworn
@@ -143,8 +161,12 @@ pl:written
    Standardowa wydajność to ___ stron rozliczeniowych dziennie. Duże teksty tłumaczymy etapami, a termin ustalamy podczas wyceny.
    Ekspresowe tłumaczenie pisemne w Kijowie wykonujemy w ciągu ___ godzin. Aby zamówić pilne tłumaczenie tekstu, wpisz wymagany termin w formularzu.
 uk:about
-   [розділ прихований, немає даних] Нагороди та сертифікати
    Бюро «Мовний дім» засноване у ___ році в Києві. Ми почали з перекладу документів для українців, які переїжджали до Польщі, і саме тому польська мова та присяжний переклад досі залишаються нашим головним напрямком. Сьогодні ми виконуємо понад ___ перекладів на рік для приватних клієнтів і компаній.
+   [демо, замінити реальним] Диплом перекладача польської мови
+   [демо, замінити реальним] Свідоцтво присяжного перекладача
+   [демо, замінити реальним] Сертифікат з юридичного перекладу
+   [демо, замінити реальним] Сертифікат з медичного перекладу
+   [демо, замінити реальним] Членство в професійній асоціації перекладачів
 uk:apostille
    [розділ прихований, немає даних] Відгуки клієнтів
    Стандартний термін залежить від міністерства й становить ___ робочих днів. Терміновий апостиль у Києві можливий за ___ робочих днів, зокрема терміновий апостиль у Міністерстві освіти на диплом.
@@ -188,9 +210,15 @@ uk:employment
    ___ годин
    Ціни на переклад трудового договору та трудової книжки залежать від обсягу, мови й типу засвідчення. Терміновий переклад трудового договору виконуємо за ___ годин.
 uk:home
-   [розділ прихований, немає даних] Нагороди та сертифікати
-   [розділ прихований, немає даних] Відгуки клієнтів
    Якщо документи потрібні сьогодні, виконуємо терміновий переклад за ___ годин, зокрема з нотаріальним засвідченням.
+   [демо, замінити реальним] Диплом перекладача польської мови
+   [демо, замінити реальним] Свідоцтво присяжного перекладача
+   [демо, замінити реальним] Сертифікат з юридичного перекладу
+   [демо, замінити реальним] Сертифікат з медичного перекладу
+   [демо, замінити реальним] Членство в професійній асоціації перекладачів
+   [демо, замінити реальним] Олена К.
+   [демо, замінити реальним] Андрій М.
+   [демо, замінити реальним] Ірина С.
    Терміновий переклад стандартного документа займає ___ годин. Точний термін залежить від обсягу й засвідчення, тож менеджер назве його під час розрахунку.
    [блок] Під контактами розмістіть карту.
 uk:interpreting
@@ -278,8 +306,16 @@ uk:privacy
 uk:reviews
    [блок] Під вступом розмістіть фільтр за послугами: «Присяжний переклад», «Нотаріальний переклад», «Переклад паспорта», «Переклад диплома», «Апостиль», «Документи для Польщі», «Усний переклад», «Для бізнесу». Так кожен клієнт швидко знайде відгуки про свою послугу, а сторінка відповідатиме на запити на кшталт «мовний дім присяжний переклад відгуки» без окремих сторінок.
    [кнопка прихована] Переглянути відгуки в Google — немає посилання на профіль Google / форми відгуку
-   [блок] Розмістіть тут реальні відгуки. Кожен має містити ім'я, мітку послуги (наприклад «Присяжний переклад свідоцтва про народження») і дату.
-   [блок] Розмістіть тут відгуки з назвою компанії та логотипом, якщо компанія дала згоду. Додайте посилання «Умови для компаній» → Для бізнесу.
+   [демо, замінити реальним] Олена К.
+   [демо, замінити реальним] Андрій М.
+   [демо, замінити реальним] Ірина С.
+   [демо, замінити реальним] Максим Т.
+   [демо, замінити реальним] Наталія Г.
+   [демо, замінити реальним] Сергій П.
+   [демо, замінити реальним] Юлія Д.
+   [демо, замінити реальним] ТОВ «Демо Логістик»
+   [демо, замінити реальним] ТОВ «Демо Тех»
+   [демо, замінити реальним] ФОП «Демо»
    [кнопка прихована] Залишити відгук у Google — немає посилання на профіль Google / форми відгуку
    [кнопка прихована] Написати відгук на сайті — немає посилання на профіль Google / форми відгуку
 uk:sworn

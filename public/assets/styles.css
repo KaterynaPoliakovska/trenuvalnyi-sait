@@ -757,6 +757,22 @@ a.more:hover { color: var(--c-ink); }
 .footer-cols .fh { font: 600 .8rem/1.4 var(--ff-body); color: var(--c-accent); margin-bottom: 14px; }
 .form-ok .h2-sm { font-family: var(--ff-display); font-weight: 600; }
 
+/* demo reviews / certificates (placeholders until real ones are provided) */
+.demo-badge { display: inline-block; align-self: flex-start; padding: 3px 10px; border-radius: var(--r-pill); background: #F6E3B4; color: #7A5A12; font: 600 .7rem/1.4 var(--ff-body); letter-spacing: .06em; text-transform: uppercase; }
+.demo-note { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: .95rem; color: var(--c-ink-2); }
+.review-grid, .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 8px; }
+.cert-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.review-card, .cert-card { margin: 0; background: var(--c-white); border-radius: var(--r-card); padding: 28px; box-shadow: var(--sh-card); display: flex; flex-direction: column; gap: 14px; }
+.sec.alt .review-card, .sec.alt .cert-card { background: var(--c-cream); box-shadow: none; }
+.review-card blockquote { margin: 0; font-size: .95rem; line-height: 1.7; color: var(--c-ink-2); }
+.review-card figcaption { margin-top: auto; display: flex; flex-direction: column; gap: 2px; }
+.review-card figcaption b { font: 600 1rem/1.3 var(--ff-display); color: var(--c-ink); }
+.review-card figcaption span { font-size: .8rem; color: var(--c-accent-deep); }
+.cert-ico { width: 64px; height: 64px; display: grid; place-items: center; border-radius: var(--r-tile); background: var(--c-beige); color: var(--c-accent); }
+.cert-ico svg { width: 36px; height: 36px; }
+.cert-card h3 { font-size: var(--fs-h5); line-height: 1.25; }
+.cert-card p { font-size: .9rem; line-height: 1.6; color: var(--c-ink-2); }
+
 /* missing data marker (see src/MISSING-DATA.txt) */
 .todo { display: inline-block; min-width: 2.2em; padding: 0 6px; border-radius: 6px; background: #F6E3B4; color: #7A5A12; font-weight: 600; text-align: center; }
 

@@ -127,11 +127,23 @@ Zapewniamy pełny komplet dokumentów księgowych dla firm i przedsiębiorców.
 
 ## Nagrody i certyfikaty
 
-TUTAJ UMIEŚĆ GALERIĘ RZECZYWISTYCH CERTYFIKATÓW I CZŁONKOSTWA W STOWARZYSZENIACH BRANŻOWYCH.
+!demo: To przykłady demonstracyjne, a nie prawdziwe dokumenty biura. Zostaną zastąpione prawdziwymi certyfikatami.
+
+!cert: Dyplom tłumacza języka polskiego | Dokument potwierdzający wykształcenie kierunkowe tłumacza.
+!cert: Zaświadczenie tłumacza przysięgłego | Potwierdzenie wpisu na listę tłumaczy przysięgłych Ministerstwa Sprawiedliwości RP.
+!cert: Certyfikat z tłumaczeń prawniczych | Kurs doskonalący z terminologii prawniczej.
+!cert: Certyfikat z tłumaczeń medycznych | Kurs z terminologii medycznej i farmaceutycznej.
+!cert: Członkostwo w stowarzyszeniu tłumaczy | Potwierdzenie członkostwa w organizacji branżowej.
 
 ## Opinie klientów
 
-TUTAJ UMIEŚĆ 3–6 RZECZYWISTYCH OPINII Z OZNACZENIEM USŁUGI ORAZ LINK «WSZYSTKIE OPINIE» → OPINIE.
+!demo: To przykłady demonstracyjne, a nie prawdziwe opinie klientów. Zostaną zastąpione prawdziwymi opiniami.
+
+!review: Olena K. | Tłumaczenie przysięgłe aktu urodzenia | Potrzebowałam tłumaczenia przysięgłego do urzędu wojewódzkiego. Menedżer od razu podpowiedział, które dokumenty przetłumaczyć, i wszystko było gotowe na czas.
+!review: Andrij M. | Tłumaczenie paszportu z poświadczeniem notarialnym | Zamówiłem online: wysłałem zdjęcia, a po kilku dniach odebrałem gotowe tłumaczenie notarialne w biurze. Bez zbędnych wizyt.
+!review: Iryna S. | Tłumaczenie dyplomu na studia w Polsce | Tłumaczyli dyplom z suplementem. Spodobało mi się, że pisownię nazwiska sprawdzono z paszportem zagranicznym.
+
+→ Wszystkie opinie => reviews
 
 ## Najczęściej zadawane pytania (FAQ)
 

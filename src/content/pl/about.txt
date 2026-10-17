@@ -30,7 +30,13 @@ Działamy na podstawie umowy i odpowiadamy za dokładność tłumaczenia. Jeśli
 
 ## Nagrody i certyfikaty
 
-TUTAJ UMIEŚĆ RZECZYWISTE CERTYFIKATY, DYPLOMY TŁUMACZY I CZŁONKOSTWO W STOWARZYSZENIACH BRANŻOWYCH.
+!demo: To przykłady demonstracyjne, a nie prawdziwe dokumenty biura. Zostaną zastąpione prawdziwymi certyfikatami.
+
+!cert: Dyplom tłumacza języka polskiego | Dokument potwierdzający wykształcenie kierunkowe tłumacza.
+!cert: Zaświadczenie tłumacza przysięgłego | Potwierdzenie wpisu na listę tłumaczy przysięgłych Ministerstwa Sprawiedliwości RP.
+!cert: Certyfikat z tłumaczeń prawniczych | Kurs doskonalący z terminologii prawniczej.
+!cert: Certyfikat z tłumaczeń medycznych | Kurs z terminologii medycznej i farmaceutycznej.
+!cert: Członkostwo w stowarzyszeniu tłumaczy | Potwierdzenie członkostwa w organizacji branżowej.
 
 ## Nasze biuro w Kijowie
 

@@ -20,7 +20,7 @@ from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NA
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'public'
-ASSET_VER = '10'
+ASSET_VER = '11'
 TODAY = datetime.date.today().isoformat()
 
 WARN = []
@@ -144,6 +144,14 @@ def to_blocks(lines):
             end_para(); continue
         if re.match(r'^(Тут розмістіть|Розмістіть тут|Під [^.]{0,40}розмістіть|TUTAJ UMIEŚĆ|Tutaj umieść|Umieść tutaj|Pod [^.]{0,40}umieść)', l, re.I):
             end_para(); out.append({'t': 'todo', 'text': l}); continue
+        m = re.match(r'^!(review|cert|demo):\s*(.*)$', l)
+        if m:
+            end_para()
+            if m.group(1) == 'demo':
+                out.append({'t': 'demo', 'text': m.group(2)})
+            else:
+                out.append({'t': m.group(1), 'parts': [x.strip() for x in m.group(2).split('|')]})
+            continue
         if l.startswith('!todo:'):
             end_para(); out.append({'t': 'todo', 'text': l[6:].strip()}); continue
         if l.startswith('!map'):
@@ -259,10 +267,29 @@ def render_blocks(blocks, lang, key, ctx_key=None):
             body = ''.join('<tr>' + ''.join((f'<th scope="row">{fill(c, lang, key)}</th>' if i == 0 else f'<td>{fill(c, lang, key)}</td>') for i, c in enumerate(r)) + '</tr>' for r in rows[1:])
             h.append(f'<div class="ptable-wrap"><table class="ptable"><thead>{head}</thead><tbody>{body}</tbody></table></div>')
         elif t == 'link':
-            k = resolve(b['target'], lang) if b.get('target') else resolve(b['label'], lang, ctx_key)
+            tg = b.get('target')
+            k = (tg if tg in PAGES else resolve(tg, lang)) if tg else resolve(b['label'], lang, ctx_key)
             h.append(f'<p class="link-line">{link_html(b["label"], k, lang, key)}</p>')
         elif t == 'todo':
             TODO.setdefault(f'{lang}:{key}', []).append('[блок] ' + b['text'])
+        elif t == 'demo':
+            h.append(f'<p class="demo-note"><span class="demo-badge">{UI[lang]["demo"]}</span> {esc(b["text"])}</p>')
+        elif t in ('review', 'cert'):
+            TODO.setdefault(f'{lang}:{key}', []).append(f'[демо, замінити реальним] {b["parts"][0]}')
+            badge = f'<span class="demo-badge">{UI[lang]["demo"]}</span>'
+            if t == 'review':
+                name_, service, text = (b['parts'] + ['', '', ''])[:3]
+                card = (f'<figure class="review-card">{badge}<blockquote>{esc(text)}</blockquote>'
+                        f'<figcaption><b>{esc(name_)}</b><span>{esc(service)}</span></figcaption></figure>')
+            else:
+                title, text = (b['parts'] + ['', ''])[:2]
+                card = (f'<div class="cert-card">{badge}<div class="cert-ico">{ICONS["stamp"]}</div>'
+                        f'<h3>{esc(title)}</h3><p>{esc(text)}</p></div>')
+            grid = f'<div class="{t}-grid">'
+            if h and h[-1].startswith(grid):
+                h[-1] = h[-1][:-len('</div>')] + card + '</div>'
+            else:
+                h.append(grid + card + '</div>')
         elif t in ('form', 'map'):
             pass
     return '\n'.join(h)
