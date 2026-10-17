@@ -45,10 +45,10 @@ Tłumaczenia notarialne i przysięgłe wydajemy w biurze w wersji papierowej, z 
 ## Terminy i cennik
 
 | Usługa | Termin | Cena |
-| Tłumaczenie pisemne | ___ | od ___ UAH / strona |
-| Tłumaczenie notarialne | ___ | od ___ UAH |
-| Tłumaczenie przysięgłe | ___ | od ___ UAH |
-| Ekspresowe tłumaczenie dokumentów online | ___ godzin | #NAME? |
+| Tłumaczenie pisemne | 4 dni robocze | od ___ UAH / strona |
+| Tłumaczenie notarialne | 6 dni roboczych | od ___ UAH |
+| Tłumaczenie przysięgłe | 5 dni roboczych | od ___ UAH |
+| Ekspresowe tłumaczenie dokumentów online | 1 dzień roboczy | #NAME? |
 
 Czas tłumaczenia dokumentów online zależy od objętości i poświadczenia. Dokładne ceny i terminy menedżer poda po zapoznaniu się z dokumentem. → Cennik
 

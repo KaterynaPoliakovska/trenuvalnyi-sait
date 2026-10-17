@@ -4,16 +4,16 @@ robots: noindex, follow
 
 # Polityka prywatności i ochrona danych osobowych
 
-Niniejsza Polityka wyjaśnia zasady przetwarzania i ochrony danych osobowych klientów biura tłumaczeń «Movnyi Dim» (___, dalej — «Biuro») zgodnie z obowiązującymi przepisami prawa. Dane osobowe przetwarzamy zgodnie z ustawą Ukrainy «O ochronie danych osobowych».
+Niniejsza Polityka wyjaśnia zasady przetwarzania i ochrony danych osobowych klientów biura tłumaczeń «Movnyi Dim» (dalej — «Biuro») zgodnie z obowiązującymi przepisami prawa. Dane osobowe przetwarzamy zgodnie z ustawą Ukrainy «O ochronie danych osobowych».
 
-Data ostatniej aktualizacji: ___
+Data ostatniej aktualizacji: 18.10.2026
 
 ## Jakie dane zbieramy
 
 Dane kontaktowe: imię, telefon, e-mail podawane w formularzu na stronie, w komunikatorach lub podczas rozmowy telefonicznej.
 Dokumenty do tłumaczenia i zawarte w nich dane osobowe: imię i nazwisko, daty, adresy, numery dokumentów oraz inne informacje zawarte w dokumentach.
 Dane do płatności i dokumentów rozliczeniowych: nazwa firmy, dane rejestrowe, numer podatkowy (dla osób prawnych — kod JDRPOU).
-Dane techniczne: adres IP, typ przeglądarki, odwiedzane strony i pliki cookie. Zbieramy je za pomocą ___ (np. Google Analytics), aby ulepszać działanie strony.
+Dane techniczne: adres IP, typ przeglądarki, odwiedzane strony i pliki cookie. Możemy je zbierać za pomocą narzędzi analityki internetowej, aby ulepszać działanie strony.
 
 ## Do czego wykorzystujemy dane
 
@@ -29,7 +29,7 @@ Nie wykorzystujemy Twoich dokumentów do innych celów i nie wysyłamy wiadomoś
 dostęp do dokumentów mają tylko menedżer i tłumacz realizujący Twoje zamówienie;
 wszyscy pracownicy i tłumacze są zobowiązani do zachowania poufności, a na życzenie klienta podpisujemy umowę o zachowaniu poufności (NDA);
 pliki przechowujemy w zabezpieczonych serwisach z ograniczonym dostępem;
-po realizacji zamówienia elektroniczne kopie dokumentów przechowujemy przez ___ (np. 6 miesięcy) na wypadek poprawek, a następnie je usuwamy. Dokumenty, które jesteśmy zobowiązani przechowywać zgodnie z prawem, przechowujemy przez ustawowy okres.
+po realizacji zamówienia elektroniczne kopie dokumentów przechowujemy przez okres potrzebny na ewentualne poprawki, a następnie je usuwamy. Dokumenty, które jesteśmy zobowiązani przechowywać zgodnie z prawem, przechowujemy przez ustawowy okres.
 
 ## Przekazywanie danych osobom trzecim
 

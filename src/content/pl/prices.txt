@@ -60,7 +60,7 @@ Tłumacz przysięgły liczy cenę za stronę: od ___ UAH. Osobne poświadczenie 
 | Tłumaczenie symultaniczne | od ___ UAH / godzina |
 | Tłumacz ustny na spotkanie | od ___ UAH / godzina |
 
-Minimalne zamówienie — ___ godziny. → Tłumaczenia ustne
+→ Tłumaczenia ustne
 
 ## Tłumaczenia ekspresowe
 
@@ -89,7 +89,7 @@ Ceny popularnych dokumentów:
 ## Najczęściej zadawane pytania
 
 ### Czy są rabaty przy dużych zleceniach?
-Tak. Dla zamówień od ___ stron i dla stałych klientów obowiązują rabaty. Wysokość rabatu menedżer poda podczas wyceny.
+Tak. Dla dużych zleceń i stałych klientów obowiązują rabaty. Wysokość rabatu menedżer poda podczas wyceny.
 
 ### Jak opłacić zamówienie?
 Zamówienie można opłacić online kartą, przelewem lub w biurze w Kijowie. Firmom wystawiamy fakturę z VAT lub bez VAT.

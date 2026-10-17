@@ -58,7 +58,7 @@ Tłumacz przyjeżdża pod adres w Kijowie i towarzyszy Ci przez całe spotkanie.
 | Pilny wyjazd (w dniu zgłoszenia) | #NAME? |
 
 ### Rozliczenie godzinowe
-Płatność za faktyczny czas spotkania. Minimalne zamówienie — ___ godziny, wliczając czas dojazdu tłumacza w granicach Kijowa. Cena za godzinę zależy od języka, tematyki i pilności.
+Płatność za faktyczny czas spotkania. W cenie jest czas dojazdu tłumacza w granicach Kijowa. Cena za godzinę zależy od języka, tematyki i pilności.
 
 Przycisk: «Zamów tłumacza»
 
@@ -69,10 +69,10 @@ TUTAJ UMIEŚĆ 3–6 RZECZYWISTYCH OPINII O ASYŚCIE TŁUMACZA ORAZ LINK DO OPIN
 ## Najczęściej zadawane pytania
 
 ### Czy można zamówić tłumacza na dziś?
-Tak, pilny wyjazd tłumacza ustnego w Kijowie jest możliwy, jeśli dostępny jest wolny tłumacz. Zadzwoń do nas, a potwierdzimy dostępność w ciągu ___ minut.
+Tak, pilny wyjazd tłumacza ustnego w Kijowie jest możliwy, jeśli dostępny jest wolny tłumacz. Zadzwoń do nas, a jak najszybciej potwierdzimy dostępność.
 
 ### Ile trwa minimalne zamówienie?
-Minimalne zamówienie wynosi ___ godziny, nawet jeśli spotkanie jest krótsze, ponieważ uwzględnia czas dojazdu i przygotowania. Jeśli spotkanie trwa dłużej, każda kolejna godzina jest płatna osobno.
+Minimalny czas zamówienia menedżer poda podczas wyceny: uwzględnia on czas dojazdu i przygotowania. Jeśli spotkanie trwa dłużej, każda kolejna godzina jest płatna osobno.
 
 ## Zamów tłumacza na spotkanie
 

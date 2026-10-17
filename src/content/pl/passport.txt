@@ -43,13 +43,13 @@ Gotowe tłumaczenie odbierasz w naszym biurze w Kijowie.
 ## Terminy i cennik tłumaczenia paszportu
 
 | Usługa | Termin | Cena |
-| Tłumaczenie paszportu bez poświadczenia | ___ | od ___ UAH |
-| Tłumaczenie notarialne paszportu | ___ | od ___ UAH |
-| Kopia notarialna i tłumaczenie paszportu | ___ | od ___ UAH |
-| Tłumaczenie przysięgłe paszportu | ___ | od ___ UAH |
-| Tłumaczenie ekspresowe | ___ godzin | #NAME? |
+| Tłumaczenie paszportu bez poświadczenia | 4 dni robocze | od ___ UAH |
+| Tłumaczenie notarialne paszportu | 6 dni roboczych | od ___ UAH |
+| Kopia notarialna i tłumaczenie paszportu | 6 dni roboczych | od ___ UAH |
+| Tłumaczenie przysięgłe paszportu | 5 dni roboczych | od ___ UAH |
+| Tłumaczenie ekspresowe | 1 dzień roboczy | #NAME? |
 
-Ekspresowe tłumaczenie paszportu z poświadczeniem notarialnym wykonujemy w ciągu ___ godzin. Cena zależy od języka, liczby wypełnionych stron i rodzaju poświadczenia.
+Ekspresowe tłumaczenie paszportu z poświadczeniem notarialnym wykonujemy w ciągu 1 dnia roboczego. Cena zależy od języka, liczby wypełnionych stron i rodzaju poświadczenia.
 
 Przycisk: «Zamów tłumaczenie paszportu»
 

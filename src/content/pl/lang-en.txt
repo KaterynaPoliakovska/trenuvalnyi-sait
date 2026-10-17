@@ -54,12 +54,12 @@ Tłumaczenie bez poświadczenia wysyłamy e-mailem, a poświadczone wydajemy w b
 ## Terminy i cennik tłumaczeń z i na język angielski
 
 | Usługa | Termin | Cena |
-| Tłumaczenie pisemne z angielskiego / na angielski | ___ | od ___ UAH / strona |
-| Tłumaczenie notarialne | ___ | od ___ UAH |
-| Tłumaczenie z apostille | ___ | od ___ UAH |
-| Tłumaczenie ekspresowe | ___ godzin | #NAME? |
+| Tłumaczenie pisemne z angielskiego / na angielski | 4 dni robocze | od ___ UAH / strona |
+| Tłumaczenie notarialne | 6 dni roboczych | od ___ UAH |
+| Tłumaczenie z apostille | ustalany podczas wyceny | od ___ UAH |
+| Tłumaczenie ekspresowe | 1 dzień roboczy | #NAME? |
 
-Koszt tłumaczenia z ukraińskiego na angielski zależy od rodzaju dokumentu, objętości, poświadczenia i pilności. Ekspresowe tłumaczenie z języka angielskiego w Kijowie wykonujemy w ciągu ___ godzin.
+Koszt tłumaczenia z ukraińskiego na angielski zależy od rodzaju dokumentu, objętości, poświadczenia i pilności. Ekspresowe tłumaczenie z języka angielskiego w Kijowie wykonujemy w ciągu 1 dnia roboczego.
 
 ## Opinie klientów
 

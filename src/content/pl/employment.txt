@@ -57,13 +57,13 @@ Gotowe tłumaczenie odbierasz w naszym biurze w Kijowie.
 ## Terminy i cennik tłumaczenia dokumentów pracowniczych
 
 | Dokument | Termin | Cena |
-| Książeczka pracy | ___ | od ___ UAH |
-| Zaświadczenie z miejsca pracy lub o dochodach | ___ | od ___ UAH |
-| Umowa o pracę | ___ | od ___ UAH / strona |
+| Książeczka pracy | ustalany podczas wyceny | od ___ UAH |
+| Zaświadczenie z miejsca pracy lub o dochodach | ustalany podczas wyceny | od ___ UAH |
+| Umowa o pracę | ustalany podczas wyceny | od ___ UAH / strona |
 | Poświadczenie notarialne | — | #ERROR! |
-| Tłumaczenie ekspresowe | ___ godzin | #NAME? |
+| Tłumaczenie ekspresowe | 1 dzień roboczy | #NAME? |
 
-Ceny tłumaczenia umowy o pracę i książeczki pracy zależą od objętości, języka i rodzaju poświadczenia. Ekspresowe tłumaczenie umowy o pracę wykonujemy w ciągu ___ godzin.
+Ceny tłumaczenia umowy o pracę i książeczki pracy zależą od objętości, języka i rodzaju poświadczenia. Ekspresowe tłumaczenie umowy o pracę wykonujemy w ciągu 1 dnia roboczego.
 
 Przycisk: «Uzyskaj wycenę»
 
