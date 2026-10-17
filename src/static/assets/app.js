@@ -241,6 +241,27 @@
     });
   }
 
+  // ---------- Header dropdowns ----------
+  var subItems = $$('.nav-item.has-sub');
+  function closeSubs(except) {
+    subItems.forEach(function (it) {
+      if (it === except) return;
+      it.classList.remove('open');
+      $('.sub-toggle', it).setAttribute('aria-expanded', 'false');
+    });
+  }
+  subItems.forEach(function (it) {
+    var btn = $('.sub-toggle', it);
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = it.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+      closeSubs(it);
+    });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.nav-item')) closeSubs(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSubs(); });
+
   // ---------- Form ----------
   var form = $('#form');
   if (form) {

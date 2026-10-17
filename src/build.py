@@ -15,12 +15,12 @@ import sys
 from urllib.parse import quote
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NAV, FOOTER, UI)  # noqa: E402
+from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NAV, NAV_SUB, FOOTER, UI)  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'public'
-ASSET_VER = '9'
+ASSET_VER = '10'
 TODAY = datetime.date.today().isoformat()
 
 WARN = []
@@ -474,9 +474,20 @@ def logo_img(lang, variant='color'):
 
 def header_html(lang, key):
     u = UI[lang]
-    nav = ''.join(
-        f'<a href="{url(k, lang)}"{" aria-current=\"page\"" if k == key else ""}><span>{esc(name(k, lang))}</span><small>{esc(u["nav_sub"][k])}</small></a>'
-        for k in NAV)
+    items = []
+    for k in NAV:
+        cur = ' aria-current="page"' if k == key else ''
+        top = f'<a href="{url(k, lang)}"{cur}><span>{esc(name(k, lang))}</span><small>{esc(u["nav_sub"][k])}</small></a>'
+        subs = NAV_SUB.get(k)
+        if not subs:
+            items.append(top)
+            continue
+        links = ''.join(
+            f'<a href="{url(s, lang)}"{" aria-current=\"page\"" if s == key else ""}>{esc(name(s, lang))}</a>' for s in subs)
+        items.append(f'<div class="nav-item has-sub">{top}'
+                     f'<button class="sub-toggle" type="button" aria-expanded="false" aria-label="{esc(name(k, lang))}: {u["submenu"]}"><span aria-hidden="true"></span></button>'
+                     f'<div class="sub">{links}</div></div>')
+    nav = ''.join(items)
     return f'''<header class="header" id="header">
   <div class="header-bar">
     <a class="logo" href="{url('home', lang)}">{logo_img(lang)}</a>
@@ -728,8 +739,7 @@ def build_page(key, lang):
         schema.append(fs)
 
     if is_home:
-        a_label, a_key = u['bar_a']
-        b_label, b_key = u['bar_b']
+        chips = ''.join(f'<a class="btn btn-white" href="{url(k, lang)}">{esc(lbl)}</a>' for lbl, k in u['bar_chips'])
         hero = f'''<section class="hero">
     <div class="hero-card">
       <div class="hero-bg" style="--img:url('{img(PAGES['home'][5], 2000)}')"></div>
@@ -748,8 +758,7 @@ def build_page(key, lang):
       <div class="bar-q">
         <div class="q split">{u['bar_q']}</div>
         <div class="chips">
-          <a class="btn btn-white" href="{url(a_key, lang)}">{a_label}</a>
-          <a class="btn btn-white" href="{url(b_key, lang)}">{b_label}</a>
+          {chips}
         </div>
       </div>
       <div class="bar-stat"><div class="stat-big" data-sx="-40,25"><span data-count="{CONTACT['price_from']}">{CONTACT['price_from']}</span><small>{u['stat1_unit']}</small></div><div class="stat-cap">{u['stat1']}</div></div>

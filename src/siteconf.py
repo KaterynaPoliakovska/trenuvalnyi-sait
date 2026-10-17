@@ -118,6 +118,12 @@ ANCHORS = {
 
 NAV = ['services', 'documents', 'prices', 'about', 'contacts']
 
+# dropdowns under the header menu items
+NAV_SUB = {
+    'services': ['written', 'sworn', 'notarial', 'apostille', 'interpreting', 'meeting', 'online', 'legal', 'medical', 'poland', 'business'],
+    'documents': ['passport', 'birth', 'marriage', 'license', 'employment', 'education', 'lang-pl', 'lang-en', 'lang-ru'],
+}
+
 FOOTER = [
     ('services', ['written', 'sworn', 'notarial', 'apostille', 'interpreting', 'meeting', 'online', 'legal', 'medical', 'poland', 'business']),
     ('documents', ['documents', 'passport', 'birth', 'marriage', 'license', 'employment', 'education']),
@@ -136,7 +142,8 @@ UI = {
         'brand_full': 'Мовний дім — бюро перекладів',
         'eyebrow': 'Бюро перекладів у Києві · PL · EN · RU · UA',
         'side_a': 'Присяжний<br>переклад', 'side_b': 'PL · EN<br>RU · UA',
-        'bar_q': 'Мені потрібен<br>переклад:', 'bar_a': ('Присяжний', 'sworn'), 'bar_b': ('Письмовий', 'written'),
+        'bar_q': 'Мені потрібен<br>переклад:', 'bar_chips': [('Присяжний', 'sworn'), ('Нотаріальний', 'notarial'), ('Письмовий', 'written'), ('Усний', 'interpreting'), ('Апостиль', 'apostille')],
+        'submenu': 'підменю',
         'stat1_unit': 'грн', 'stat1': 'ціна перекладу від', 'stat2': 'мови перекладу',
         'marquee': 'Мова не має для нас таємниць',
         'logos_label': 'Переклади для подання до',
@@ -173,7 +180,8 @@ UI = {
         'brand_full': 'Movnyi Dim — biuro tłumaczeń',
         'eyebrow': 'Biuro tłumaczeń w Kijowie · PL · EN · RU · UA',
         'side_a': 'Tłumaczenie<br>przysięgłe', 'side_b': 'PL · EN<br>RU · UA',
-        'bar_q': 'Potrzebuję<br>tłumaczenia:', 'bar_a': ('Przysięgłego', 'sworn'), 'bar_b': ('Pisemnego', 'written'),
+        'bar_q': 'Potrzebuję<br>tłumaczenia:', 'bar_chips': [('Przysięgłego', 'sworn'), ('Notarialnego', 'notarial'), ('Pisemnego', 'written'), ('Ustnego', 'interpreting'), ('Apostille', 'apostille')],
+        'submenu': 'podmenu',
         'stat1_unit': 'UAH', 'stat1': 'cena tłumaczenia od', 'stat2': 'języki tłumaczeń',
         'marquee': 'Język nie ma dla nas tajemnic',
         'logos_label': 'Tłumaczenia do złożenia w',
