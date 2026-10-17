@@ -1,3 +1,151 @@
+pl:about
+   [розділ прихований, немає даних] Nagrody i certyfikaty
+   Biuro «Movnyi Dim» zostało założone w ___ roku w Kijowie. Zaczynaliśmy od tłumaczenia dokumentów dla Ukraińców przeprowadzających się do Polski i dlatego język polski oraz tłumaczenia przysięgłe nadal są naszym głównym kierunkiem. Dziś wykonujemy ponad ___ tłumaczeń rocznie dla klientów prywatnych i firm.
+pl:apostille
+   [розділ прихований, немає даних] Opinie klientów
+   Standardowy termin zależy od ministerstwa i wynosi ___ dni roboczych. Pilne apostille w Kijowie jest możliwe w ciągu ___ dni roboczych, w tym pilne apostille na dyplom w Ministerstwie Edukacji.
+pl:birth
+   ___
+   ___
+   ___
+   ___
+   ___ godzin
+pl:blog
+   [блок] Lista artykułów w kategorii — brak artykułów
+   [блок] Lista artykułów w kategorii — brak artykułów
+   [блок] Lista artykułów w kategorii — brak artykułów
+   [блок] Lista artykułów w kategorii — brak artykułów
+pl:business
+   [розділ прихований, немає даних] Zaufali nam
+pl:contacts
+   Kijów, ___
+   +380 ___
+   ___
+   ___
+   [блок] Viber / Telegram — brak danych
+   [блок] Jak dojechać: najbliższa stacja metra, komunikacja miejska, parking — brak danych
+   [блок] Jak dojechać: najbliższa stacja metra, komunikacja miejska, parking — brak danych
+pl:documents
+   [розділ прихований, немає даних] Opinie klientów
+   Standardowy dokument (paszport, akt, dyplom) tłumaczymy w ciągu ___ dni roboczych. Termin dla pakietu dokumentów ustalamy podczas wyceny.
+   Ekspresowe tłumaczenie dokumentów w Kijowie wykonujemy w ciągu ___ godzin, również z poświadczeniem notarialnym. Szybkie tłumaczenie można zamówić przez formularz, podając wymagany termin.
+pl:education
+   ___
+   ___
+   ___
+   ___
+   ___
+   ___
+   ___ godzin
+   Koszt tłumaczenia dyplomu z suplementem liczony jest według liczby stron. Suplement z wykazem przedmiotów zajmuje zwykle kilka stron, dlatego cena dyplomu z suplementem jest wyższa niż samego dyplomu. Ekspresowe tłumaczenie dyplomu i suplementu wykonujemy w ciągu ___ godzin.
+pl:employment
+   ___
+   ___
+   ___
+   ___ godzin
+   Ceny tłumaczenia umowy o pracę i książeczki pracy zależą od objętości, języka i rodzaju poświadczenia. Ekspresowe tłumaczenie umowy o pracę wykonujemy w ciągu ___ godzin.
+pl:home
+   [розділ прихований, немає даних] Nagrody i certyfikaty
+   [розділ прихований, немає даних] Opinie klientów
+   Standardowy dokument (paszport, akt stanu cywilnego, dyplom) tłumaczymy w ciągu ___ dni roboczych. W przypadku pakietów dokumentów termin ustalamy indywidualnie podczas wyceny.
+   Jeśli potrzebujesz dokumentów na dziś, wykonujemy tłumaczenie ekspresowe w ciągu ___ godzin, również z poświadczeniem notarialnym.
+   Tłumaczenie pilne standardowego dokumentu zajmuje ok. ___ godzin. Dokładny czas zależy od objętości oraz rodzaju poświadczenia.
+pl:interpreting
+   [розділ прихований, немає даних] Opinie klientów
+   Koszt tłumaczenia ustnego zależy od rodzaju tłumaczenia, języka, czasu trwania i stopnia skomplikowania tematyki. Minimalne zamówienie — ___ godziny.
+   Tłumacza konsekutywnego warto zamówić co najmniej ___ dni wcześniej, symultanicznego — ___ dni wcześniej. Pilne tłumaczenie ustne jest również możliwe, jeśli dostępny jest wolny tłumacz.
+pl:lang-en
+   [розділ прихований, немає даних] Opinie klientów
+   ___
+   ___
+   ___
+   ___ godzin
+   Koszt tłumaczenia z ukraińskiego na angielski zależy od rodzaju dokumentu, objętości, poświadczenia i pilności. Ekspresowe tłumaczenie z języka angielskiego w Kijowie wykonujemy w ciągu ___ godzin.
+pl:lang-pl
+   [розділ прихований, немає даних] Opinie klientów
+   ___
+   ___
+   ___
+   ___ godzin
+   Koszt tłumaczenia z ukraińskiego na polski zależy od rodzaju dokumentu, poświadczenia i pilności. Ekspresowe tłumaczenie z języka polskiego w Kijowie wykonujemy w ciągu ___ godzin.
+pl:lang-ru
+   [розділ прихований, немає даних] Opinie klientów
+   ___
+   ___
+   ___
+   ___ godzin
+   Koszt tłumaczenia z ukraińskiego na rosyjski i z rosyjskiego na ukraiński zależy od rodzaju dokumentu, poświadczenia i pilności. Ekspresowe tłumaczenie z języka rosyjskiego w Kijowie wykonujemy w ciągu ___ godzin.
+pl:legal
+   [розділ прихований, немає даних] Opinie klientów
+   Standardowa wydajność to ___ stron tekstu prawniczego dziennie. Dla dużych umów i pakietów dokumentów uzgadniamy harmonogram oddawania etapami. Pilne tłumaczenie prawnicze jest możliwe w ciągu ___ godzin.
+pl:license
+   ___
+   ___
+   ___
+   ___ godzin
+pl:marriage
+   ___
+   ___
+   ___
+   ___
+   ___ godzin
+   Cena tłumaczenia aktu małżeństwa zależy od języka, poświadczenia i pilności. Jeśli dokument jest potrzebny szybko, wykonujemy tłumaczenie ekspresowe w ciągu ___ godzin.
+pl:medical
+   [розділ прихований, немає даних] Opinie klientów
+   Wypis lub opinię na 1–3 stronach tłumaczymy w ciągu ___ dni roboczych. Duże pakiety dokumentów — według uzgodnionego harmonogramu.
+   Pilne tłumaczenie wyników badań w Kijowie wykonujemy w ciągu 2–4 godzin, jeśli dokumenty dotarły do godziny ___ dnia roboczego.
+pl:meeting
+   [розділ прихований, немає даних] Opinie klientów
+   Płatność za faktyczny czas spotkania. Minimalne zamówienie — ___ godziny, wliczając czas dojazdu tłumacza w granicach Kijowa. Cena za godzinę zależy od języka, tematyki i pilności.
+   Tak, pilny wyjazd tłumacza ustnego w Kijowie jest możliwy, jeśli dostępny jest wolny tłumacz. Zadzwoń do nas, a potwierdzimy dostępność w ciągu ___ minut.
+   Minimalne zamówienie wynosi ___ godziny, nawet jeśli spotkanie jest krótsze, ponieważ uwzględnia czas dojazdu i przygotowania. Jeśli spotkanie trwa dłużej, każda kolejna godzina jest płatna osobno.
+pl:notarial
+   [розділ прихований, немає даних] Opinie klientów
+   Tłumaczenie notarialne standardowego dokumentu trwa ___ dni roboczych.
+   Ekspresowe tłumaczenie notarialne dokumentów w Kijowie wykonujemy w ciągu ___ godzin, jeśli dokument dotarł do godziny ___.
+pl:online
+   [розділ прихований, немає даних] Opinie klientów
+   ___
+   ___
+   ___
+   ___ godzin
+pl:passport
+   ___
+   ___
+   ___
+   ___
+   ___ godzin
+   Ekspresowe tłumaczenie paszportu z poświadczeniem notarialnym wykonujemy w ciągu ___ godzin. Cena zależy od języka, liczby wypełnionych stron i rodzaju poświadczenia.
+pl:poland
+   [розділ прихований, немає даних] Opinie klientów
+   ___
+   ___
+   ___
+   ___ godzin
+   Cena zależy od liczby dokumentów, objętości i potrzeby uzyskania apostille. Ekspresowe tłumaczenie dokumentów do Polski w Kijowie wykonujemy w ciągu ___ godzin.
+pl:prices
+   Minimalne zamówienie — ___ godziny.
+   Tak. Dla zamówień od ___ stron i dla stałych klientów obowiązują rabaty. Wysokość rabatu menedżer poda podczas wyceny.
+pl:privacy
+   Niniejsza Polityka wyjaśnia zasady przetwarzania i ochrony danych osobowych klientów biura tłumaczeń «Movnyi Dim» (___, dalej — «Biuro») zgodnie z obowiązującymi przepisami prawa. Dane osobowe przetwarzamy zgodnie z ustawą Ukrainy «O ochronie danych osobowych».
+   Data ostatniej aktualizacji: ___
+   Dane techniczne: adres IP, typ przeglądarki, odwiedzane strony i pliki cookie. Zbieramy je za pomocą ___ (np. Google Analytics), aby ulepszać działanie strony.
+   po realizacji zamówienia elektroniczne kopie dokumentów przechowujemy przez ___ (np. 6 miesięcy) na wypadek poprawek, a następnie je usuwamy. Dokumenty, które jesteśmy zobowiązani przechowywać zgodnie z prawem, przechowujemy przez ustawowy okres.
+pl:reviews
+   [блок] Pod wstępem umieść filtr według usług: «Tłumaczenie przysięgłe», «Tłumaczenie notarialne», «Tłumaczenie paszportu», «Tłumaczenie dyplomu», «Apostille», «Dokumenty do Polski», «Tłumaczenia ustne», «Dla biznesu».
+   [кнопка прихована] Zobacz opinie w Google — немає посилання на профіль Google / форми відгуку
+   [блок] Umieść tutaj prawdziwe opinie. Każda powinna zawierać imię, nazwę usługi (np. «Tłumaczenie przysięgłe aktu urodzenia») i datę.
+   [блок] Umieść tutaj opinie z nazwą firmy i logo, jeśli firma wyraziła na to zgodę.
+   [кнопка прихована] Dodaj opinię w Google — немає посилання на профіль Google / форми відгуку
+   [кнопка прихована] Napisz opinię na stronie — немає посилання на профіль Google / форми відгуку
+pl:sworn
+   [розділ прихований, немає даних] Opinie klientów
+   Tłumaczenie przysięgłe standardowego dokumentu (paszport, akt, zaświadczenie) trwa ___ dni roboczych.
+   Jeśli masz pilną wizytę w urzędzie lub ambasadzie, zamów ekspresowe tłumaczenie przysięgłe w Kijowie. Czas realizacji wynosi od ___ godzin.
+pl:written
+   [розділ прихований, немає даних] Opinie klientów
+   Standardowa wydajność to ___ stron rozliczeniowych dziennie. Duże teksty tłumaczymy etapami, a termin ustalamy podczas wyceny.
+   Ekspresowe tłumaczenie pisemne w Kijowie wykonujemy w ciągu ___ godzin. Aby zamówić pilne tłumaczenie tekstu, wpisz wymagany termin w formularzu.
 uk:about
    [розділ прихований, немає даних] Нагороди та сертифікати
    Бюро «Мовний дім» засноване у ___ році в Києві. Ми почали з перекладу документів для українців, які переїжджали до Польщі, і саме тому польська мова та присяжний переклад досі залишаються нашим головним напрямком. Сьогодні ми виконуємо понад ___ перекладів на рік для приватних клієнтів і компаній.
@@ -100,7 +248,6 @@ uk:meeting
    Оплата за фактичний час зустрічі. Мінімальне замовлення — ___ години, і в нього входить час на дорогу перекладача в межах Києва. Ціна за годину залежить від мови, тематики та терміновості.
    Так, терміновий виклик усного перекладача в Києві можливий за наявності вільного перекладача. Зателефонуйте нам, і ми підтвердимо доступність протягом ___ хвилин.
    Мінімальне замовлення становить ___ години, навіть якщо зустріч коротша, бо в нього враховано час на дорогу та підготовку. Якщо зустріч триває довше, кожна наступна година оплачується окремо.
-   [блок] Під контактами розмістіть карту.
 uk:notarial
    [розділ прихований, немає даних] Відгуки клієнтів
    Нотаріальний переклад стандартного документа займає ___ робочих днів.
@@ -135,9 +282,6 @@ uk:privacy
    Дата останнього оновлення: ___
    Технічні дані: IP-адреса, тип браузера, сторінки, які ви переглядали, та файли cookie. Ми збираємо їх через ___ (наприклад, Google Analytics), щоб покращувати роботу сайту.
    після виконання замовлення електронні копії документів зберігаємо ___ (наприклад, 6 місяців) для можливих виправлень, а потім видаляємо. Документи, які ми зобов'язані зберігати за законом, зберігаємо протягом установленого строку.
-   ___
-   +380 ___
-   м. Київ, ___
 uk:reviews
    [блок] Під вступом розмістіть фільтр за послугами: «Присяжний переклад», «Нотаріальний переклад», «Переклад паспорта», «Переклад диплома», «Апостиль», «Документи для Польщі», «Усний переклад», «Для бізнесу». Так кожен клієнт швидко знайде відгуки про свою послугу, а сторінка відповідатиме на запити на кшталт «мовний дім присяжний переклад відгуки» без окремих сторінок.
    [кнопка прихована] Переглянути відгуки в Google — немає посилання на профіль Google / форми відгуку

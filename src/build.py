@@ -191,7 +191,7 @@ def fill(text, lang, page_key):
     t = re.sub(r'(від|od)\s+___\s+(грн|UAH)', lambda m: f'{m.group(1)} {CONTACT["price_from"]} {m.group(2)}', t)
     t = t.replace('#ERROR!', ('від ' if lang == 'uk' else 'od ') + CONTACT['price_from'] + (' грн' if lang == 'uk' else ' UAH'))
     t = t.replace('#NAME?', UI[lang]['urgent_price'])
-    t = re.sub(r'на\s+___\s*%', 'на 50 %', t)
+    t = re.sub(r'(на|o)\s+___\s*%', lambda m: m.group(1) + ' 50 %', t)
     t = esc(t)
     if '___' in t:
         TODO.setdefault(f'{lang}:{page_key}', []).append(text)
@@ -204,6 +204,10 @@ def inline(text, lang, page_key, ctx_key=None):
     parts = text.split('→')
     out = fill(parts[0].rstrip(), lang, page_key)
     for seg in parts[1:]:
+        m = re.match(r'^\s*(.+?)\s*=>\s*([\w-]+)(.*)$', seg)
+        if m:
+            out += ' ' + link_html(m.group(1), m.group(2), lang, page_key) + fill(m.group(3), lang, page_key)
+            continue
         anchor, rest = split_anchor(seg, lang)
         key = resolve(anchor, lang, ctx_key)
         out += ' ' + link_html(anchor, key, lang, page_key) + fill(rest, lang, page_key)

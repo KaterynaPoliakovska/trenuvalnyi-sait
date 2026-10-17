@@ -1,0 +1,65 @@
+title: Polityka prywatności | Movnyi Dim
+description: Jak biuro tłumaczeń «Movnyi Dim» zbiera, wykorzystuje i chroni dane osobowe klientów zgodnie z ustawą Ukrainy «O ochronie danych osobowych».
+robots: noindex, follow
+
+# Polityka prywatności i ochrona danych osobowych
+
+Niniejsza Polityka wyjaśnia zasady przetwarzania i ochrony danych osobowych klientów biura tłumaczeń «Movnyi Dim» (___, dalej — «Biuro») zgodnie z obowiązującymi przepisami prawa. Dane osobowe przetwarzamy zgodnie z ustawą Ukrainy «O ochronie danych osobowych».
+
+Data ostatniej aktualizacji: ___
+
+## Jakie dane zbieramy
+
+Dane kontaktowe: imię, telefon, e-mail podawane w formularzu na stronie, w komunikatorach lub podczas rozmowy telefonicznej.
+Dokumenty do tłumaczenia i zawarte w nich dane osobowe: imię i nazwisko, daty, adresy, numery dokumentów oraz inne informacje zawarte w dokumentach.
+Dane do płatności i dokumentów rozliczeniowych: nazwa firmy, dane rejestrowe, numer podatkowy (dla osób prawnych — kod JDRPOU).
+Dane techniczne: adres IP, typ przeglądarki, odwiedzane strony i pliki cookie. Zbieramy je za pomocą ___ (np. Google Analytics), aby ulepszać działanie strony.
+
+## Do czego wykorzystujemy dane
+
+aby obliczyć koszt, wykonać tłumaczenie i je poświadczyć;
+aby skontaktować się z Tobą w sprawie zamówienia;
+aby przygotować umowę, fakturę i dokumenty rozliczeniowe;
+aby ulepszać działanie strony i analizować ruch.
+
+Nie wykorzystujemy Twoich dokumentów do innych celów i nie wysyłamy wiadomości reklamowych bez Twojej odrębnej zgody.
+
+## Jak chronimy dokumenty klientów
+
+dostęp do dokumentów mają tylko menedżer i tłumacz realizujący Twoje zamówienie;
+wszyscy pracownicy i tłumacze są zobowiązani do zachowania poufności, a na życzenie klienta podpisujemy umowę o zachowaniu poufności (NDA);
+pliki przechowujemy w zabezpieczonych serwisach z ograniczonym dostępem;
+po realizacji zamówienia elektroniczne kopie dokumentów przechowujemy przez ___ (np. 6 miesięcy) na wypadek poprawek, a następnie je usuwamy. Dokumenty, które jesteśmy zobowiązani przechowywać zgodnie z prawem, przechowujemy przez ustawowy okres.
+
+## Przekazywanie danych osobom trzecim
+
+Dane przekazujemy wyłącznie podmiotom, bez których nie da się zrealizować zamówienia, i tylko w niezbędnym zakresie:
+
+notariuszom — w celu poświadczenia notarialnego tłumaczenia;
+tłumaczom przysięgłym — w celu wykonania tłumaczenia przysięgłego;
+organom państwowym (Ministerstwu Sprawiedliwości, MEN, MSZ) — w celu uzyskania apostille;
+serwisom płatniczym — w celu opłacenia zamówienia;
+serwisom hostingowym i analitycznym — w celu działania strony.
+
+Nie sprzedajemy i nie przekazujemy Twoich danych do celów reklamowych ani innych celów zewnętrznych. Dane mogą zostać udostępnione organom państwowym wyłącznie w przypadkach wprost przewidzianych prawem.
+
+## Twoje prawa
+
+Zgodnie z ustawą Ukrainy «O ochronie danych osobowych» masz prawo:
+
+wiedzieć, jakie Twoje dane przetwarzamy, w jakim celu i komu je przekazujemy;
+uzyskać dostęp do swoich danych;
+żądać sprostowania nieprawidłowych danych lub ich usunięcia;
+wycofać zgodę na przetwarzanie danych;
+wnieść sprzeciw wobec przetwarzania danych;
+złożyć skargę do Pełnomocnika Rady Najwyższej Ukrainy ds. Praw Człowieka lub do sądu.
+
+Wycofanie zgody nie wpływa na zamówienia już zrealizowane.
+
+## Kontakt w sprawie danych osobowych
+
+W sprawach dotyczących przetwarzania danych osobowych prosimy o kontakt:
+
+e-mail: movnydom@gmail.com
+telefon: +380 37 121 2124
+adres korespondencyjny: Kijów, ul. Peremohy 7
