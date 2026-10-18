@@ -1,9 +1,7 @@
 pl:about
-   [демо, замінити реальним] Dyplom tłumacza języka polskiego
-   [демо, замінити реальним] Zaświadczenie tłumacza przysięgłego
-   [демо, замінити реальним] Certyfikat z tłumaczeń prawniczych
-   [демо, замінити реальним] Certyfikat z tłumaczeń medycznych
-   [демо, замінити реальним] Członkostwo w stowarzyszeniu tłumaczy
+   [демо-сертифікат] korporatyvnyi-sertyfikat-mid.jpg
+   [демо-сертифікат] sertyfikat-kursu-b2.jpg
+   [демо-сертифікат] korporatyvnyi-sertyfikat-synii.jpg
 pl:apostille
    [розділ прихований, немає даних] Opinie klientów
 pl:business
@@ -19,11 +17,9 @@ pl:contacts
 pl:documents
    [розділ прихований, немає даних] Opinie klientów
 pl:home
-   [демо, замінити реальним] Dyplom tłumacza języka polskiego
-   [демо, замінити реальним] Zaświadczenie tłumacza przysięgłego
-   [демо, замінити реальним] Certyfikat z tłumaczeń prawniczych
-   [демо, замінити реальним] Certyfikat z tłumaczeń medycznych
-   [демо, замінити реальним] Członkostwo w stowarzyszeniu tłumaczy
+   [демо-сертифікат] korporatyvnyi-sertyfikat-mid.jpg
+   [демо-сертифікат] sertyfikat-kursu-b2.jpg
+   [демо-сертифікат] korporatyvnyi-sertyfikat-synii.jpg
    [демо, замінити реальним] Olena K.
    [демо, замінити реальним] Andrij M.
    [демо, замінити реальним] Iryna S.
@@ -67,11 +63,9 @@ pl:sworn
 pl:written
    [розділ прихований, немає даних] Opinie klientów
 uk:about
-   [демо, замінити реальним] Диплом перекладача польської мови
-   [демо, замінити реальним] Свідоцтво присяжного перекладача
-   [демо, замінити реальним] Сертифікат з юридичного перекладу
-   [демо, замінити реальним] Сертифікат з медичного перекладу
-   [демо, замінити реальним] Членство в професійній асоціації перекладачів
+   [демо-сертифікат] korporatyvnyi-sertyfikat-mid.jpg
+   [демо-сертифікат] sertyfikat-kursu-b2.jpg
+   [демо-сертифікат] korporatyvnyi-sertyfikat-synii.jpg
 uk:apostille
    [розділ прихований, немає даних] Відгуки клієнтів
 uk:business
@@ -87,11 +81,9 @@ uk:contacts
 uk:documents
    [розділ прихований, немає даних] Відгуки клієнтів
 uk:home
-   [демо, замінити реальним] Диплом перекладача польської мови
-   [демо, замінити реальним] Свідоцтво присяжного перекладача
-   [демо, замінити реальним] Сертифікат з юридичного перекладу
-   [демо, замінити реальним] Сертифікат з медичного перекладу
-   [демо, замінити реальним] Членство в професійній асоціації перекладачів
+   [демо-сертифікат] korporatyvnyi-sertyfikat-mid.jpg
+   [демо-сертифікат] sertyfikat-kursu-b2.jpg
+   [демо-сертифікат] korporatyvnyi-sertyfikat-synii.jpg
    [демо, замінити реальним] Олена К.
    [демо, замінити реальним] Андрій М.
    [демо, замінити реальним] Ірина С.

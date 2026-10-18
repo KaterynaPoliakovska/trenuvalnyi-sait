@@ -773,6 +773,14 @@ a.more:hover { color: var(--c-ink); }
 .cert-card h3 { font-size: var(--fs-h5); line-height: 1.25; }
 .cert-card p { font-size: .9rem; line-height: 1.6; color: var(--c-ink-2); }
 
+.certimg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 8px; }
+.certimg-card { margin: 0; background: var(--c-white); border-radius: var(--r-card); padding: 18px; box-shadow: var(--sh-card); display: flex; flex-direction: column; gap: 12px; }
+.sec.alt .certimg-card { background: var(--c-cream); box-shadow: none; }
+.certimg-card img { width: 100%; height: auto; border-radius: 12px; transition: transform .5s var(--ease); }
+.certimg-card a { display: block; overflow: hidden; border-radius: 12px; }
+.certimg-card a:hover img { transform: scale(1.03); }
+.certimg-card figcaption { font-size: .9rem; color: var(--c-ink-2); }
+
 /* missing data marker (see src/MISSING-DATA.txt) */
 .todo { display: inline-block; min-width: 2.2em; padding: 0 6px; border-radius: 6px; background: #F6E3B4; color: #7A5A12; font-weight: 600; text-align: center; }
 

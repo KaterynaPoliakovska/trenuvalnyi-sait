@@ -129,11 +129,9 @@ Zapewniamy pełny komplet dokumentów księgowych dla firm i przedsiębiorców.
 
 !demo: To przykłady demonstracyjne, a nie prawdziwe dokumenty biura. Zostaną zastąpione prawdziwymi certyfikatami.
 
-!cert: Dyplom tłumacza języka polskiego | Dokument potwierdzający wykształcenie kierunkowe tłumacza.
-!cert: Zaświadczenie tłumacza przysięgłego | Potwierdzenie wpisu na listę tłumaczy przysięgłych Ministerstwa Sprawiedliwości RP.
-!cert: Certyfikat z tłumaczeń prawniczych | Kurs doskonalący z terminologii prawniczej.
-!cert: Certyfikat z tłumaczeń medycznych | Kurs z terminologii medycznej i farmaceutycznej.
-!cert: Członkostwo w stowarzyszeniu tłumaczy | Potwierdzenie członkostwa w organizacji branżowej.
+!certimg: korporatyvnyi-sertyfikat-mid.jpg | Korporacyjny certyfikat zgodności: angielski biznesowy (przykład demo)
+!certimg: sertyfikat-kursu-b2.jpg | Certyfikat ukończenia kursu «Język angielski. Poziom B2» (przykład demo)
+!certimg: korporatyvnyi-sertyfikat-synii.jpg | Korporacyjny certyfikat zgodności, wersja niebieska (przykład demo)
 
 ## Opinie klientów
 

@@ -103,7 +103,7 @@ for u, (p, txt) in pages.items():
         if l.startswith(('http', 'tel:', 'mailto:', '#')):
             continue
         path = l.split('#')[0].split('?')[0]
-        if path not in existing:
+        if path not in existing and not (OUT / path.lstrip('/')).is_file():
             errors.append(f'{u}: broken link {l}')
     for bad in (r'Варшав', r'Warszaw', r'\+48', r'\d\s?zł', r'\d\s?зл', r'Olena Kovalenko', r'>5\.0<'):
         if re.search(bad, txt):

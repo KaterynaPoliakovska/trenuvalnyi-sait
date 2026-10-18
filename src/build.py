@@ -20,7 +20,7 @@ from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NA
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'public'
-ASSET_VER = '11'
+ASSET_VER = '12'
 TODAY = datetime.date.today().isoformat()
 
 WARN = []
@@ -146,7 +146,7 @@ def to_blocks(lines):
             end_para(); continue
         if re.match(r'^(Тут розмістіть|Розмістіть тут|Під [^.]{0,40}розмістіть|TUTAJ UMIEŚĆ|Tutaj umieść|Umieść tutaj|Pod [^.]{0,40}umieść)', l, re.I):
             end_para(); out.append({'t': 'todo', 'text': l}); continue
-        m = re.match(r'^!(review|cert|demo):\s*(.*)$', l)
+        m = re.match(r'^!(review|certimg|cert|demo):\s*(.*)$', l)
         if m:
             end_para()
             if m.group(1) == 'demo':
@@ -276,6 +276,17 @@ def render_blocks(blocks, lang, key, ctx_key=None):
             TODO.setdefault(f'{lang}:{key}', []).append('[блок] ' + b['text'])
         elif t == 'demo':
             h.append(f'<p class="demo-note"><span class="demo-badge">{UI[lang]["demo"]}</span> {esc(b["text"])}</p>')
+        elif t == 'certimg':
+            TODO.setdefault(f'{lang}:{key}', []).append(f'[демо-сертифікат] {b["parts"][0]}')
+            src, cap = (b['parts'] + ['', ''])[:2]
+            card = (f'<figure class="certimg-card"><span class="demo-badge">{UI[lang]["demo"]}</span>'
+                    f'<a href="/assets/certs/{esc(src)}" target="_blank" rel="noopener">'
+                    f'<img src="/assets/certs/{esc(src)}" width="1408" height="768" loading="lazy" alt="{esc(cap)}"></a>'
+                    f'<figcaption>{esc(cap)}</figcaption></figure>')
+            if h and h[-1].startswith('<div class="certimg-grid">'):
+                h[-1] = h[-1][:-len('</div>')] + card + '</div>'
+            else:
+                h.append('<div class="certimg-grid">' + card + '</div>')
         elif t in ('review', 'cert'):
             TODO.setdefault(f'{lang}:{key}', []).append(f'[демо, замінити реальним] {b["parts"][0]}')
             badge = f'<span class="demo-badge">{UI[lang]["demo"]}</span>'
