@@ -671,6 +671,18 @@ textarea.input { resize: vertical; min-height: 96px; }
 .bento .b-sand .b-text a.more { color: var(--c-white); background: var(--c-accent); border: 1px solid var(--c-accent); }
 .bento .b-sand .b-text a.more:hover { background: var(--c-accent-deep); border-color: var(--c-accent-deep); }
 
+/* business cards: darker photo, larger text */
+.aud-card::after { background: linear-gradient(180deg, rgba(18,12,7,.35) 0%, rgba(18,12,7,.62) 45%, rgba(18,12,7,.9) 100%); }
+.aud-card p { font-size: clamp(1.05rem, 1.25vw, 1.2rem); line-height: 1.6; color: var(--c-white); }
+
+/* footer contacts: bigger block, more air between lines */
+.footer-addr { font-size: 1.05rem; gap: 14px; line-height: 1.5; }
+.footer-addr b { font-size: 1.15rem; }
+.footer-addr .gap { height: 22px; }
+.footer-grid { margin-top: 110px; }
+.footer-cols a { font-size: .95rem; }
+.footer-cols ul { gap: 12px; }
+
 /* hero bar: more service chips */
 .bar-q .chips { gap: 10px 12px; }
 .bar-q .btn-white { font-size: 1rem; line-height: 1.6; padding: 4px 20px; }
