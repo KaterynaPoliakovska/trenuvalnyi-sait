@@ -655,6 +655,9 @@ textarea.input { resize: vertical; min-height: 96px; }
 .hero-bar { background: linear-gradient(135deg, rgba(22,15,10,.86) 0%, rgba(30,21,14,.74) 100%); }
 .hero-bar > div + div { border-left-color: rgba(255,255,255,.22); }
 
+/* bento "Polish" card: larger, lower, wider text */
+.bento .b-tall .b-text p { font-size: clamp(1.05rem, 1.25vw, 1.2rem); line-height: 1.6; max-width: none; margin-top: 38px; }
+
 /* hero bar: more service chips */
 .bar-q .chips { gap: 10px 12px; }
 .bar-q .btn-white { font-size: 1rem; line-height: 1.6; padding: 4px 20px; }
