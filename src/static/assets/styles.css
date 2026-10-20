@@ -640,6 +640,16 @@ textarea.input { resize: vertical; min-height: 96px; }
 .nav .sub a:hover { background: var(--c-cream); color: var(--c-accent-deep); }
 .nav .sub a[aria-current="page"] { color: var(--c-accent-deep); }
 
+/* hero: darker photo for readable white text, larger side labels */
+.hero-bg::after {
+  background:
+    linear-gradient(90deg, rgba(20,13,8,.78) 0%, rgba(28,19,12,.58) 45%, rgba(28,19,12,.38) 100%),
+    linear-gradient(0deg, rgba(20,13,8,.55), rgba(20,13,8,0) 55%),
+    rgba(70,48,30,.55);
+}
+.hero-names { gap: clamp(64px, 9vw, 160px); }
+.hero-names span { font-size: clamp(1.6rem, 2.3vw, 2.25rem); line-height: 1.15; text-shadow: 0 2px 14px rgba(0,0,0,.35); }
+
 /* hero bar: more service chips */
 .bar-q .chips { gap: 10px 12px; }
 .bar-q .btn-white { font-size: 1rem; line-height: 1.6; padding: 4px 20px; }

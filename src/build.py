@@ -20,7 +20,7 @@ from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NA
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'public'
-ASSET_VER = '12'
+ASSET_VER = '13'
 TODAY = datetime.date.today().isoformat()
 
 WARN = []
@@ -785,7 +785,6 @@ def build_page(key, lang):
     <div class="hero-card">
       <div class="hero-bg" style="--img:url('{img(PAGES['home'][5], 2000)}')"></div>
       <div class="hero-copy">
-        <span class="eyebrow fade" style="transition-delay:.1s">{esc(u['eyebrow'])}</span>
         <h1 class="split">{esc(page['h1'])}</h1>
         <div class="hero-lead fade" style="transition-delay:.5s">{intro}</div>
         <div class="fade" style="transition-delay:.7s">{btns}</div>
