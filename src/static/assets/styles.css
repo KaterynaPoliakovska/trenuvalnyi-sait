@@ -683,6 +683,14 @@ textarea.input { resize: vertical; min-height: 96px; }
 .footer-cols a { font-size: .95rem; }
 .footer-cols ul { gap: 12px; }
 
+/* header dropdowns: dark panel */
+@media (min-width: 901px) {
+  .sub { background: #2A1F17; box-shadow: 0 24px 48px rgba(24,18,12,.35); }
+  .nav .sub a { color: var(--c-cream); }
+  .nav .sub a:hover { background: rgba(255,255,255,.08); color: var(--c-accent-light); }
+  .nav .sub a[aria-current="page"] { color: var(--c-accent-light); }
+}
+
 /* hero bar: more service chips */
 .bar-q .chips { gap: 10px 12px; }
 .bar-q .btn-white { font-size: 1rem; line-height: 1.6; padding: 4px 20px; }
