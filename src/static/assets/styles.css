@@ -656,7 +656,20 @@ textarea.input { resize: vertical; min-height: 96px; }
 .hero-bar > div + div { border-left-color: rgba(255,255,255,.22); }
 
 /* bento "Polish" card: larger, lower, wider text */
-.bento .b-tall .b-text p { font-size: clamp(1.05rem, 1.25vw, 1.2rem); line-height: 1.6; max-width: none; margin-top: 38px; }
+.bento { grid-template-rows: minmax(320px, auto) minmax(320px, auto); }
+.bento .b-sand { padding-top: 40px; padding-bottom: 40px; }
+.bento .b-card .b-text p { font-size: clamp(1.05rem, 1.25vw, 1.2rem); line-height: 1.6; max-width: none; margin-top: 38px; }
+.bento .b-card .b-text a.more {
+  display: flex; width: fit-content; align-items: center; gap: 8px; margin-top: 18px;
+  padding: 9px 22px; border-radius: var(--r-pill); font-size: 1rem; font-weight: 500; line-height: 1.2;
+  text-decoration: none; white-space: nowrap; transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+.bento .b-tall .b-text a.more { color: var(--c-white); border: 1px solid rgba(255,255,255,.85); background: rgba(255,255,255,.08); }
+.bento .b-tall .b-text a.more:hover { background: var(--c-white); color: var(--c-cocoa); }
+.bento .b-gold .b-text a.more { color: var(--c-cocoa); background: var(--c-white); border: 1px solid var(--c-white); }
+.bento .b-gold .b-text a.more:hover { background: var(--c-cocoa); border-color: var(--c-cocoa); color: var(--c-white); }
+.bento .b-sand .b-text a.more { color: var(--c-white); background: var(--c-accent); border: 1px solid var(--c-accent); }
+.bento .b-sand .b-text a.more:hover { background: var(--c-accent-deep); border-color: var(--c-accent-deep); }
 
 /* hero bar: more service chips */
 .bar-q .chips { gap: 10px 12px; }
