@@ -651,6 +651,10 @@ textarea.input { resize: vertical; min-height: 96px; }
 .hero-names { gap: clamp(64px, 9vw, 160px); }
 .hero-names span { font-size: clamp(1.6rem, 2.3vw, 2.25rem); line-height: 1.15; text-shadow: 0 2px 14px rgba(0,0,0,.35); }
 
+/* hero bar: darker glass so white text reads comfortably */
+.hero-bar { background: linear-gradient(135deg, rgba(22,15,10,.86) 0%, rgba(30,21,14,.74) 100%); }
+.hero-bar > div + div { border-left-color: rgba(255,255,255,.22); }
+
 /* hero bar: more service chips */
 .bar-q .chips { gap: 10px 12px; }
 .bar-q .btn-white { font-size: 1rem; line-height: 1.6; padding: 4px 20px; }
