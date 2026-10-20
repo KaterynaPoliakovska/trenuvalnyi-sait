@@ -619,8 +619,9 @@ textarea.input { resize: vertical; min-height: 96px; }
 .nav a[aria-current="page"] span { color: var(--c-accent-deep); }
 
 /* header dropdowns (services, documents) */
-.nav-item { position: relative; display: flex; align-items: flex-start; gap: 2px; }
-.sub-toggle { flex: none; width: 20px; height: 20px; padding: 0; margin-top: 1px; border: 0; background: transparent; display: grid; place-items: center; border-radius: 50%; }
+.nav { align-items: center; }
+.nav-item { position: relative; display: flex; align-items: center; gap: 2px; }
+.sub-toggle { flex: none; width: 20px; height: 20px; padding: 0; margin-top: 0; border: 0; background: transparent; display: grid; place-items: center; border-radius: 50%; }
 .sub-toggle span { width: 7px; height: 7px; border-right: 1.5px solid var(--c-ink); border-bottom: 1.5px solid var(--c-ink); transform: translateY(-2px) rotate(45deg); transition: transform var(--t-fast); }
 .nav-item.open .sub-toggle span { transform: translateY(2px) rotate(-135deg); }
 .sub {

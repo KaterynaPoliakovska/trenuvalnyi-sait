@@ -20,7 +20,7 @@ from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NA
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'public'
-ASSET_VER = '13'
+ASSET_VER = '14'
 TODAY = datetime.date.today().isoformat()
 
 WARN = []
@@ -518,7 +518,7 @@ def header_html(lang, key):
     items = []
     for k in NAV:
         cur = ' aria-current="page"' if k == key else ''
-        top = f'<a href="{url(k, lang)}"{cur}><span>{esc(name(k, lang))}</span><small>{esc(u["nav_sub"][k])}</small></a>'
+        top = f'<a href="{url(k, lang)}"{cur}><span>{esc(name(k, lang))}</span></a>'
         subs = NAV_SUB.get(k)
         if not subs:
             items.append(top)
