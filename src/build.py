@@ -702,7 +702,7 @@ def head_html(lang, key, meta, schema):
 def org_schema(lang):
     return {
         '@context': 'https://schema.org', '@type': 'ProfessionalService', '@id': SITE_URL + '/#org',
-        'name': UI[lang]['brand'], 'alternateName': ['Мовний дім', 'Movnyi Dim'],
+        'name': UI[lang]['brand'], 'alternateName': ['Мовний дім', 'Dom Językowy', 'Movnyi Dim'],
         'url': SITE_URL + url('home', lang), 'logo': SITE_URL + '/assets/logo/mark-color-1024.png',
         'image': SITE_URL + '/assets/logo/social-avatar-1080.png',
         'telephone': CONTACT['phone'], 'email': CONTACT['email'], 'priceRange': 'від 300 грн' if lang == 'uk' else 'od 300 UAH',
