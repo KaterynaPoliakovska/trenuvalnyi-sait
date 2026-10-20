@@ -20,7 +20,7 @@ from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NA
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'public'
-ASSET_VER = '19'
+ASSET_VER = '20'
 TODAY = datetime.date.today().isoformat()
 
 WARN = []
@@ -509,6 +509,11 @@ def section_html(sec, lang, key, idx):
 
 def logo_img(lang, variant='color'):
     lg = UI[lang]['logo']
+    if lg == 'pl':
+        # Polish wordmark: the brand mark + live text in the logo fonts (Unbounded / Manrope)
+        mark = 'mark-color.svg'
+        return (f'<span class="wordmark wordmark-{variant}"><img src="/assets/logo/{mark}" width="100" height="100" alt="">'
+                f'<span class="wm-text"><b>Dom<br>Językowy</b><small>biuro tłumaczeń</small></span></span>')
     w = 468 if lg == 'ua' else 434
     return f'<img src="/assets/logo/logo-horizontal-{lg}-{variant}.svg" width="{w}" height="158" alt="{esc(UI[lang]["brand_full"])}">'
 
@@ -694,7 +699,7 @@ def head_html(lang, key, meta, schema):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@100;200&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Unbounded:wght@700&family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@100;200&display=swap">
   <link rel="stylesheet" href="/assets/styles.css?v={ASSET_VER}">{ld}
 </head>'''
 

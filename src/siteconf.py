@@ -170,7 +170,7 @@ UI = {
         'urgent_price': '+50% до базової ціни',
     },
     'pl': {
-        'html_lang': 'pl', 'og_locale': 'pl_PL', 'brand': 'Dom Językowy', 'logo': 'en',
+        'html_lang': 'pl', 'og_locale': 'pl_PL', 'brand': 'Dom Językowy', 'logo': 'pl',
         'nav_sub': {'services': 'przysięgłe, notarialne, ustne', 'documents': 'paszport, akty, dyplomy',
                     'prices': 'od 300 UAH', 'about': 'biuro w Kijowie', 'contacts': 'pn–pt 09:00–17:00'},
         'footer_cols': {'services': 'Usługi', 'documents': 'Dokumenty', 'bureau': 'Języki i biuro'},

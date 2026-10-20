@@ -691,6 +691,17 @@ textarea.input { resize: vertical; min-height: 96px; }
   .nav .sub a[aria-current="page"] { color: var(--c-accent-light); }
 }
 
+/* Polish wordmark «Dom Językowy» (live text, same colours as the logo files) */
+.wordmark { display: flex; align-items: center; gap: .32em; height: 100%; font-size: 46px; }
+.wordmark img { height: 100%; width: auto; flex: none; }
+.wm-text { display: flex; flex-direction: column; justify-content: center; line-height: 1; }
+.wm-text b { font: 700 .34em/0.98 'Unbounded', 'Manrope', sans-serif; text-transform: uppercase; letter-spacing: .01em; color: #1F4B3A; }
+.wm-text small { margin-top: .32em; font: 600 .125em/1 'Manrope', sans-serif; text-transform: uppercase; letter-spacing: .22em; color: #6B5B4D; white-space: nowrap; }
+.wordmark-reverse .wm-text b { color: var(--c-white); }
+.wordmark-reverse .wm-text small { color: var(--c-taupe); }
+.footer-logo .wordmark { font-size: 66px; }
+@media (max-width: 640px) { .logo .wordmark { font-size: 38px; } .footer-logo .wordmark { font-size: 54px; } }
+
 /* hero bar: more service chips */
 .bar-q .chips { gap: 10px 12px; }
 .bar-q .btn-white { font-size: 1rem; line-height: 1.6; padding: 4px 20px; }
