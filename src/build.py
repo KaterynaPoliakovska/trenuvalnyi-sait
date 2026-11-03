@@ -515,7 +515,7 @@ def logo_img(lang, variant='color'):
     # Wordmark: the brand mark + live text in the logo fonts (Unbounded / Manrope)
     u = UI[lang]
     first, _, rest = u['brand'].partition(' ')
-    return (f'<span class="wordmark wordmark-{variant}"><img src="/assets/logo/mark-color.svg" width="100" height="100" alt="">'
+    return (f'<span class="wordmark wordmark-{variant} notranslate" translate="no"><img src="/assets/logo/mark-color.svg" width="100" height="100" alt="">'
             f'<span class="wm-text"><b>{esc(first)}<br>{esc(rest)}</b><small>{esc(u["tagline"])}</small></span></span>')
 
 
