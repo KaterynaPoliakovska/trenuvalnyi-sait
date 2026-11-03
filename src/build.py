@@ -15,7 +15,7 @@ import sys
 from urllib.parse import quote
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NAV, NAV_SUB, FOOTER, UI)  # noqa: E402
+from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, XDEFAULT_LANG, PAGES, PAGES_EN, ANCHORS, NAV, NAV_SUB, FOOTER, UI)  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
@@ -32,10 +32,14 @@ def esc(s):
 
 
 def url(key, lang):
+    if lang == 'en':
+        return PAGES_EN[key][0]
     return PAGES[key][0 if lang == 'uk' else 1]
 
 
 def name(key, lang):
+    if lang == 'en':
+        return PAGES_EN[key][1]
     return PAGES[key][2 if lang == 'uk' else 3]
 
 
@@ -62,7 +66,7 @@ def parse(text):
         for b in blocks:
             if b['t'] == 'buttons':
                 (sec['buttons'] if sec else page['intro_buttons']).extend(b['items'])
-            elif sec is not None and b['t'] == 'link' and re.match(r'^(Послуга|Usługa):', b['label']):
+            elif sec is not None and b['t'] == 'link' and re.match(r'^(Послуга|Usługa|Service):', b['label']):
                 sec.setdefault('after', []).append(b)
             elif sec is None:
                 page['intro'].append(b)
@@ -127,7 +131,7 @@ def to_blocks(lines):
             continue
         if rows:
             out.append({'t': 'table', 'rows': rows}); rows = []
-        m = re.match(r'^(Кнопка|Кнопки|Przycisk|Przyciski):\s*(.*)$', l)
+        m = re.match(r'^(Кнопка|Кнопки|Przycisk|Przyciski|Button|Buttons):\s*(.*)$', l)
         if m:
             end_para()
             body = m.group(2)
@@ -140,11 +144,11 @@ def to_blocks(lines):
         m = re.match(r'^(Посилання|Link):\s*«([^»]+)»\s*→\s*(.+)$', l)
         if m:
             end_para(); out.append({'t': 'link', 'label': m.group(2), 'target': m.group(3).strip()}); continue
-        if re.match(r'^(Форма|Formularz):', l):
+        if re.match(r'^(Форма|Formularz|Form):', l):
             end_para(); out.append({'t': 'form'}); continue
         if re.match(r'^(Інтент:|Футер\b|Stopka\b|Intencja:)', l):
             end_para(); continue
-        if re.match(r'^(Тут розмістіть|Розмістіть тут|Під [^.]{0,40}розмістіть|TUTAJ UMIEŚĆ|Tutaj umieść|Umieść tutaj|Pod [^.]{0,40}umieść)', l, re.I):
+        if re.match(r'^(Тут розмістіть|Розмістіть тут|Під [^.]{0,40}розмістіть|TUTAJ UMIEŚĆ|Tutaj umieść|Umieść tutaj|Pod [^.]{0,40}umieść|PLACE HERE)', l, re.I):
             end_para(); out.append({'t': 'todo', 'text': l}); continue
         m = re.match(r'^!(review|certimg|cert|demo):\s*(.*)$', l)
         if m:
@@ -180,7 +184,7 @@ def resolve(anchor, lang, ctx_key=None):
     for k in sorted(table, key=len, reverse=True):
         if a.lower() == k.lower():
             return table[k]
-    if a.lower().startswith(('детальніше', 'więcej')) and ctx_key:
+    if a.lower().startswith(('детальніше', 'więcej', 'learn more', 'more details')) and ctx_key:
         return ctx_key
     return None
 
@@ -199,7 +203,7 @@ def fill(text, lang, page_key):
     """Escape + replace data placeholders. Returns safe HTML."""
     t = text
     t = re.sub(r'(від|od)\s+___\s+(грн|UAH)', lambda m: f'{m.group(1)} {CONTACT["price_from"]} {m.group(2)}', t)
-    t = t.replace('#ERROR!', ('від ' if lang == 'uk' else 'od ') + CONTACT['price_from'] + (' грн' if lang == 'uk' else ' UAH'))
+    t = t.replace('#ERROR!', UI[lang]['price_from_text'])
     t = t.replace('#NAME?', UI[lang]['urgent_price'])
     t = re.sub(r'(на|o)\s+___\s*%', lambda m: m.group(1) + ' 50 %', t)
     t = esc(t)
@@ -313,7 +317,7 @@ def buttons_html(btns, lang, key, light=False):
         return ''
     out = []
     for i, b in enumerate(btns):
-        if re.search(r'Google|відгук на сайті|opinię na stronie', b['label']):
+        if re.search(r'Google|відгук на сайті|opinię na stronie|review on the site', b['label']):
             TODO.setdefault(f'{lang}:{key}', []).append(f'[кнопка прихована] {b["label"]} — немає посилання на профіль Google / форми відгуку')
             continue
         k = resolve(b['target'], lang) if b.get('target') else resolve(b['label'], lang)
@@ -344,7 +348,7 @@ def is_contacts(sec):
     allb = sec['blocks'] + [b for it in sec['items'] for b in it['blocks']]
     txt = ' '.join(b.get('text', '') for b in allb) + ' '.join(' '.join(r) for b in allb if b['t'] == 'kv' for r in b['rows'])
     txt += ' '.join(i for b in allb if b['t'] == 'list' for i in b['items'])
-    return sec['layout'] == 'contacts' or bool(re.search(r'(Адреса|Adres)', txt) and re.search(r'(Телефон|Telefon)', txt))
+    return sec['layout'] == 'contacts' or bool(re.search(r'(Адреса|Adres|Address)', txt) and re.search(r'(Телефон|Telefon|Phone)', txt))
 
 
 def is_empty(sec):
@@ -399,9 +403,9 @@ def section_html(sec, lang, key, idx):
     lay = sec['layout']
     items = sec['items']
     if not lay:
-        if section_is(sec, 'часті запитання', 'najczęściej zadawane', 'faq'):
+        if section_is(sec, 'часті запитання', 'najczęściej zadawane', 'faq', 'frequently asked'):
             lay = 'faq'
-        elif section_is(sec, 'як ми працюємо', 'jak działamy', 'jak pracujemy', 'як замовити', 'jak zamówić') and 2 < len(items) <= 6:
+        elif section_is(sec, 'як ми працюємо', 'jak działamy', 'jak pracujemy', 'як замовити', 'jak zamówić', 'how we work', 'how to order') and 2 < len(items) <= 6:
             lay = 'steps'
     alt = ' alt' if idx % 2 else ''
 
@@ -485,7 +489,7 @@ def section_html(sec, lang, key, idx):
         def keep(b):
             if b['t'] in ('kv', 'list'):
                 return False
-            return not re.match(r'^(Адреса|Телефон|E-mail|Графік|Adres|Telefon|Godziny|Viber|Бюро перекладів «|Biuro tłumaczeń «)', b.get('text', ''))
+            return not re.match(r'^(Адреса|Телефон|E-mail|Графік|Adres|Telefon|Godziny|Viber|Address|Phone|Opening hours|Бюро перекладів «|Biuro tłumaczeń «|Translation bureau «)', b.get('text', ''))
         extra = ''.join(render_blocks([b for b in it['blocks'] if keep(b)], lang, key) for it in items)
         intro2 = render_blocks([b for b in sec['blocks'] if keep(b)], lang, key)
         return f'<section class="sec{alt}" id="kontakty"><div class="sec-in"><h2 class="h2-sm split">{h2}</h2>{intro2}{contacts_html(lang, key, h3)}{extra}{btns}</div></section>'
@@ -551,7 +555,7 @@ def lang_switch(lang, key, dark=False):
     u = UI[lang]
     links = []
     for l in LANGS:
-        label = 'UA' if l == 'uk' else 'PL'
+        label = {'uk': 'UA', 'pl': 'PL', 'en': 'EN'}[l]
         cur = ' aria-current="true"' if l == lang else ''
         links.append(f'<a href="{url(key, l)}" hreflang="{l}" lang="{l}"{cur}>{label}</a>')
     return f'<div class="lang{" lang-dark" if dark else ""}" role="group" aria-label="{u["lang_group"]}">{"".join(links)}</div>'
@@ -663,7 +667,7 @@ def head_html(lang, key, meta, schema):
     desc = meta.get('description', '')
     canon = SITE_URL + url(key, lang)
     alts = ''.join(f'\n  <link rel="alternate" hreflang="{l}" href="{SITE_URL + url(key, l)}">' for l in LANGS)
-    alts += f'\n  <link rel="alternate" hreflang="x-default" href="{SITE_URL + url(key, DEFAULT_LANG)}">'
+    alts += f'\n  <link rel="alternate" hreflang="x-default" href="{SITE_URL + url(key, XDEFAULT_LANG)}">'
     robots = meta.get('robots', 'index, follow')
     ld = ''.join(f'\n  <script type="application/ld+json">{json.dumps(s, ensure_ascii=False, separators=(",", ":"))}</script>' for s in schema)
     return f'''<!doctype html>
@@ -707,13 +711,13 @@ def org_schema(lang):
         'name': UI[lang]['brand'], 
         'url': SITE_URL + url('home', lang), 'logo': SITE_URL + '/assets/logo/mark-color-1024.png',
         'image': SITE_URL + '/assets/logo/social-avatar-1080.png',
-        'telephone': CONTACT['phone'], 'email': CONTACT['email'], 'priceRange': 'від 300 грн' if lang == 'uk' else 'od 300 UAH',
+        'telephone': CONTACT['phone'], 'email': CONTACT['email'], 'priceRange': UI[lang]['price_from_text'],
         'address': {'@type': 'PostalAddress', 'streetAddress': CONTACT['street'][lang], 'addressLocality': CONTACT['city'][lang],
                     'addressRegion': CONTACT['district'][lang], 'addressCountry': 'UA'},
         'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification',
                                        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
                                        'opens': '09:00', 'closes': '17:00'}],
-        'areaServed': 'Київ' if lang == 'uk' else 'Kijów',
+        'areaServed': CONTACT['city'][lang],
         'knowsLanguage': ['uk', 'pl', 'en', 'ru'],
     }
 
@@ -721,7 +725,7 @@ def org_schema(lang):
 def faq_schema(page, lang, key):
     qas = []
     for sec in page['sections']:
-        if section_is(sec, 'часті запитання', 'najczęściej zadawane', 'faq') or sec['layout'] == 'faq':
+        if section_is(sec, 'часті запитання', 'najczęściej zadawane', 'faq', 'frequently asked') or sec['layout'] == 'faq':
             for it in sec['items']:
                 txt = ' '.join(re.sub(r'\s*→.*$', '', b['text']) for b in it['blocks'] if b['t'] == 'p')
                 if '___' in txt or not txt:
@@ -803,7 +807,7 @@ def build_page(key, lang):
           {chips}
         </div>
       </div>
-      <div class="bar-stat"><div class="stat-big" data-sx="-40,25"><span data-count="{CONTACT['price_from']}">{CONTACT['price_from']}</span><small>{u['stat1_unit']}</small></div><div class="stat-cap">{u['stat1']}</div></div>
+      <div class="bar-stat"><div class="stat-big" data-sx="-40,25"><span data-count="{u['stat1_value']}">{u['stat1_value']}</span><small>{u['stat1_unit']}</small></div><div class="stat-cap">{u['stat1']}</div></div>
       <div class="bar-stat"><div class="stat-big" data-sx="-35,0"><span data-count="4">4</span></div><div class="stat-cap">{u['stat2']}</div></div>
     </div></div>
   </section>'''
@@ -823,7 +827,7 @@ def build_page(key, lang):
     body = []
     for i, s in enumerate(sections):
         body.append(section_html(s, lang, key, i))
-        if is_home and s['layout'] == 'steps' or (is_home and section_is(s, 'як ми працюємо', 'jak działamy')):
+        if is_home and s['layout'] == 'steps' or (is_home and section_is(s, 'як ми працюємо', 'jak działamy', 'how we work')):
             logos = ''.join(f'<span>{esc(x)}</span>' for x in u['logos'])
             body.append(f'<section class="logos"><p class="logos-label fade">{esc(u["logos_label"])}</p><div class="logos-track"><div class="logos-move">{logos}{logos}</div></div></section>')
 
@@ -846,7 +850,7 @@ def build_page(key, lang):
 
 
 def build_404():
-    u, p = UI['uk'], UI['pl']
+    u, p, e = UI['uk'], UI['pl'], UI['en']
     doc = f'''{head_html('uk', 'home', {'title': u['not_found_title'] + ' | Language House', 'description': u['not_found_text'], 'robots': 'noindex, follow'}, [])}
 <body class="page-404">
 {header_html('uk', 'home')}
@@ -857,8 +861,8 @@ def build_404():
       <div class="hero-copy">
         <span class="eyebrow">404</span>
         <h1>{u['not_found_title']}</h1>
-        <div class="hero-lead"><p>{u['not_found_text']}</p><p lang="pl">{p['not_found_title']}. {p['not_found_text']}</p></div>
-        <div class="btn-row"><a class="btn btn-accent" href="/">{u['not_found_btn']}</a><a class="btn btn-outline-light" href="/pl/" lang="pl">{p['not_found_btn']}</a></div>
+        <div class="hero-lead"><p>{u['not_found_text']}</p><p lang="pl">{p['not_found_title']}. {p['not_found_text']}</p><p lang="en">{e['not_found_title']}. {e['not_found_text']}</p></div>
+        <div class="btn-row"><a class="btn btn-accent" href="/">{u['not_found_btn']}</a><a class="btn btn-outline-light" href="/pl/" lang="pl">{p['not_found_btn']}</a><a class="btn btn-outline-light" href="/en/" lang="en">{e['not_found_btn']}</a></div>
       </div>
     </div>
   </section>
@@ -875,7 +879,7 @@ def build_sitemap(indexable):
     for key in indexable:
         for lang in LANGS:
             alts = ''.join(f'\n    <xhtml:link rel="alternate" hreflang="{l}" href="{SITE_URL + url(key, l)}"/>' for l in LANGS)
-            alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL + url(key, DEFAULT_LANG)}"/>'
+            alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE_URL + url(key, XDEFAULT_LANG)}"/>'
             rows.append(f'  <url>\n    <loc>{SITE_URL + url(key, lang)}</loc>\n    <lastmod>{TODAY}</lastmod>{alts}\n  </url>')
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'

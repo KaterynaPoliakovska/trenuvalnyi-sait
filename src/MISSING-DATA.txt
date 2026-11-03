@@ -1,3 +1,32 @@
+en:about
+   [демо-сертифікат] korporatyvnyi-sertyfikat-mid.jpg
+   [демо-сертифікат] sertyfikat-kursu-b2.jpg
+   [демо-сертифікат] korporatyvnyi-sertyfikat-synii.jpg
+en:contacts
+   [блок] Viber / Telegram — details not provided
+   [блок] How to get there: nearest metro station, public transport, parking — details not provided
+   [блок] How to get there: nearest metro station, public transport, parking — details not provided
+en:home
+   [демо-сертифікат] korporatyvnyi-sertyfikat-mid.jpg
+   [демо-сертифікат] sertyfikat-kursu-b2.jpg
+   [демо-сертифікат] korporatyvnyi-sertyfikat-synii.jpg
+   [демо, замінити реальним] Olena K.
+   [демо, замінити реальним] Andrii M.
+   [демо, замінити реальним] Iryna S.
+en:reviews
+   [кнопка прихована] See reviews on Google — немає посилання на профіль Google / форми відгуку
+   [демо, замінити реальним] Olena K.
+   [демо, замінити реальним] Andrii M.
+   [демо, замінити реальним] Iryna S.
+   [демо, замінити реальним] Maksym T.
+   [демо, замінити реальним] Nataliia H.
+   [демо, замінити реальним] Serhii P.
+   [демо, замінити реальним] Yuliia D.
+   [демо, замінити реальним] Demo Logistics LLC
+   [демо, замінити реальним] Demo Tech LLC
+   [демо, замінити реальним] «Demo» sole trader
+   [кнопка прихована] Leave a review on Google — немає посилання на профіль Google / форми відгуку
+   [кнопка прихована] Write a review on the site — немає посилання на профіль Google / форми відгуку
 pl:about
    [демо-сертифікат] korporatyvnyi-sertyfikat-mid.jpg
    [демо-сертифікат] sertyfikat-kursu-b2.jpg

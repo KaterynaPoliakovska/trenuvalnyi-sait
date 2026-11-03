@@ -5,391 +5,671 @@
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/pysmovyi-pereklad/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/pysmovyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-pisemne/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/pysmovyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/written-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/written-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-pisemne/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/pysmovyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-pisemne/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/pysmovyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/written-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/written-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/written-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/pysmovyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-pisemne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/written-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/written-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/prysiazhnyi-pereklad/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/prysiazhnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-przysiegle/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/prysiazhnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/sworn-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/sworn-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-przysiegle/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/prysiazhnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-przysiegle/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/prysiazhnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/sworn-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/sworn-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/sworn-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/prysiazhnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-przysiegle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/sworn-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/sworn-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/notarialnyi-pereklad/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/notarialnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-notarialne/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/notarialnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/notarised-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/notarised-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-notarialne/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/notarialnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-notarialne/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/notarialnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/notarised-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/notarised-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/notarised-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/notarialnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-notarialne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/notarised-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/notarised-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/apostyl/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/apostyl/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/apostille/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/apostyl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/apostille/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/apostille/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/apostyl/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/apostille/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/apostyl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/apostille/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/apostille/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/apostyl/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/apostille/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/apostille/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-ustne/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-ustne/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-ustne/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/interpreting/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-ustne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/perekladach-na-zustrich/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/perekladach-na-zustrich/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-ustne/tlumacz-na-spotkanie/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/perekladach-na-zustrich/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/interpreter-for-meetings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/interpreter-for-meetings/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-ustne/tlumacz-na-spotkanie/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/perekladach-na-zustrich/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-ustne/tlumacz-na-spotkanie/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/perekladach-na-zustrich/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/interpreter-for-meetings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/interpreter-for-meetings/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/interpreting/interpreter-for-meetings/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/usnyi-pereklad/perekladach-na-zustrich/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-ustne/tlumacz-na-spotkanie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/interpreter-for-meetings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/interpreting/interpreter-for-meetings/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/pereklad-onlain/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/pereklad-onlain/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-online/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/pereklad-onlain/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/online-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/online-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-online/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/pereklad-onlain/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-online/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/pereklad-onlain/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/online-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/online-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/online-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/pereklad-onlain/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenie-online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/online-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/online-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/yurydychnyi-pereklad/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/yurydychnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-prawnicze/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/yurydychnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/legal-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/legal-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-prawnicze/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/yurydychnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-prawnicze/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/yurydychnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/legal-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/legal-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/legal-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/yurydychnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-prawnicze/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/legal-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/legal-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/medychnyi-pereklad/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/medychnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-medyczne/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/medychnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/medical-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/medical-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-medyczne/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/medychnyi-pereklad/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-medyczne/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/medychnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/medical-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/medical-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/medical-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/medychnyi-pereklad/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/tlumaczenia-medyczne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/medical-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/medical-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/poslugy/dokumenty-dlia-polshchi/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/dokumenty-dlia-polshchi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/dokumenty-do-polski/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/dokumenty-dlia-polshchi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/documents-for-poland/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/documents-for-poland/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/uslugi/dokumenty-do-polski/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/dokumenty-dlia-polshchi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/dokumenty-do-polski/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/poslugy/dokumenty-dlia-polshchi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/documents-for-poland/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/documents-for-poland/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/services/documents-for-poland/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/poslugy/dokumenty-dlia-polshchi/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/uslugi/dokumenty-do-polski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/services/documents-for-poland/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/services/documents-for-poland/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/document-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/pasport/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/pasport/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/paszport/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/pasport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/passport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/passport/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/paszport/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/pasport/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/paszport/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/pasport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/passport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/passport/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/document-translation/passport/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/pasport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/paszport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/passport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/passport/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-narodzhennia/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-narodzhennia/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/akt-urodzenia/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-narodzhennia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/birth-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/birth-certificate/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/akt-urodzenia/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-narodzhennia/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/akt-urodzenia/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-narodzhennia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/birth-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/birth-certificate/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/document-translation/birth-certificate/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-narodzhennia/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/akt-urodzenia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/birth-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/birth-certificate/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-shliub/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-shliub/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/akt-malzenstwa/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-shliub/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/marriage-certificate/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/akt-malzenstwa/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-shliub/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/akt-malzenstwa/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-shliub/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/marriage-certificate/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/document-translation/marriage-certificate/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/svidotstvo-pro-shliub/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/akt-malzenstwa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/marriage-certificate/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/vodiiske-posvidchennia/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/vodiiske-posvidchennia/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/prawo-jazdy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/vodiiske-posvidchennia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/driving-licence/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/driving-licence/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/prawo-jazdy/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/vodiiske-posvidchennia/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/prawo-jazdy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/vodiiske-posvidchennia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/driving-licence/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/driving-licence/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/document-translation/driving-licence/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/vodiiske-posvidchennia/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/prawo-jazdy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/driving-licence/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/driving-licence/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/trudovi-dokumenty/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/trudovi-dokumenty/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/dokumenty-pracownicze/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/trudovi-dokumenty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/employment-documents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/employment-documents/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/dokumenty-pracownicze/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/trudovi-dokumenty/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/dokumenty-pracownicze/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/trudovi-dokumenty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/employment-documents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/employment-documents/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/document-translation/employment-documents/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/trudovi-dokumenty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/dokumenty-pracownicze/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/employment-documents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/employment-documents/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/dyplom-atestat/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/dyplom-atestat/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/dyplom-swiadectwo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/dyplom-atestat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/diploma-and-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/diploma-and-certificate/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/dyplom-swiadectwo/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/dyplom-atestat/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/dyplom-swiadectwo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/dyplom-atestat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/diploma-and-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/diploma-and-certificate/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/document-translation/diploma-and-certificate/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-dokumentiv/dyplom-atestat/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenie-dokumentow/dyplom-swiadectwo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/diploma-and-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/document-translation/diploma-and-certificate/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-z-polskoi/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-polskoi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-polski/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-polskoi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/polish-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/polish-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-polski/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-polskoi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-polski/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-polskoi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/polish-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/polish-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/polish-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-polskoi/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-polski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/polish-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/polish-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-z-angliiskoi/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-angliiskoi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-angielski/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-angliiskoi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/english-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/english-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-angielski/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-angliiskoi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-angielski/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-angliiskoi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/english-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/english-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/english-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-angliiskoi/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-angielski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/english-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/english-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pereklad-z-rosiiskoi/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-rosiiskoi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-rosyjski/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-rosiiskoi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/russian-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/russian-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-rosyjski/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-rosiiskoi/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-rosyjski/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-rosiiskoi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/russian-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/russian-translation/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/russian-translation/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pereklad-z-rosiiskoi/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/tlumaczenia-jezyk-rosyjski/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/russian-translation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/russian-translation/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/dlia-biznesu/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/dlia-biznesu/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/dla-biznesu/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/dlia-biznesu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/for-business/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/for-business/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/dla-biznesu/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/dlia-biznesu/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/dla-biznesu/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/dlia-biznesu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/for-business/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/for-business/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/for-business/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/dlia-biznesu/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/dla-biznesu/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/for-business/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/for-business/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/tsiny/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/tsiny/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/cennik/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/tsiny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/prices/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/prices/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/cennik/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/tsiny/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/cennik/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/tsiny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/prices/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/prices/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/prices/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/tsiny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/cennik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/prices/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/prices/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pro-nas/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pro-nas/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/o-nas/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pro-nas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/about/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/o-nas/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pro-nas/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/o-nas/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/pro-nas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/about/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/about/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/pro-nas/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/o-nas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/about/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/vidguky/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/vidguky/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/opinie/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/vidguky/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/reviews/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/reviews/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/opinie/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/vidguky/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/opinie/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/vidguky/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/reviews/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/reviews/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/reviews/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/vidguky/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/opinie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/reviews/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/reviews/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/kontakty/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/kontakty/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/kontakt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/kontakty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/contact/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/kontakt/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/kontakty/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/kontakt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/kontakty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/contact/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/kontakty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/contact/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/blog/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/blog/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/blog/"/>
   </url>
   <url>
     <loc>https://trenuvalnyi-sait.vercel.app/pl/blog/</loc>
     <lastmod>2026-11-03</lastmod>
     <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/blog/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/blog/"/>
+  </url>
+  <url>
+    <loc>https://trenuvalnyi-sait.vercel.app/en/blog/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://trenuvalnyi-sait.vercel.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://trenuvalnyi-sait.vercel.app/pl/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trenuvalnyi-sait.vercel.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trenuvalnyi-sait.vercel.app/en/blog/"/>
   </url>
 </urlset>

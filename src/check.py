@@ -8,7 +8,7 @@ import sys
 from html.parser import HTMLParser
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from siteconf import SITE_URL  # noqa: E402
+from siteconf import SITE_URL, LANGS  # noqa: E402
 
 OUT = pathlib.Path(__file__).resolve().parent.parent / 'public'
 
@@ -85,15 +85,15 @@ for u, (p, txt) in pages.items():
         errors.append(f'{u}: canonical {p.canon}')
     if not p.desc:
         errors.append(f'{u}: no description')
-    if 'noindex' in (p.robots or '') and 'polityka' not in u:
+    if 'noindex' in (p.robots or '') and not re.search(r'polityka|privacy', u):
         errors.append(f'{u}: noindex')
-    if set(p.alts) != {'uk', 'pl', 'x-default'}:
+    if set(p.alts) != set(LANGS) | {'x-default'}:
         errors.append(f'{u}: hreflang {sorted(p.alts)}')
     for lang, href in p.alts.items():
         tu = href.replace(SITE_URL, '')
         if tu not in existing:
             errors.append(f'{u}: hreflang {lang} -> missing {tu}')
-        elif pages[tu][0].alts.get('uk') != p.alts.get('uk') or pages[tu][0].alts.get('pl') != p.alts.get('pl'):
+        elif any(pages[tu][0].alts.get(x) != p.alts.get(x) for x in LANGS):
             errors.append(f'{u}: hreflang not reciprocal with {tu}')
     titles.setdefault(p.title, []).append(u)
     descs.setdefault(p.desc, []).append(u)
@@ -121,7 +121,7 @@ locs = re.findall(r'<loc>([^<]+)</loc>', sm)
 for l in locs:
     if l.replace(SITE_URL, '') not in existing:
         errors.append(f'sitemap: missing page {l}')
-if any('polityka' in l for l in locs):
+if any(re.search(r'polityka|privacy', l) for l in locs):
     errors.append('sitemap: contains noindex privacy page')
 
 print(f'{len(pages)} html files, {len(locs)} sitemap urls')

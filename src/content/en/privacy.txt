@@ -1,0 +1,65 @@
+title: Privacy Policy | Language House
+description: How Language House translation bureau collects, uses and protects clients' personal data in accordance with the Law of Ukraine «On Personal Data Protection».
+robots: noindex, follow
+
+# Privacy Policy
+
+This policy explains what personal data Language House translation bureau (hereinafter — «the Bureau») collects, why we use it and how we protect it. We process personal data in accordance with the Law of Ukraine «On Personal Data Protection».
+
+Last updated: 18.10.2026
+
+## What data we collect
+
+Contact details: name, phone and email that you provide in the form on the website, in messengers or during a call.
+Documents for translation and the personal data in them: full names, dates, addresses, document numbers and other information contained in the documents.
+Payment and accounting details: company name, bank details, tax number or company code for legal entities.
+Technical data: IP address, browser type, pages you have viewed and cookies. We may collect them using web analytics services to improve the website.
+
+## Why we use the data
+
+to calculate the price, translate and certify the translation;
+to contact you about your order;
+to prepare the contract, invoice and accounting documents;
+to improve the website and analyse traffic.
+
+We do not use your documents for any other purpose and do not send advertising without your separate consent.
+
+## How we protect clients' documents
+
+only the manager and translator working on your order have access to the documents;
+all employees and translators are bound by confidentiality, and at the client's request we sign a non-disclosure agreement (NDA);
+files are stored in secure services with restricted access;
+after the order is completed, electronic copies of documents are kept for the period needed for possible corrections and then deleted. Documents that we are required to keep by law are kept for the statutory period.
+
+## Sharing data with third parties
+
+We share data only with those without whom the order cannot be completed, and only to the extent necessary:
+
+notaries — for notarisation of the translation;
+sworn translators — for sworn translation;
+state bodies (Ministry of Justice, Ministry of Education, Ministry of Foreign Affairs) — for the apostille;
+payment services — for paying for the order;
+hosting and analytics services — for running the website.
+
+We do not sell or share your data for advertising or other third-party purposes. Data may be provided to state bodies only in cases expressly provided for by law.
+
+## Your rights
+
+Under the Law of Ukraine «On Personal Data Protection», you have the right to:
+
+know what data of yours we process, for what purpose and with whom we share it;
+access your data;
+request correction of inaccurate data or its deletion;
+withdraw consent to data processing;
+object to data processing;
+file a complaint with the Ukrainian Parliament Commissioner for Human Rights or a court.
+
+Withdrawing consent does not affect orders that have already been completed.
+
+## Contact for data requests
+
+For questions about the processing of personal data, please contact us:
+
+email: movnydom@gmail.com
+phone: +380 37 121 2124
+postal address: 7 Peremohy St, Kyiv

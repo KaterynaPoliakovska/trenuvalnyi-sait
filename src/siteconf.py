@@ -1,7 +1,7 @@
 """Site-wide data: domain, contacts, page registry, UI strings.
 
 Edit this file to change the domain, contacts, menu or URLs.
-Page texts live in content/uk/*.txt and content/pl/*.txt.
+Page texts live in content/uk/*.txt, content/pl/*.txt and content/en/*.txt.
 """
 
 # Change to the real domain once it is connected in Vercel (no trailing slash).
@@ -11,16 +11,17 @@ CONTACT = {
     'phone': '+380 37 121 2124',
     'tel': '+380371212124',
     'email': 'movnydom@gmail.com',
-    'street': {'uk': 'вул. Перемоги, 7', 'pl': 'ul. Peremohy 7'},
-    'district': {'uk': 'Голосіївський район', 'pl': 'dzielnica Hołosijiwski'},
-    'city': {'uk': 'Київ', 'pl': 'Kijów'},
-    'hours': {'uk': 'пн–пт 09:00–17:00', 'pl': 'pn–pt 09:00–17:00'},
+    'street': {'uk': 'вул. Перемоги, 7', 'pl': 'ul. Peremohy 7', 'en': '7 Peremohy St'},
+    'district': {'uk': 'Голосіївський район', 'pl': 'dzielnica Hołosijiwski', 'en': 'Holosiivskyi district'},
+    'city': {'uk': 'Київ', 'pl': 'Kijów', 'en': 'Kyiv'},
+    'hours': {'uk': 'пн–пт 09:00–17:00', 'pl': 'pn–pt 09:00–17:00', 'en': 'Mon–Fri 09:00–17:00'},
     'map_query': 'Київ, вул. Перемоги, 7',
     'price_from': '300',
 }
 
-LANGS = ('uk', 'pl')
-DEFAULT_LANG = 'uk'
+LANGS = ('uk', 'pl', 'en')
+DEFAULT_LANG = 'uk'      # served at /
+XDEFAULT_LANG = 'en'     # hreflang x-default
 
 # key: (uk url, pl url, uk short name, pl short name, parent key, hero image id)
 PAGES = {
@@ -57,6 +58,39 @@ PAGES = {
 
 # Anchor texts used in the SEO docs (→ …) mapped to page keys. Matching is
 # case-insensitive and by prefix, longest first.
+# English URLs and short names (same keys as PAGES)
+PAGES_EN = {
+    'home': ('/en/', 'Home'),
+    'services': ('/en/services/', 'Services'),
+    'written': ('/en/services/written-translation/', 'Written translation'),
+    'sworn': ('/en/services/sworn-translation/', 'Sworn translation'),
+    'notarial': ('/en/services/notarised-translation/', 'Notarised translation'),
+    'apostille': ('/en/services/apostille/', 'Apostille'),
+    'interpreting': ('/en/services/interpreting/', 'Interpreting'),
+    'meeting': ('/en/services/interpreting/interpreter-for-meetings/', 'Interpreter for meetings'),
+    'online': ('/en/services/online-translation/', 'Online translation'),
+    'legal': ('/en/services/legal-translation/', 'Legal translation'),
+    'medical': ('/en/services/medical-translation/', 'Medical document translation'),
+    'poland': ('/en/services/documents-for-poland/', 'Documents for Poland'),
+    'documents': ('/en/document-translation/', 'Document translation'),
+    'passport': ('/en/document-translation/passport/', 'Passport translation'),
+    'birth': ('/en/document-translation/birth-certificate/', 'Birth certificate'),
+    'marriage': ('/en/document-translation/marriage-certificate/', 'Marriage certificate'),
+    'license': ('/en/document-translation/driving-licence/', 'Driving licence'),
+    'employment': ('/en/document-translation/employment-documents/', 'Employment documents'),
+    'education': ('/en/document-translation/diploma-and-certificate/', 'Diploma and certificate'),
+    'lang-pl': ('/en/polish-translation/', 'Polish'),
+    'lang-en': ('/en/english-translation/', 'English'),
+    'lang-ru': ('/en/russian-translation/', 'Russian'),
+    'business': ('/en/for-business/', 'For business'),
+    'prices': ('/en/prices/', 'Prices'),
+    'about': ('/en/about/', 'About us'),
+    'reviews': ('/en/reviews/', 'Reviews'),
+    'contacts': ('/en/contact/', 'Contact'),
+    'blog': ('/en/blog/', 'Blog'),
+    'privacy': ('/en/privacy-policy/', 'Privacy policy'),
+}
+
 ANCHORS = {
     'uk': {
         'Письмовий переклад': 'written', 'Присяжний переклад': 'sworn', 'Присяжний перекладач': 'sworn',
@@ -114,6 +148,32 @@ ANCHORS = {
         'Usługa: Tłumaczenie przysięgłe': 'sworn', 'Usługa: Apostille': 'apostille',
         'Usługa: Dokumenty do Polski': 'poland', 'Usługa: Tłumaczenie dokumentów': 'documents',
     },
+    'en': {
+        'Written translation': 'written', 'Sworn translation': 'sworn', 'Sworn translator': 'sworn',
+        'Notarised translation': 'notarial', 'Notarial certification': 'notarial',
+        'More about notarised translation': 'notarial',
+        'Apostille': 'apostille', 'Document translation': 'documents', 'Personal document translation': 'documents',
+        'Personal documents': 'documents',
+        'Medical document translation': 'medical', 'Medical translation': 'medical',
+        'Legal translation': 'legal', 'Interpreting': 'interpreting', 'Interpreter for meetings': 'meeting',
+        'Online translation': 'online', 'Online document translation': 'online',
+        'Polish translation': 'lang-pl', 'Polish': 'lang-pl',
+        'English translation': 'lang-en', 'English': 'lang-en',
+        'Russian translation': 'lang-ru', 'Russian': 'lang-ru',
+        'Documents for Poland': 'poland', 'Full list of situations on the «Documents for Poland» page': 'poland',
+        'Translation for business': 'business', 'For business': 'business', 'Terms for companies': 'business',
+        'Prices': 'prices', 'All prices': 'prices', 'Full price list': 'prices', 'See translation prices': 'prices',
+        'Services': 'services', 'All services': 'services',
+        'About us': 'about', 'More about the bureau': 'about', 'Reviews': 'reviews', 'All reviews': 'reviews',
+        'Contact': 'contacts', 'All contact details': 'contacts',
+        'Passport translation': 'passport', 'Birth certificate translation': 'birth',
+        'Marriage certificate translation': 'marriage', 'Driving licence translation': 'license',
+        'Employment document translation': 'employment', 'Education document translation': 'education',
+        'Blog': 'blog',
+        'More about types of certification on the «Written translation» page': 'written',
+        'Service: Sworn translation': 'sworn', 'Service: Apostille': 'apostille',
+        'Service: Documents for Poland': 'poland', 'Service: Document translation': 'documents',
+    },
 }
 
 NAV = ['services', 'documents', 'prices', 'about', 'contacts']
@@ -167,7 +227,7 @@ UI = {
         'not_found_title': 'Сторінку не знайдено',
         'not_found_text': 'Можливо, адресу змінено або введено з помилкою. Перейдіть на головну або скористайтеся меню.',
         'not_found_btn': 'На головну',
-        'urgent_price': '+50% до базової ціни',
+        'urgent_price': '+50% до базової ціни', 'price_from_text': 'від 300 грн', 'stat1_value': '300',
     },
     'pl': {
         'html_lang': 'pl', 'og_locale': 'pl_PL', 'brand': 'Language House', 'logo': 'wordmark',
@@ -205,6 +265,42 @@ UI = {
         'not_found_title': 'Nie znaleziono strony',
         'not_found_text': 'Adres mógł się zmienić lub zawiera błąd. Przejdź na stronę główną lub skorzystaj z menu.',
         'not_found_btn': 'Strona główna',
-        'urgent_price': '+50% do ceny podstawowej',
+        'urgent_price': '+50% do ceny podstawowej', 'price_from_text': 'od 300 UAH', 'stat1_value': '300',
+    },
+    'en': {
+        'html_lang': 'en', 'og_locale': 'en_US', 'brand': 'Language House', 'logo': 'wordmark',
+        'footer_cols': {'services': 'Services', 'documents': 'Documents', 'bureau': 'Languages & bureau'},
+        'menu': 'Menu', 'lang_group': 'Site language', 'crumbs': 'Breadcrumbs', 'more': 'Learn more',
+        'call_now': 'Call us', 'contact_btn': 'Contact us',
+        'slogan': '<i>We speak</i> the language of officials<br>like <em>no one else.</em>',
+        'brand_full': 'Language House — translation bureau',
+        'eyebrow': 'Translation bureau in Kyiv · PL · EN · RU · UA',
+        'side_a': 'Sworn<br>translation', 'side_b': 'PL · EN<br>RU · UA',
+        'bar_q': 'I need<br>a translation:', 'bar_chips': [('Sworn', 'sworn'), ('Notarised', 'notarial'), ('Written', 'written'), ('Interpreting', 'interpreting'), ('Apostille', 'apostille')],
+        'submenu': 'submenu', 'tagline': 'translation bureau', 'demo': 'Demo example',
+        'stat1_unit': 'USD', 'stat1': 'translation from', 'stat2': 'languages',
+        'marquee': 'No language is a mystery to us',
+        'logos_label': 'Translations for submission to',
+        'logos': ['Voivodeship offices', 'Civil registry (USC)', 'ZUS', 'Courts', 'Universities', 'Embassies', 'Visa centres', 'Notaries', 'Banks'],
+        'form_title': 'Free translation quote',
+        'form_sub': 'Send us your document and our manager will calculate the price and turnaround free of charge.',
+        'from': 'From', 'to': 'To', 'type': 'Service',
+        'types': ['Written translation', 'Sworn translation', 'Notarised translation', 'Apostille', 'Interpreting', 'Other'],
+        'file_label': 'Document for the quote', 'file_btn': 'Choose file', 'file_hint': 'PDF, DOCX, JPG · up to 25 MB',
+        'msg': 'Your message', 'name': 'Name', 'email': 'Email', 'phone': 'Phone number',
+        'agree': 'I accept the <a href="{privacy}">privacy policy</a>', 'send': 'Get a free quote',
+        'err_name': 'Enter your name', 'err_email': 'Enter a valid email',
+        'err_phone': 'Enter the full number, e.g. +380 37 121 2124',
+        'err_file': 'Allowed: PDF, DOCX, JPG, PNG up to 25 MB', 'err_agree': 'Please tick the consent box',
+        'ok_title': 'Thank you!', 'ok_text': 'Your request has been received. Our manager will get back to you with a quote during office hours.',
+        'ok_again': 'Send another',
+        'lang_names': {'UA': 'Ukrainian', 'PL': 'Polish', 'EN': 'English', 'RU': 'Russian'},
+        'c_address': 'Address', 'c_phone': 'Phone', 'c_email': 'Email', 'c_hours': 'Opening hours',
+        'map_title': 'Map: Language House translation bureau in Kyiv', 'route': 'Get directions',
+        'todo': 'Details coming soon', 'privacy': 'Privacy policy',
+        'not_found_title': 'Page not found',
+        'not_found_text': 'The address may have changed or contain a typo. Go to the home page or use the menu.',
+        'not_found_btn': 'Home page',
+        'urgent_price': '+50% to the base price', 'price_from_text': 'from $7', 'stat1_value': '7',
     },
 }
