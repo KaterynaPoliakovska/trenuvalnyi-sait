@@ -1,4 +1,4 @@
-"""Static site generator for Movnyi Dim.
+"""Static site generator for Language House.
 
     python src/build.py
 
@@ -20,7 +20,7 @@ from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, PAGES, ANCHORS, NA
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
 OUT = ROOT / 'public'
-ASSET_VER = '20'
+ASSET_VER = '21'
 TODAY = datetime.date.today().isoformat()
 
 WARN = []
@@ -508,14 +508,11 @@ def section_html(sec, lang, key, idx):
 # ---------------------------------------------------------------- page chrome
 
 def logo_img(lang, variant='color'):
-    lg = UI[lang]['logo']
-    if lg == 'pl':
-        # Polish wordmark: the brand mark + live text in the logo fonts (Unbounded / Manrope)
-        mark = 'mark-color.svg'
-        return (f'<span class="wordmark wordmark-{variant}"><img src="/assets/logo/{mark}" width="100" height="100" alt="">'
-                f'<span class="wm-text"><b>Dom<br>Językowy</b><small>biuro tłumaczeń</small></span></span>')
-    w = 468 if lg == 'ua' else 434
-    return f'<img src="/assets/logo/logo-horizontal-{lg}-{variant}.svg" width="{w}" height="158" alt="{esc(UI[lang]["brand_full"])}">'
+    # Wordmark: the brand mark + live text in the logo fonts (Unbounded / Manrope)
+    u = UI[lang]
+    first, _, rest = u['brand'].partition(' ')
+    return (f'<span class="wordmark wordmark-{variant}"><img src="/assets/logo/mark-color.svg" width="100" height="100" alt="">'
+            f'<span class="wm-text"><b>{esc(first)}<br>{esc(rest)}</b><small>{esc(u["tagline"])}</small></span></span>')
 
 
 def header_html(lang, key):
@@ -707,7 +704,7 @@ def head_html(lang, key, meta, schema):
 def org_schema(lang):
     return {
         '@context': 'https://schema.org', '@type': 'ProfessionalService', '@id': SITE_URL + '/#org',
-        'name': UI[lang]['brand'], 'alternateName': ['Мовний дім', 'Dom Językowy', 'Movnyi Dim'],
+        'name': UI[lang]['brand'], 
         'url': SITE_URL + url('home', lang), 'logo': SITE_URL + '/assets/logo/mark-color-1024.png',
         'image': SITE_URL + '/assets/logo/social-avatar-1080.png',
         'telephone': CONTACT['phone'], 'email': CONTACT['email'], 'priceRange': 'від 300 грн' if lang == 'uk' else 'od 300 UAH',
@@ -850,7 +847,7 @@ def build_page(key, lang):
 
 def build_404():
     u, p = UI['uk'], UI['pl']
-    doc = f'''{head_html('uk', 'home', {'title': u['not_found_title'] + ' | Мовний дім', 'description': u['not_found_text'], 'robots': 'noindex, follow'}, [])}
+    doc = f'''{head_html('uk', 'home', {'title': u['not_found_title'] + ' | Language House', 'description': u['not_found_text'], 'robots': 'noindex, follow'}, [])}
 <body class="page-404">
 {header_html('uk', 'home')}
 <main id="top">

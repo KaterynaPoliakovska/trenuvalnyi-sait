@@ -1,5 +1,5 @@
 /* =========================================================
-   Movnyi Dim — site styles v3
+   Language House — site styles v3
    Visual system mirrored from localeader.pl (see DESIGN_SYSTEM.html)
    ========================================================= */
 
@@ -691,7 +691,7 @@ textarea.input { resize: vertical; min-height: 96px; }
   .nav .sub a[aria-current="page"] { color: var(--c-accent-light); }
 }
 
-/* Polish wordmark «Dom Językowy» (live text, same colours as the logo files) */
+/* Wordmark «Language House» (live text, same colours as the logo files) */
 .wordmark { display: flex; align-items: center; gap: .32em; height: 100%; font-size: 46px; }
 .wordmark img { height: 100%; width: auto; flex: none; }
 .wm-text { display: flex; flex-direction: column; justify-content: center; line-height: 1; }
