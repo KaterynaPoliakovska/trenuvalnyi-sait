@@ -7,6 +7,7 @@
 | Тексти сторінок (Title, Description, H1, H2/H3, абзаци, FAQ, таблиці) | `src/content/uk/*.txt`, `src/content/pl/*.txt` |
 | Домен, телефон, e-mail, адреса, графік, мінімальна ціна | `src/siteconf.py` → `SITE_URL`, `CONTACT` |
 | URL сторінок, меню, футер, тексти форми | `src/siteconf.py` → `PAGES`, `NAV`, `FOOTER`, `UI` |
+| Розмітка Schema.org (назви послуг, опис компанії, оплата, валюта) | `src/siteconf.py` → `SCHEMA`, `SERVICE_SCHEMA` |
 | Стилі та анімації | `src/static/assets/styles.css`, `src/static/assets/app.js` |
 
 Після змін:

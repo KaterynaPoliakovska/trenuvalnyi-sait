@@ -15,7 +15,8 @@ import sys
 from urllib.parse import quote
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, XDEFAULT_LANG, PAGES, PAGES_EN, ANCHORS, NAV, NAV_SUB, FOOTER, UI)  # noqa: E402
+from siteconf import (SITE_URL, CONTACT, LANGS, DEFAULT_LANG, XDEFAULT_LANG, PAGES, PAGES_EN, ANCHORS, NAV, NAV_SUB, FOOTER, UI,  # noqa: E402
+                      SCHEMA, SERVICE_SCHEMA, CATALOG_SERVICES)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'src'
@@ -705,20 +706,72 @@ def head_html(lang, key, meta, schema):
 </head>'''
 
 
+def address_schema(lang):
+    return {'@type': 'PostalAddress', 'streetAddress': CONTACT['street'][lang], 'addressLocality': CONTACT['city'][lang],
+            'addressRegion': CONTACT['city'][lang], 'addressCountry': 'UA'}
+
+
 def org_schema(lang):
     return {
-        '@context': 'https://schema.org', '@type': 'ProfessionalService', '@id': SITE_URL + '/#org',
-        'name': UI[lang]['brand'], 
+        '@context': 'https://schema.org', '@type': 'LocalBusiness', '@id': SITE_URL + '/#org',
+        'name': UI[lang]['brand'], 'alternateName': SCHEMA[lang]['alt_name'], 'description': SCHEMA[lang]['description'],
         'url': SITE_URL + url('home', lang), 'logo': SITE_URL + '/assets/logo/mark-color-1024.png',
         'image': SITE_URL + '/assets/logo/social-avatar-1080.png',
-        'telephone': CONTACT['phone'], 'email': CONTACT['email'], 'priceRange': UI[lang]['price_from_text'],
-        'address': {'@type': 'PostalAddress', 'streetAddress': CONTACT['street'][lang], 'addressLocality': CONTACT['city'][lang],
-                    'addressRegion': CONTACT['district'][lang], 'addressCountry': 'UA'},
+        'telephone': CONTACT['tel'], 'email': CONTACT['email'], 'foundingDate': '2015',
+        'priceRange': UI[lang]['price_from_text'], 'paymentAccepted': SCHEMA[lang]['payment'],
+        'address': address_schema(lang),
+        'hasMap': route_url(),
         'openingHoursSpecification': [{'@type': 'OpeningHoursSpecification',
                                        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
                                        'opens': '09:00', 'closes': '17:00'}],
-        'areaServed': CONTACT['city'][lang],
+        'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': CONTACT['tel'], 'email': CONTACT['email']},
+        'areaServed': {'@type': 'City', 'name': CONTACT['city'][lang]},
         'knowsLanguage': ['uk', 'pl', 'en', 'ru'],
+        'hasOfferCatalog': {
+            '@type': 'OfferCatalog', 'name': SCHEMA[lang]['catalog'], 'url': SITE_URL + url('services', lang),
+            'itemListElement': [
+                {'@type': 'Offer', 'itemOffered': {'@type': 'Service', '@id': SITE_URL + url(k, lang) + '#service',
+                                                   'name': SERVICE_SCHEMA[k][1][lang][0], 'url': SITE_URL + url(k, lang)}}
+                for k in CATALOG_SERVICES],
+        },
+    }
+
+
+def webpage_schema(type_, key, lang, meta):
+    """AboutPage / ContactPage: the page describes the organisation block on the same page."""
+    return {
+        '@context': 'https://schema.org', '@type': type_, '@id': SITE_URL + url(key, lang) + '#webpage',
+        'url': SITE_URL + url(key, lang), 'name': meta.get('title', ''), 'description': meta.get('description', ''),
+        'inLanguage': UI[lang]['html_lang'],
+        'isPartOf': {'@type': 'WebSite', 'name': UI[lang]['brand'], 'url': SITE_URL + url('home', lang)},
+        'mainEntity': {'@id': SITE_URL + '/#org'},
+    }
+
+
+def service_schema(key, lang, meta):
+    unit, names = SERVICE_SCHEMA[key]
+    page_url = SITE_URL + url(key, lang)
+    s = {
+        '@context': 'https://schema.org', '@type': 'Service', '@id': page_url + '#service',
+        'name': names[lang][0], 'serviceType': names[lang][1], 'description': meta.get('description', ''), 'url': page_url,
+        'provider': {'@type': 'LocalBusiness', '@id': SITE_URL + '/#org', 'name': UI[lang]['brand'], 'url': SITE_URL + url('home', lang),
+                     'telephone': CONTACT['tel'], 'image': SITE_URL + '/assets/logo/social-avatar-1080.png',
+                     'priceRange': UI[lang]['price_from_text'], 'address': address_schema(lang)},
+        'areaServed': {'@type': 'City', 'name': CONTACT['city'][lang]},
+    }
+    if unit:
+        s['offers'] = {'@type': 'Offer', 'url': page_url, 'description': UI[lang]['price_from_text'] + SCHEMA[lang]['units'][unit],
+                       'priceSpecification': {'@type': 'PriceSpecification', 'minPrice': int(UI[lang]['stat1_value']), 'priceCurrency': SCHEMA[lang]['currency']}}
+    return s
+
+
+def blog_schema(lang, meta):
+    return {
+        '@context': 'https://schema.org', '@type': 'Blog', '@id': SITE_URL + url('blog', lang) + '#blog',
+        'url': SITE_URL + url('blog', lang), 'name': SCHEMA[lang]['blog'], 'description': meta.get('description', ''),
+        'inLanguage': UI[lang]['html_lang'],
+        'publisher': {'@type': 'Organization', '@id': SITE_URL + '/#org', 'name': UI[lang]['brand'], 'url': SITE_URL + url('home', lang),
+                      'logo': SITE_URL + '/assets/logo/mark-color-1024.png'},
     }
 
 
@@ -779,6 +832,14 @@ def build_page(key, lang):
         schema.append({'@context': 'https://schema.org', '@type': 'WebSite', 'name': u['brand'], 'url': SITE_URL + url('home', lang), 'inLanguage': u['html_lang']})
     elif key == 'contacts':
         schema.append(org_schema(lang))
+        schema.append(webpage_schema('ContactPage', key, lang, meta))
+    elif key == 'about':
+        schema.append(org_schema(lang))
+        schema.append(webpage_schema('AboutPage', key, lang, meta))
+    elif key == 'blog':
+        schema.append(blog_schema(lang, meta))
+    elif key in SERVICE_SCHEMA:
+        schema.append(service_schema(key, lang, meta))
     if not is_home:
         schema.append(crumb_schema(chain, lang))
     fs = faq_schema(page, lang, key)

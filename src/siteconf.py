@@ -23,6 +23,66 @@ LANGS = ('uk', 'pl', 'en')
 DEFAULT_LANG = 'uk'      # served at /
 XDEFAULT_LANG = 'en'     # hreflang x-default
 
+# Schema.org texts. Prices come from UI[lang] (price_from_text, stat1_value),
+# so they always match the numbers shown on the site.
+SCHEMA = {
+    'uk': {
+        'alt_name': 'Бюро перекладів «Language House»',
+        'description': 'Бюро перекладів у Києві: письмовий, усний і присяжний переклад, нотаріальне засвідчення, апостиль, документи для Польщі. Польська, англійська, російська.',
+        'payment': 'Картка, банківський переказ',
+        'catalog': 'Послуги бюро перекладів «Language House»',
+        'blog': 'Блог бюро перекладів «Language House»',
+        'currency': 'UAH',
+        'units': {'base': '', 'page': ' / сторінка', 'hour': ' / година', 'doc': ' за документ'},
+    },
+    'pl': {
+        'alt_name': 'Biuro tłumaczeń «Language House»',
+        'description': 'Biuro tłumaczeń w Kijowie: tłumaczenia pisemne, ustne i przysięgłe, poświadczenia notarialne, apostille, dokumenty do Polski.',
+        'payment': 'Karta, przelew bankowy',
+        'catalog': 'Usługi biura tłumaczeń «Language House»',
+        'blog': 'Blog biura tłumaczeń «Language House»',
+        'currency': 'UAH',
+        'units': {'base': '', 'page': ' / strona', 'hour': ' / godzina', 'doc': ' za dokument'},
+    },
+    'en': {
+        'alt_name': 'Language House Translation Bureau',
+        'description': 'Translation bureau in Kyiv: written, oral and sworn translation, notarisation, apostille and documents for Poland. Polish, English and Russian.',
+        'payment': 'Card, bank transfer',
+        'catalog': 'Language House translation services',
+        'blog': 'Language House Translation Bureau Blog',
+        'currency': 'USD',
+        'units': {'base': '', 'page': ' / page', 'hour': ' / hour', 'doc': ' per document'},
+    },
+}
+
+# Pages marked up as schema.org/Service: page key -> price unit (None = no price
+# on the page), then (name, serviceType) per language.
+SERVICE_SCHEMA = {
+    'written': ('page', {'uk': ('Письмовий переклад', 'Письмовий переклад'), 'pl': ('Tłumaczenia pisemne', 'Tłumaczenia pisemne'), 'en': ('Written translation', 'Written translation')}),
+    'sworn': ('page', {'uk': ('Присяжний переклад', 'Присяжний переклад'), 'pl': ('Tłumaczenia przysięgłe', 'Tłumaczenia przysięgłe'), 'en': ('Sworn translation', 'Sworn translation')}),
+    'notarial': ('doc', {'uk': ('Переклад із нотаріальним засвідченням', 'Нотаріальний переклад'), 'pl': ('Tłumaczenie z poświadczeniem notarialnym', 'Tłumaczenia notarialne'), 'en': ('Notarised translation', 'Notarised translation')}),
+    'apostille': ('base', {'uk': ('Апостиль на документи', 'Апостиль'), 'pl': ('Apostille na dokumenty', 'Apostille'), 'en': ('Apostille on documents', 'Apostille')}),
+    'interpreting': ('hour', {'uk': ('Усний переклад', 'Усний переклад'), 'pl': ('Tłumaczenia ustne', 'Tłumaczenia ustne'), 'en': ('Interpreting', 'Interpreting')}),
+    'meeting': ('hour', {'uk': ('Усний перекладач на зустріч', 'Усний переклад'), 'pl': ('Tłumacz ustny na spotkanie', 'Tłumaczenia ustne'), 'en': ('Interpreter for meetings', 'Interpreting')}),
+    'online': ('page', {'uk': ('Переклад документів онлайн', 'Письмовий переклад'), 'pl': ('Tłumaczenie dokumentów online', 'Tłumaczenia pisemne'), 'en': ('Online document translation', 'Written translation')}),
+    'legal': ('page', {'uk': ('Юридичний переклад', 'Юридичний переклад'), 'pl': ('Tłumaczenia prawnicze', 'Tłumaczenia prawnicze'), 'en': ('Legal translation', 'Legal translation')}),
+    'medical': ('page', {'uk': ('Переклад медичних документів', 'Медичний переклад'), 'pl': ('Tłumaczenie dokumentacji medycznej', 'Tłumaczenia medyczne'), 'en': ('Medical document translation', 'Medical translation')}),
+    'poland': ('page', {'uk': ('Переклад документів для Польщі', 'Присяжний переклад'), 'pl': ('Tłumaczenie dokumentów do Polski', 'Tłumaczenia przysięgłe'), 'en': ('Document translation for Poland', 'Sworn translation')}),
+    'business': (None, {'uk': ('Переклади для бізнесу', 'Переклад для бізнесу'), 'pl': ('Tłumaczenia dla firm', 'Tłumaczenia dla firm'), 'en': ('Translation for business', 'Business translation')}),
+    'passport': ('base', {'uk': ('Переклад паспорта', 'Переклад документів'), 'pl': ('Tłumaczenie paszportu', 'Tłumaczenie dokumentów'), 'en': ('Passport translation', 'Document translation')}),
+    'birth': ('base', {'uk': ('Переклад свідоцтва про народження', 'Переклад документів'), 'pl': ('Tłumaczenie aktu urodzenia', 'Tłumaczenie dokumentów'), 'en': ('Birth certificate translation', 'Document translation')}),
+    'marriage': ('base', {'uk': ('Переклад свідоцтва про шлюб', 'Переклад документів'), 'pl': ('Tłumaczenie aktu małżeństwa', 'Tłumaczenie dokumentów'), 'en': ('Marriage certificate translation', 'Document translation')}),
+    'license': ('base', {'uk': ('Переклад водійського посвідчення', 'Переклад документів'), 'pl': ('Tłumaczenie prawa jazdy', 'Tłumaczenie dokumentów'), 'en': ('Driving licence translation', 'Document translation')}),
+    'employment': ('base', {'uk': ('Переклад трудових документів', 'Переклад документів'), 'pl': ('Tłumaczenie dokumentów pracowniczych', 'Tłumaczenie dokumentów'), 'en': ('Employment document translation', 'Document translation')}),
+    'education': ('base', {'uk': ('Переклад освітніх документів', 'Переклад документів'), 'pl': ('Tłumaczenie dyplomów, świadectw i suplementów', 'Tłumaczenie dokumentów'), 'en': ('Education document translation', 'Document translation')}),
+    'lang-pl': ('page', {'uk': ('Переклад з польської та на польську мову', 'Письмовий переклад'), 'pl': ('Tłumaczenia z i na język polski', 'Tłumaczenia pisemne'), 'en': ('Polish translation', 'Written translation')}),
+    'lang-en': ('page', {'uk': ('Переклад з англійської та на англійську мову', 'Письмовий переклад'), 'pl': ('Tłumaczenia z i na język angielski', 'Tłumaczenia pisemne'), 'en': ('English translation', 'Written translation')}),
+    'lang-ru': ('page', {'uk': ('Переклад з російської та на російську мову', 'Письмовий переклад'), 'pl': ('Tłumaczenia z i na język rosyjski', 'Tłumaczenia pisemne'), 'en': ('Russian translation', 'Written translation')}),
+}
+
+# Main services listed in the organisation's offer catalog.
+CATALOG_SERVICES = ('written', 'sworn', 'notarial', 'apostille', 'interpreting', 'meeting', 'online', 'legal', 'medical', 'poland', 'business')
+
 # key: (uk url, pl url, uk short name, pl short name, parent key, hero image id)
 PAGES = {
     'home':         ('/', '/pl/', 'Головна', 'Strona główna', None, '1583847268964-b28dc8f51f92'),
